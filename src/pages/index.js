@@ -1,14 +1,14 @@
 import React from "react"
-
-import Layout from "../components/layout"
-import IncludeScripts from "../components/include-scripts"
+import Layout from "../components/shared/layout"
+import SEO from "../components/shared/seo"
 
 import Landscape from "../images/landscape.svg"
 import Reflection from "../images/reflection.svg"
 
 const IndexPage = () => (
   <Layout>
-    <IncludeScripts />
+    <SEO title="Homepage" />
+
     <section className="main-marquee">
       <div className="container">
         <nav className="navbar navbar-expand-md navbar-light">
