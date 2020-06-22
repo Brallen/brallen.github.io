@@ -8,7 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Header from "../navigation/header"
 import Footer from "../navigation/footer"
 
 import "jquery/dist/jquery.min"

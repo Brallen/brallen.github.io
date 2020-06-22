@@ -48,11 +48,11 @@ p {
   margin-bottom: 40px;
 }
 
-.who-am-i {
+.headline-with-text {
   margin-top: 0;
 }
 
-.who-am-i p {
+.headline-with-text p {
   font-size: 1.25rem;
   line-height: 2.25rem;
 }
