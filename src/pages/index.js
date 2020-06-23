@@ -4,6 +4,7 @@ import SEO from "../components/shared/seo"
 import Marquee from "../components/content/marquee"
 import HeadlineWithText from "../components/content/headline-with-text"
 import CardContainer from "../components/content/card-container"
+import ContactCard from "../components/content/contact-card"
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,8 @@ const IndexPage = () => (
     />
     <HeadlineWithText headline="Stuff I've Built" />
     <CardContainer />
+    <HeadlineWithText headline="Contact" />
+    <ContactCard />
   </Layout>
 )
 

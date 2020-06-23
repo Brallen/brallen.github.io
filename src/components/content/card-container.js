@@ -1,10 +1,10 @@
 import React from "react"
-import Card from "./Card"
+import ProjectCard from "./project-card"
 
 const CardContainer = () => (
   <section className="cards-container component container">
-    <Card />
-    <Card />
+    <ProjectCard />
+    <ProjectCard />
   </section>
 )
 
