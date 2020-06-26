@@ -1,0 +1,28 @@
+[
+  {
+    "cardName": "account",
+    "image": "https://source.unsplash.com/random",
+    "headline": "Account.wacom.com",
+    "flairText": "july-19th",
+    "shortDescription": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    "longDescription": "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    "modalImages": [
+      "https://source.unsplash.com/random",
+      "https://source.unsplash.com/random",
+      "https://source.unsplash.com/random"
+    ]
+  },
+  {
+    "cardName": "new",
+    "image": "https://source.unsplash.com/random",
+    "headline": "new",
+    "flairText": "july-2ndth",
+    "shortDescription": "2nd This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    "longDescription": " 2ndThis is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    "modalImages": [
+      "https://source.unsplash.com/random",
+      "https://source.unsplash.com/random",
+      "https://source.unsplash.com/random"
+    ]
+  }
+]

@@ -13,6 +13,7 @@
     "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-sharp": "^2.6.11",
     "gatsby-source-filesystem": "^2.3.11",
+    "gatsby-transformer-json": "^2.4.7",
     "gatsby-transformer-sharp": "^2.5.5",
     "jquery": "^3.5.1",
     "prop-types": "^15.7.2",

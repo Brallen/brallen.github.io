@@ -186,3 +186,27 @@ strong {
 .card-contact .card-contact-link:hover {
   color: #ffffff;
 }
+
+.modal-content {
+  border: none;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-header .close {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-title {
+  margin: auto;
+}
+
+.modal-text {
+  margin: 1.5rem auto;
+}
