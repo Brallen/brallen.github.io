@@ -1,14 +1,14 @@
 import React from "react"
 
-const ProjectCard = ({ content }) => (
+const ProjectCard = ({ content, order }) => (
   <div
     className={`card mb-5 col-12 col-md-10 offset-md-1 py-3 py-md-3 px-0 ${content.cardName}`}
   >
     <div className="row">
-      <div className="col-md-5">
+      <div className={`col-md-5 order-1 order-md-${order}`}>
         <img src={content.image} className="card-img" alt="random" />
       </div>
-      <div className="col-md-7">
+      <div className={`col-md-7 order-2 order-md-${order === 1 ? 2 : 1}`}>
         <div className="card-body">
           <h5 className="card-title">{content.headline}</h5>
           <p className="card-text">

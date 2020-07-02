@@ -24,10 +24,10 @@ const CardContainer = () => {
 
   return (
     <section className="cards-container component container">
-      {data.allCardsJson.edges.map(card => {
+      {data.allCardsJson.edges.map((card, index) => {
         return (
           <div key={`${card.node.cardName}`}>
-            <ProjectCard content={card.node} />
+            <ProjectCard content={card.node} order={(index % 2) + 1} />
             <ProjectModal content={card.node} />
           </div>
         )
