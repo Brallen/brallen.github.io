@@ -6,17 +6,26 @@ const ContactCard = () => (
       <div className="col-12 justify-content-center">
         <div className="card-body">
           <p className="card-text">Find me around the internet at</p>
-          <a className="card-contact-link" href="https://github.com/Brallen">
+          <a
+            className="card-contact-link"
+            href="https://github.com/Brallen"
+            target="_blank"
+          >
             <strong>github</strong>.com/<strong>brallen</strong>
           </a>
           <a
             className="card-contact-link"
             href="https://linkedin.com/in/brettcase"
+            target="_blank"
           >
             <strong>linkedin</strong>.com/in/<strong>brettcase</strong>
           </a>
           <p className="card-text mt-3">Or send me an email at</p>
-          <a className="card-contact-link" href="mailto:brett.case97@gmail.com">
+          <a
+            className="card-contact-link"
+            href="mailto:brett.case97@gmail.com"
+            target="_blank"
+          >
             <strong>brett.case97</strong>@<strong>gmail</strong>.com
           </a>
         </div>
