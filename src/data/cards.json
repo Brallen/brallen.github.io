@@ -10,7 +10,11 @@
       "https://source.unsplash.com/random",
       "https://source.unsplash.com/random",
       "https://source.unsplash.com/random"
-    ]
+    ],
+    "modalLink": {
+      "url": "https://github.com/brallen",
+      "text": "View on GitHub"
+    }
   },
   {
     "cardName": "new",
@@ -23,6 +27,10 @@
       "https://source.unsplash.com/random",
       "https://source.unsplash.com/random",
       "https://source.unsplash.com/random"
-    ]
+    ],
+    "modalLink": {
+      "url": "https://github.com/brallen",
+      "text": "View on GitHub"
+    }
   }
 ]

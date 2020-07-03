@@ -8,7 +8,11 @@ const ProjectCard = ({ content, order }) => (
       <div className={`col-md-5 order-1 order-md-${order}`}>
         <img src={content.image} className="card-img" alt="random" />
       </div>
-      <div className={`col-md-7 order-2 order-md-${order === 1 ? 2 : 1}`}>
+      <div
+        className={`col-md-7 order-2 px-md-5 text-center text-md-left order-md-${
+          order === 1 ? 2 : 1
+        }`}
+      >
         <div className="card-body">
           <h5 className="card-title">{content.headline}</h5>
           <p className="card-text">

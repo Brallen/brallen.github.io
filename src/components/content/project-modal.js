@@ -10,10 +10,10 @@ const ProjectModal = ({ content }) => (
     aria-hidden="true"
   >
     <div
-      className="modal-dialog modal-dialog-centered modal-lg"
+      className="modal-dialog modal-dialog-centered modal-md"
       role="document"
     >
-      <div className="modal-content">
+      <div className="modal-content px-md-4">
         <div className="modal-header">
           <h5 className="modal-title" id="exampleModalLabel">
             {content.headline}
@@ -70,7 +70,12 @@ const ProjectModal = ({ content }) => (
               <span className="sr-only">Next</span>
             </a>
           </div>
-          <div className="modal-text">{content.longDescription}</div>
+          <div className="modal-text text-center">
+            <p>{content.longDescription}</p>
+            <a href={content.modalLink.url} className="btn" target="_blank">
+              {content.modalLink.text}
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -16,6 +16,10 @@ const CardContainer = () => {
             shortDescription
             longDescription
             modalImages
+            modalLink {
+              url
+              text
+            }
           }
         }
       }

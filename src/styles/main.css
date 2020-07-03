@@ -156,14 +156,11 @@ strong {
 
 .btn {
   border-radius: 0;
-}
-
-.btn-toggle {
   background-color: #1e2d32;
   color: #ffffff;
 }
 
-.btn-toggle:hover {
+.btn:hover {
   background-color: #4f6563;
   color: #ffffff;
 }
@@ -189,6 +186,7 @@ strong {
 
 .modal-content {
   border: none;
+  border-radius: 0;
 }
 
 .modal-header {
