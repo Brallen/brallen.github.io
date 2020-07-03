@@ -72,7 +72,12 @@ const ProjectModal = ({ content }) => (
           </div>
           <div className="modal-text text-center">
             <p>{content.longDescription}</p>
-            <a href={content.modalLink.url} className="btn" target="_blank">
+            <a
+              href={content.modalLink.url}
+              className="btn"
+              target="_blank"
+              rel="noreferrer"
+            >
               {content.modalLink.text}
             </a>
           </div>

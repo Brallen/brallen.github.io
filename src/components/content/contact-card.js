@@ -10,6 +10,7 @@ const ContactCard = () => (
             className="card-contact-link"
             href="https://github.com/Brallen"
             target="_blank"
+            rel="noreferrer"
           >
             <strong>github</strong>.com/<strong>brallen</strong>
           </a>
@@ -17,6 +18,7 @@ const ContactCard = () => (
             className="card-contact-link"
             href="https://linkedin.com/in/brettcase"
             target="_blank"
+            rel="noreferrer"
           >
             <strong>linkedin</strong>.com/in/<strong>brettcase</strong>
           </a>
@@ -25,6 +27,7 @@ const ContactCard = () => (
             className="card-contact-link"
             href="mailto:brett.case97@gmail.com"
             target="_blank"
+            rel="noreferrer"
           >
             <strong>brett.case97</strong>@<strong>gmail</strong>.com
           </a>
