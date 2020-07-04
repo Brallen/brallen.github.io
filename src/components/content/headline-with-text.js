@@ -22,14 +22,17 @@ const HeadlineWithText = ({ id }) => {
   ).node
 
   return (
-    <section className={`headline-with-text component container`} id={id}>
-      {content.headline !== undefined && (
-        <h3 className="col-12">{content.headline}</h3>
-      )}
-      {content.text !== undefined && (
-        <p className="col-12 col-md-10 offset-md-1">{content.text}</p>
-      )}
-    </section>
+    <>
+      <div id={id} className="anchor"></div>
+      <section className={`headline-with-text component container`}>
+        {content.headline !== undefined && (
+          <h3 className="col-12">{content.headline}</h3>
+        )}
+        {content.text !== undefined && (
+          <p className="col-12 col-md-10 offset-md-1">{content.text}</p>
+        )}
+      </section>
+    </>
   )
 }
 

@@ -208,3 +208,10 @@ strong {
 .modal-text {
   margin: 1.5rem auto;
 }
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -1.5rem;
+  visibility: hidden;
+}
