@@ -1,12 +1,36 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
-const HeadlineWithText = ({ headline, text }) => (
-  <section className="headline-with-text component container">
-    {headline !== undefined && <h3 className="col-12">{headline}</h3>}
-    {text !== undefined && (
-      <p className="col-12 col-md-10 offset-md-1">{text}</p>
-    )}
-  </section>
-)
+const HeadlineWithText = ({ id }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allHeadlineTextJson {
+        edges {
+          node {
+            id
+            headline
+            text
+          }
+        }
+      }
+    }
+  `)
+
+  //since not using createPage, have to get all content and sort for the one we want
+  const content = data.allHeadlineTextJson.edges.find(
+    content => content.node.id === id
+  ).node
+
+  return (
+    <section className={`headline-with-text component container`} id={id}>
+      {content.headline !== undefined && (
+        <h3 className="col-12">{content.headline}</h3>
+      )}
+      {content.text !== undefined && (
+        <p className="col-12 col-md-10 offset-md-1">{content.text}</p>
+      )}
+    </section>
+  )
+}
 
 export default HeadlineWithText

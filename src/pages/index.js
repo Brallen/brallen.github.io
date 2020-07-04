@@ -10,13 +10,10 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Homepage" />
     <Marquee />
-    <HeadlineWithText
-      headline="Who Am I?"
-      text="Hello, I am a 23 year old developer currently working for Wacom in their web services department. I enjoy working with all things web related"
-    />
-    <HeadlineWithText headline="Stuff I've Built" />
+    <HeadlineWithText id="whoami" />
+    <HeadlineWithText id="stuffivebuilt" />
     <CardContainer />
-    <HeadlineWithText headline="Contact" />
+    <HeadlineWithText id="contact" />
     <ContactCard />
   </Layout>
 )
