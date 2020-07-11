@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image"
 
 const ProjectModal = ({ content }) => (
   <div
@@ -34,13 +35,19 @@ const ProjectModal = ({ content }) => (
             data-ride="carousel"
           >
             <div className="carousel-inner">
+              {console.log(content.modalImages)}
               {content.modalImages.map((image, index) => {
                 return (
                   <div
                     className={`carousel-item ${index === 0 ? "active" : ""}`}
                     key={index}
                   >
-                    <img src={image} className="d-block w-100" alt="..." />
+                    {image !== undefined && (
+                      <Img
+                        fluid={image.node.childImageSharp.fluid}
+                        className="card-img"
+                      />
+                    )}
                   </div>
                 )
               })}

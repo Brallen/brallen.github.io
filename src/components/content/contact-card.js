@@ -3,7 +3,7 @@ import React from "react"
 const ContactCard = () => (
   <section className="cards-container component container">
     <div className="card-contact card mb-5 col-12 col-md-10 offset-md-1 py-3 py-md-3 px-0">
-      <div className="col-12 justify-content-center">
+      <div className="justify-content-center">
         <div className="card-body">
           <p className="card-text">Find me around the internet at</p>
           <a

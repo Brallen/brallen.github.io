@@ -4,18 +4,16 @@ import ProjectCard from "./project-card"
 import ProjectModal from "./project-modal"
 
 const CardContainer = () => {
-  const data = useStaticQuery(graphql`
+  let data = useStaticQuery(graphql`
     query {
       allCardsJson {
         edges {
           node {
             cardName
-            image
             headline
             flairText
             shortDescription
             longDescription
-            modalImages
             modalLink {
               url
               text
@@ -23,8 +21,32 @@ const CardContainer = () => {
           }
         }
       }
+      allFile(filter: { extension: { eq: "jpg" } }) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(maxWidth: 1140) {
+                ...GatsbyImageSharpFluid
+                originalName
+              }
+            }
+          }
+        }
+      }
     }
   `)
+  data.allCardsJson.edges.forEach(card => {
+    card.node.image = data.allFile.edges.find(
+      image =>
+        image.node.childImageSharp.fluid.originalName ===
+        `${card.node.cardName}-main.jpg`
+    )
+    card.node.modalImages = data.allFile.edges.filter(image =>
+      image.node.childImageSharp.fluid.originalName.startsWith(
+        `${card.node.cardName}-modal`
+      )
+    )
+  })
 
   return (
     <section className="cards-container component container">
