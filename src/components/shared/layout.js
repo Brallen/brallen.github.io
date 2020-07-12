@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Footer from "../navigation/footer"
+import Header from "../navigation/header"
 
 import "jquery/dist/jquery.min"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -17,6 +18,7 @@ import "../../styles/main.css"
 
 const Layout = ({ children }) => (
   <>
+    <Header />
     <main>{children}</main>
     <Footer />
   </>
