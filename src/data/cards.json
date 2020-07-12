@@ -20,5 +20,16 @@
       "url": "https://github.com/brallen",
       "text": "View on GitHub"
     }
+  },
+  {
+    "cardName": "spotiguess",
+    "headline": "Spotiguess",
+    "flairText": "july-2ndth",
+    "shortDescription": "2nd This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    "longDescription": " 2ndThis is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+    "modalLink": {
+      "url": "https://github.com/brallen",
+      "text": "View on GitHub"
+    }
   }
 ]
