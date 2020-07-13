@@ -46,6 +46,7 @@ const ProjectModal = ({ content }) => (
                       <Img
                         fluid={image.node.childImageSharp.fluid}
                         className="card-img"
+                        imgStyle={{ objectFit: "contain" }}
                       />
                     )}
                   </div>

@@ -11,6 +11,7 @@ const ProjectCard = ({ content, order }) => (
           <Img
             fluid={content.image.node.childImageSharp.fluid}
             className={`card-img ${order === 1 ? "ml-md-5" : "mr-md-5"}`}
+            imgStyle={{ objectFit: "contain" }}
           />
         )}
       </div>
