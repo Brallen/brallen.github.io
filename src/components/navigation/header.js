@@ -16,9 +16,9 @@ const Header = ({ siteTitle }) => {
   `)
   return (
     <header>
-      <nav class="navbar navbar-expand-sm fixed-top mt-sm-2">
+      <nav className="navbar navbar-expand-sm fixed-top mt-sm-2">
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#header-nav"
@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <div class="navbar-toggler-burger">
+          <div className="navbar-toggler-burger">
             <span className="burger burger1"></span>
             <span className="burger burger2"></span>
             <span className="burger burger3"></span>
@@ -34,10 +34,10 @@ const Header = ({ siteTitle }) => {
           </div>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-center"
+          className="collapse navbar-collapse justify-content-center"
           id="header-nav"
         >
-          <div class="navbar-nav">
+          <div className="navbar-nav">
             {data.allHeadlineTextJson.edges.map(link => {
               return (
                 <a

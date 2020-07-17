@@ -35,7 +35,6 @@ const ProjectModal = ({ content }) => (
             data-ride="carousel"
           >
             <div className="carousel-inner">
-              {console.log(content.modalImages)}
               {content.modalImages.map((image, index) => {
                 return (
                   <div
