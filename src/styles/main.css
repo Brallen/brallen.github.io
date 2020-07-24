@@ -151,6 +151,8 @@ strong {
 .navbar-nav {
   background-color: #fff;
   width: 150px;
+  border-radius: 15px;
+  border: 1px solid #1e2d32;
 }
 
 .navbar-nav .nav-item {
@@ -205,8 +207,12 @@ strong {
 }
 
 .card {
+  overflow: hidden;
+  justify-content: center;
   border: none;
-  border-radius: 0;
+  border-radius: 15px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-img {
@@ -217,7 +223,7 @@ strong {
 
 @media only screen and (min-device-width: 768px) {
   .card {
-    height: 20rem;
+    min-height: 20rem;
   }
 
   .card-img {
@@ -240,7 +246,7 @@ strong {
 }
 
 .btn {
-  border-radius: 0;
+  border-radius: 10px;
   background-color: #1e2d32;
   color: #ffffff;
 }
@@ -271,7 +277,7 @@ strong {
 
 .modal-content {
   border: none;
-  border-radius: 0;
+  border-radius: 15px;
 }
 
 .modal-header {
