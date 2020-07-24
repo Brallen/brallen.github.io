@@ -1,6 +1,5 @@
 import React from "react"
 import Landscape from "../../images/landscape.svg"
-import Reflection from "../../images/reflection.svg"
 
 const Marquee = () => (
   <section className="main-marquee">
@@ -12,7 +11,6 @@ const Marquee = () => (
     </div>
 
     <img src={Landscape} className="mountains" alt="mountain landscape" />
-    <img src={Reflection} className="reflection" alt="reflection" />
   </section>
 )
 

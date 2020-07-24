@@ -182,23 +182,14 @@ strong {
 }
 
 .mountains,
-.reflection,
 .footer-logo {
   width: 300%;
   margin-left: -120%;
   max-width: initial;
 }
 
-.reflection {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  opacity: 0.4;
-}
-
 @media only screen and (min-device-width: 576px) {
   .mountains,
-  .reflection,
   .footer-logo {
     width: 200%;
     margin-left: -50%;
@@ -207,7 +198,6 @@ strong {
 
 @media only screen and (min-device-width: 768px) {
   .mountains,
-  .reflection,
   .footer-logo {
     width: 120%;
     margin-left: -11%;
