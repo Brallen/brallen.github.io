@@ -1,7 +1,6 @@
 body {
   background-color: #fff1e5;
   color: #1e2d32;
-  overflow-x: hidden;
   font-family: houschka-rounded, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -186,6 +185,7 @@ em {
   background-color: #d9f5fd;
   position: relative;
   padding-top: 72px;
+  overflow: hidden;
 }
 
 .mountains,
@@ -309,4 +309,8 @@ em {
   position: relative;
   top: -6rem;
   visibility: hidden;
+}
+
+footer {
+  overflow: hidden;
 }
