@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "brallen-personal-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal website to showcase dev",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Brett Case <brett.case97@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.5.0",
     "gatsby": "^2.23.3",
@@ -33,14 +33,13 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Brallen/brallen.github.io"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Brallen/brallen.github.io/issues"
   }
 }

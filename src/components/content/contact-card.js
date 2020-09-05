@@ -12,7 +12,7 @@ const ContactCard = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <strong>github</strong>.com/<strong>brallen</strong>
+            github<em>.com/</em>brallen
           </a>
           <a
             className="card-contact-link"
@@ -20,7 +20,7 @@ const ContactCard = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <strong>linkedin</strong>.com/in/<strong>brettcase</strong>
+            linkedin<em>.com/in/</em>brettcase
           </a>
           <p className="card-text mt-3">Or send me an email at</p>
           <a
@@ -29,7 +29,7 @@ const ContactCard = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <strong>brett.case97</strong>@<strong>gmail</strong>.com
+            brett.case97<em>@</em>gmail<em>.com</em>
           </a>
         </div>
       </div>
