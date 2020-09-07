@@ -304,6 +304,39 @@ em {
   margin: 1.5rem auto;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+  color: #1e2d32;
+  font-size: 1.6rem;
+  opacity: 0.7;
+}
+
+.carousel-control-next i,
+.carousel-control-prev i {
+  position: relative;
+}
+
+.carousel-control-next i::after,
+.carousel-control-prev i::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-color: #ffffff;
+  width: 1.49rem;
+  height: 1.49rem;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.carousel-control-next:focus,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:hover {
+  color: #1e2d32;
+  opacity: 1;
+}
+
 .anchor {
   display: block;
   position: relative;

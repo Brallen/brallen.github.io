@@ -15,6 +15,10 @@ export default function HTML(props) {
           rel="stylesheet"
           href="https://use.typekit.net/tts5cfx.css"
         ></link>
+        <script
+          src="https://kit.fontawesome.com/c96c6c974a.js"
+          crossorigin="anonymous"
+        ></script>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
