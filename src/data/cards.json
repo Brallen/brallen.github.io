@@ -35,9 +35,9 @@
   },
   {
     "cardName": "developer",
-    "headline": "developer.wacom.com",
+    "headline": "Wacom Developer",
     "flairText": "February 2020 - March 2020",
-    "shortDescription": "Developer site showcasing different APIs and SDKs that Wacom has to offer.",
+    "shortDescription": "Developer site showcasing different APIs and SDKs that Wacom has to offer. Site offers downloads and documentation for Wacom tools.",
     "keyPoints": [
       "Tech lead",
       "Built most of the components from scratch",
@@ -54,10 +54,10 @@
     "cardName": "teslar",
     "headline": "Teslar",
     "flairText": "September 2018 - June 2019",
-    "shortDescription": "Web App made to mimic the official Tesla application. App offers control of the car such as turning on and off the Tesla, starting the car, media and climate controls, and summoning.",
+    "shortDescription": "Web App made to mimic the official Tesla application. App offers control of the car such as turning on and off the car, media and climate controls, and summoning.",
     "keyPoints": [
-      "Team captain",
-      "Led design and implementation",
+      "Team captain for 5 members",
+      "Led design and implementation over course of 9 months",
       "Handled all front end work (HTML, SASS, JavaScript)",
       "Created API calls to mimic official Tesla functionality (NodeJS)"
     ],
