@@ -4,7 +4,15 @@
     "headline": "account.wacom.com",
     "flairText": "October 2019 - January 2020",
     "shortDescription": "Website to register products, redeem software, and update profile information.",
-    "longDescription": "Website to register products, redeem software, and update profile information. I was tech lead, designed the workflow for sign in/sign up, built most components, integrated components with a CMS, handled data privacy for accounts.",
+    "keyPoints": [
+      "Tech lead",
+      "Designed Sign In/Sign Up workflow",
+      "Built most components",
+      "Integrated components with a CMS",
+      "handled data privacy requirements for GDPR and CCPA",
+      "Integrated Google Analytics",
+      "Handled internationalization of site language support and video providers"
+    ],
     "modalLink": {
       "url": "https://account.wacom.com",
       "text": "View Site"
@@ -15,7 +23,11 @@
     "headline": "Spotiguess",
     "flairText": "February 2019",
     "shortDescription": "Android app using Spotify API to get a random song, play a preview, and have the user guess from 4 choices which song it is.",
-    "longDescription": "Android app using Spotify API to get a random song, play a preview, and have the user guess from 4 choices which song it is. Team of 4 designed and built in 2 weeks. I was responsible for the overall design, API calls, and settings (Java).",
+    "keyPoints": [
+      "Responsible for overall design (Adobe XD)",
+      "Created all API calls to Spotify (Java)",
+      "Created Settings page to adjust genre and number of rounds (Java)"
+    ],
     "modalLink": {
       "url": "https://github.com/spotiguess-guessthatname/GuessThatName",
       "text": "View on GitHub"
@@ -26,7 +38,13 @@
     "headline": "developer.wacom.com",
     "flairText": "February 2020 - March 2020",
     "shortDescription": "Developer site showcasing different APIs and SDKs that Wacom has to offer.",
-    "longDescription": "Developer site showcasing different APIs and SDKs that Wacom has to offer. I was tech lead, built most of the components, and integrated components with a CMS.",
+    "keyPoints": [
+      "Tech lead",
+      "Built most of the components from scratch",
+      "Integrated components with a CMS",
+      "Retrofit old Dashboard to work with new components and SDK downloads",
+      "Handled internationalization of site language support and video providers"
+    ],
     "modalLink": {
       "url": "https://developer.wacom.com",
       "text": "View Site"
@@ -37,7 +55,12 @@
     "headline": "Teslar",
     "flairText": "September 2018 - June 2019",
     "shortDescription": "Web App made to mimic the official Tesla application. App offers control of the car such as turning on and off the Tesla, starting the car, media and climate controls, and summoning.",
-    "longDescription": "Web App made to mimic the official Tesla application. App offers control of the car such as turning on and off the Tesla, starting the car, media and climate controls, and summoning. Team of 5 designed and built over the course of 9 months. I was the team captain, led design and implementation, handled all front end work (HTML, SASS, JavaScript), and some API calls (NodeJS).",
+    "keyPoints": [
+      "Team captain",
+      "Led design and implementation",
+      "handled all front end work (HTML, SASS, JavaScript)",
+      "Created API calls to mimic official Tesla functionality (NodeJS)"
+    ],
     "modalLink": {
       "url": "https://github.com/Brallen/Tesla_Capstone",
       "text": "View on GitHub"
@@ -48,7 +71,11 @@
     "headline": "Creative Enterprise",
     "flairText": "June 2018 - September 2018",
     "shortDescription": "Website to showcase the uses of Wacom tablets in a business to business scenario.",
-    "longDescription": "Website to showcase the uses of Wacom tablets in a business to business scenario. I built many components and integrated components with a CMS.",
+    "keyPoints": [
+      "Built many of the components",
+      "Integrated components with a CMS",
+      "Handled internationalization of site including language support and video providers"
+    ],
     "modalLink": {
       "url": "https://creativeenterprise.wacom.com/en-us",
       "text": "View Site"

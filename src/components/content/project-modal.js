@@ -35,22 +35,20 @@ const ProjectModal = ({ content }) => (
             data-ride="carousel"
           >
             <div className="carousel-inner">
-              {content.modalImages.map((image, index) => {
-                return (
-                  <div
-                    className={`carousel-item ${index === 0 ? "active" : ""}`}
-                    key={index}
-                  >
-                    {image !== undefined && (
-                      <Img
-                        fluid={image.node.childImageSharp.fluid}
-                        className="card-img"
-                        imgStyle={{ objectFit: "contain" }}
-                      />
-                    )}
-                  </div>
-                )
-              })}
+              {content.modalImages.map((image, index) => (
+                <div
+                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+                  key={index}
+                >
+                  {image !== undefined && (
+                    <Img
+                      fluid={image.node.childImageSharp.fluid}
+                      className="card-img"
+                      imgStyle={{ objectFit: "contain" }}
+                    />
+                  )}
+                </div>
+              ))}
             </div>
             <a
               className="carousel-control-prev"
@@ -78,7 +76,13 @@ const ProjectModal = ({ content }) => (
             </a>
           </div>
           <div className="modal-text text-center">
-            <p>{content.longDescription}</p>
+            <p className="text-left">{content.shortDescription}</p>
+            <p className="text-left mb-1">My contributions:</p>
+            <ul className="text-left mb-4">
+              {content.keyPoints.map((bullet, index) => (
+                <li key={index}>{bullet}</li>
+              ))}
+            </ul>
             <a
               href={content.modalLink.url}
               className="btn"

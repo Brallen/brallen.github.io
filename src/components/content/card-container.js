@@ -13,7 +13,7 @@ const CardContainer = () => {
             headline
             flairText
             shortDescription
-            longDescription
+            keyPoints
             modalLink {
               url
               text
