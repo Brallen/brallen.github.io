@@ -42,6 +42,12 @@ h3::after {
   margin: 10px auto 0;
 }
 
+h5 {
+  font-family: ff-basic-gothic-pro, sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
 p {
   font-size: 1rem;
   line-height: 2rem;
