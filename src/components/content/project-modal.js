@@ -11,7 +11,7 @@ const ProjectModal = ({ content }) => (
     aria-hidden="true"
   >
     <div
-      className="modal-dialog modal-dialog-centered modal-md"
+      className="modal-dialog modal-dialog-centered modal-lg"
       role="document"
     >
       <div className="modal-content px-md-4">
