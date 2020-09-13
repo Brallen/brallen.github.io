@@ -6,7 +6,7 @@ const Marquee = () => (
     <div className="container">
       <div className="text-center">
         <h1 className="col-12">Brett Case</h1>
-        <h2 className="col-12">Full Stack Developer</h2>
+        <h2 className="col-12">Software Engineer</h2>
       </div>
     </div>
 

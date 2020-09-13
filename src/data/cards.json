@@ -1,7 +1,7 @@
 [
   {
     "cardName": "account",
-    "headline": "account.wacom.com",
+    "headline": "Wacom ID",
     "flairText": "October 2019 - January 2020",
     "shortDescription": "Website to register products, redeem software, and update profile information.",
     "keyPoints": [
@@ -35,7 +35,7 @@
   },
   {
     "cardName": "developer",
-    "headline": "Wacom Developer",
+    "headline": "Wacom for Developers",
     "flairText": "February 2020 - March 2020",
     "shortDescription": "Developer site showcasing different APIs and SDKs that Wacom has to offer. Site offers downloads and documentation for Wacom tools.",
     "keyPoints": [

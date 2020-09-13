@@ -2,11 +2,11 @@
   {
     "id": "whoami",
     "headline": "Who am I?",
-    "text": "Hello, I am a 23 year old developer currently working for Wacom in their web services department. I enjoy working with all things web related"
+    "text": "Hello! I am a 23 year old developer currently working for Wacom in their web services department. I enjoy working with front-end web technologies, APIs, and designers to create websites that are intuitive and fast."
   },
   {
-    "id": "stuffivebuilt",
-    "headline": "Stuff I've Built"
+    "id": "projects",
+    "headline": "Projects"
   },
   {
     "id": "contact",

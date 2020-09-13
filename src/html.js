@@ -17,7 +17,7 @@ export default function HTML(props) {
         ></link>
         <script
           src="https://kit.fontawesome.com/c96c6c974a.js"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
         {props.headComponents}
       </head>

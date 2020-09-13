@@ -11,7 +11,7 @@ const IndexPage = () => (
     <SEO title="Homepage" />
     <Marquee />
     <HeadlineWithText id="whoami" />
-    <HeadlineWithText id="stuffivebuilt" />
+    <HeadlineWithText id="projects" />
     <CardContainer />
     <HeadlineWithText id="contact" />
     <ContactCard />
