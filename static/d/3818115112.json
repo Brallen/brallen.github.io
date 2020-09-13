@@ -1,1 +1,1 @@
-{"data":{"allHeadlineTextJson":{"edges":[{"node":{"id":"whoami","headline":"Who am I?"}},{"node":{"id":"stuffivebuilt","headline":"Stuff I've Built"}},{"node":{"id":"contact","headline":"Contact"}}]}}}
+{"data":{"allHeadlineTextJson":{"edges":[{"node":{"id":"whoami","headline":"Who am I?"}},{"node":{"id":"projects","headline":"Projects"}},{"node":{"id":"contact","headline":"Contact"}}]}}}
