@@ -56,7 +56,7 @@ const ProjectModal = ({ content }) => (
               role="button"
               data-slide="prev"
             >
-              <i class="fas fa-arrow-circle-left"></i>
+              <i className="fas fa-arrow-circle-left"></i>
               <span className="sr-only">Previous</span>
             </a>
             <a
@@ -65,7 +65,7 @@ const ProjectModal = ({ content }) => (
               role="button"
               data-slide="next"
             >
-              <i class="fas fa-arrow-circle-right"></i>
+              <i className="fas fa-arrow-circle-right"></i>
               <span className="sr-only">Next</span>
             </a>
           </div>

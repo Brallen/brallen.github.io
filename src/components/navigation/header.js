@@ -1,7 +1,23 @@
 import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
+  const autoScroll = e => {
+    if (e.target) {
+      const scrollTarget = document.querySelector(e.target.hash).offsetTop
+      window.scroll({
+        top: scrollTarget,
+        behavior: "smooth",
+      })
+      document.querySelector(".navbar-toggler").click()
+    }
+  }
+
+  const onClick = e => {
+    e.preventDefault()
+    autoScroll(e)
+  }
+
   const data = useStaticQuery(graphql`
     query {
       allHeadlineTextJson {
@@ -44,6 +60,7 @@ const Header = ({ siteTitle }) => {
                   className="nav-item nav-link px-4"
                   href={`#${link.node.id}`}
                   key={link.node.id}
+                  onClick={onClick}
                 >
                   {link.node.headline}
                 </a>
