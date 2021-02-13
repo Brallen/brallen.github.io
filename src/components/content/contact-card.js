@@ -1,4 +1,5 @@
 import React from "react"
+import ContactForm from "../shared/contact-form"
 
 const ContactCard = () => (
   <section className="cards-container component container">
@@ -22,15 +23,8 @@ const ContactCard = () => (
           >
             linkedin<em>.com/in/</em>brettcase
           </a>
-          <p className="card-text mt-3">Or send me an email at</p>
-          <a
-            className="card-contact-link"
-            href="mailto:brett.case97@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            brett.case97<em>@</em>gmail<em>.com</em>
-          </a>
+          <p className="card-text mt-3">Or send me an email to get in touch</p>
+          <ContactForm />
         </div>
       </div>
     </div>

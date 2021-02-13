@@ -266,6 +266,10 @@ em {
   color: #ffffff;
 }
 
+form .btn:hover {
+  background-color: #ca9954;
+}
+
 .card-contact {
   text-align: center;
 }
