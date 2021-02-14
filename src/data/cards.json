@@ -34,19 +34,18 @@
     }
   },
   {
-    "cardName": "developer",
-    "headline": "Wacom for Developers",
-    "flairText": "February 2020 - March 2020",
-    "shortDescription": "Developer site showcasing different APIs and SDKs that Wacom has to offer. Site offers downloads and documentation for Wacom tools.",
+    "cardName": "events",
+    "headline": "Wacom Events",
+    "flairText": "March 2020 - June 2020",
+    "shortDescription": "Website to register for in-person and digital Wacom hosted events ",
     "keyPoints": [
-      "Tech lead for the 3 weeks of develop time",
-      "Built most of the components from scratch",
-      "Integrated components with a CMS",
-      "Retrofit old Dashboard to work with new components and SDK downloads",
-      "Handled internationalization of site language support and video providers"
+      "Built many static components",
+      "Designed and built modular and customizable 'add to calendar' component",
+      "Helped design and build modular form component for use in all sign ups",
+      "Integrated components with a CMS"
     ],
     "modalLink": {
-      "url": "https://developer.wacom.com",
+      "url": "https://www.wacom.com/events",
       "text": "View Site"
     }
   },
@@ -66,6 +65,24 @@
       "text": "View on GitHub"
     }
   },
+  {
+    "cardName": "developer",
+    "headline": "Wacom for Developers",
+    "flairText": "February 2020 - March 2020",
+    "shortDescription": "Developer site showcasing different APIs and SDKs that Wacom has to offer. Site offers downloads and documentation for Wacom tools.",
+    "keyPoints": [
+      "Tech lead for the 3 weeks of develop time",
+      "Built most of the components from scratch",
+      "Integrated components with a CMS",
+      "Retrofit old Dashboard to work with new components and SDK downloads",
+      "Handled internationalization of site language support and video providers"
+    ],
+    "modalLink": {
+      "url": "https://developer.wacom.com",
+      "text": "View Site"
+    }
+  },
+
   {
     "cardName": "creativeenterprise",
     "headline": "Creative Enterprise",
