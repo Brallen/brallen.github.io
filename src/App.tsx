@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import FourOhFourPage from './pages/404';
 import HomePage from './pages/Home';
-import DefaultFooter from './shared/navigation/footer/DefaultFooter';
+import Footer from './shared/navigation/Footer';
 import DefaultHeader from './shared/navigation/header/DefaultHeader';
 import LightTheme from './util/LightTheme';
 
@@ -25,7 +25,7 @@ const App: React.FC = () => (
               <Route path="*" element={<FourOhFourPage />} />
             </Routes>
           </Box>
-          <DefaultFooter />
+          <Footer />
         </ThemeProvider>
       </StyledEngineProvider>
     </Router>

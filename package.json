@@ -6,6 +6,7 @@
   "author": "Brett Case",
   "private": true,
   "devDependencies": {
+    "@svgr/webpack": "6.1.2",
     "@types/react": "17.0.15",
     "@types/react-dom": "17.0.9",
     "@types/react-router-dom": "5.3.2",

@@ -18,6 +18,11 @@ module.exports = {
         include: path.resolve(__dirname, 'src'),
         use: 'ts-loader',
       },
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: [ '@svgr/webpack' ],
+      },
     ],
   },
   resolve: {

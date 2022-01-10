@@ -9,7 +9,8 @@
     "noImplicitAny": true
   },
   "include": [
-      "src/**/*"
+      "src/**/*",
+      "src/custom.d.ts"
   ],
   "exclude": [
     "node_modules",
