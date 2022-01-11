@@ -21,12 +21,10 @@ const lightTheme = createTheme({
 
     primary: {
       main: '#fb631d',
-      dark: '#9a5131',
     },
 
     secondary: {
       main: '#62b2cc',
-      dark: '#2f6a87',
     },
 
     error: {
@@ -74,7 +72,7 @@ const lightTheme = createTheme({
 
     background: {
       paper: '#fff',
-      default: '#e7e7e7',
+      default: '#fff1e5',
     },
   },
 

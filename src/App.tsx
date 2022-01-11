@@ -21,7 +21,6 @@ const App: React.FC = () => (
           <Box component="main">
             <Routes>
               <Route path="/" element={<HomePage />} />
-              {/* 404 page */}
               <Route path="*" element={<FourOhFourPage />} />
             </Routes>
           </Box>

@@ -1,7 +1,11 @@
 import React from 'react';
 
+import Marquee from '../features/Marquee';
+
 const HomePage: React.FC = () => {
-  return <h1>Test</h1>;
+  return (
+    <Marquee />
+  );
 };
 
 export default HomePage;

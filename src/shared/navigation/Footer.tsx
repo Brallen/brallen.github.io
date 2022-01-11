@@ -6,13 +6,10 @@ import { Box, SxProps } from '@mui/system';
 import Trees from '../../images/trees.svg';
 
 const classes: { [className: string]: SxProps } = {
-  container: {
-    position: 'relative',
-  },
   trees: {
     width: 'inherit',
     height: 'inherit',
-    position: 'absolute',
+    position: 'relative',
     left: '50%',
     transform: 'translateX(-50%)',
   },
@@ -20,7 +17,7 @@ const classes: { [className: string]: SxProps } = {
 
 const Footer: React.FC = () => {
   return (
-    <Box>
+    <Box component="footer">
       <SvgIcon component={Trees} sx={classes.trees} viewBox="0 0 2607 227" />
     </Box>
   );
