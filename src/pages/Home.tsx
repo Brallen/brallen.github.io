@@ -12,6 +12,12 @@ const cards: ProjectCardProps[] = [
     flairText: 'Flair Text',
     shortDescription: 'Short Description',
   },
+  {
+    imageUrl: 'https://source.unsplash.com/random/800x600',
+    headline: 'Headline',
+    flairText: 'Flair Text',
+    shortDescription: 'Short Description',
+  },
 ];
 
 const HomePage: React.FC = () => {
