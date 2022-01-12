@@ -15,16 +15,17 @@ const lightTheme = createTheme({
 
   palette: {
     common: {
-      black: '#221b17',
+      black: '#1e2d32',
       white: '#ffffff',
     },
 
     primary: {
-      main: '#fb631d',
+      main: '#4f6563',
+      dark: '#1e2d32',
     },
 
     secondary: {
-      main: '#62b2cc',
+      main: '#ca9954',
     },
 
     error: {
@@ -36,34 +37,17 @@ const lightTheme = createTheme({
     },
 
     info: {
-      main: '#62b2cc',
+      main: '#d9f5fd',
     },
 
     success: {
       main: '#62b2cc',
     },
 
-    grey: {
-      50: '#fafafa',
-      100: '#f5f5f5',
-      200: '#eeeeee',
-      300: '#e0e0e0',
-      400: '#bdbdbd',
-      500: '#9e9e9e',
-      600: '#757575',
-      700: '#616161',
-      800: '#424242',
-      900: '#3b3735',
-      A100: '#f5f5f5',
-      A200: '#eeeeee',
-      A400: '#bdbdbd',
-      A700: '#616161',
-    },
-
     contrastThreshold: 4.5,
 
     text: {
-      primary: '#221b17',
+      primary: '#1e2d32',
       secondary: '#ffffff',
       disabled: '#9e9e9e',
     },
@@ -78,46 +62,47 @@ const lightTheme = createTheme({
 
   typography: {
     h1: {
-      fontFamily: 'Black Ops One, sans-serif',
-      fontWeight: 800,
+      letterSpacing: '0.1em',
+      fontFamily: 'ff-basic-gothic-pro, sans-serif',
+      fontWeight: 700,
+      fontSize: '3rem',
+      lineHeight: '4rem',
     },
     h2: {
-      fontSize: '2.25rem',
-      fontFamily: 'Black Ops One, sans-serif',
-      fontWeight: 800,
+      letterSpacing: '0.15em',
+      fontFamily: 'houschka-rounded, sans-serif',
+      fontWeight: 300,
+      fontSize: '2rem',
+      lineHeight: '3rem',
     },
     h3: {
-      fontSize: '1.75rem',
-      fontFamily: 'Black Ops One, sans-serif',
-      fontWeight: 800,
+      fontFamily: 'ff-basic-gothic-pro, sans-serif',
+      fontWeight: 400,
+      fontSize: '1.8rem',
+      lineHeight: '2.5rem',
     },
     h4: {
-      fontFamily: 'Lato, sans-serif',
-      fontWeight: 600,
-    },
-    h5: {
-      fontFamily: 'Black Ops One, sans-serif',
+      fontFamily: 'ff-basic-gothic-pro, sans-serif',
       fontWeight: 400,
-    },
-    h6: {
-      fontFamily: 'Lato, sans-serif',
-      fontWeight: 400,
+      fontSize: '1.4rem',
     },
     subtitle1: {
       fontFamily: 'Lato, sans-serif',
       fontWeight: 400,
     },
     body1: {
-      fontFamily: 'Lato, sans-serif',
-      fontWeight: 400,
-    },
-    body2: {
-      fontFamily: 'Lato, sans-serif',
-      fontWeight: 700,
+      fontFamily: 'houschka-rounded, sans-serif',
+      fontWeight: 500,
+      fontStyle: 'normal',
+      fontSize: '1rem',
+      lineHeight: 2,
     },
     button: {
-      fontFamily: 'Lato, sans-serif',
-      fontWeight: 400,
+      fontFamily: 'houschka-rounded, sans-serif',
+      fontWeight: 500,
+      fontStyle: 'normal',
+      fontSize: '1rem',
+      lineHeight: 2,
     },
   },
 });

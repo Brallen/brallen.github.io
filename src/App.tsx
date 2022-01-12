@@ -11,20 +11,22 @@ import DefaultHeader from './shared/navigation/header/DefaultHeader';
 import LightTheme from './util/LightTheme';
 
 const App: React.FC = () => (
-  <Box className="app" sx={{ mt: 9 }}>
+  <Box className="app">
     <Router>
       <CssBaseline />
 
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={LightTheme}>
-          <DefaultHeader />
-          <Box component="main">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="*" element={<FourOhFourPage />} />
-            </Routes>
+          <Box sx={{ backgroundColor: 'background.default' }}>
+            <DefaultHeader />
+            <Box component="main">
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="*" element={<FourOhFourPage />} />
+              </Routes>
+            </Box>
+            <Footer />
           </Box>
-          <Footer />
         </ThemeProvider>
       </StyledEngineProvider>
     </Router>

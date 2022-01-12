@@ -6,42 +6,34 @@ import { Box, SxProps } from '@mui/system';
 import Landscape from '../images/landscape.svg';
 
 const classes: { [className: string]: SxProps } = {
+  background: {
+    backgroundColor: 'info.main',
+    overflowX: 'hidden',
+  },
+  titleText: {
+    pt: 8,
+  },
+  accentText: {
+    pb: 8,
+  },
   image: {
-    width: 'inherit',
-    height: 'inherit',
+    width: { xs: '200vw', md: '140vw' },
+    height: 'auto',
     position: 'relative',
     left: '50%',
     transform: 'translateX(-50%)',
+    display: 'block',
   },
 };
 
 const Marquee: React.FC = () => {
   return (
-    <Box component="section" >
-      <Typography variant="h1" align="center">Brett Case</Typography>
-      <Typography variant="h2" align="center">Software Engineer</Typography>
+    <Box component="section" sx={classes.background}>
+      <Typography variant="h1" align="center" sx={classes.titleText}>Brett Case</Typography>
+      <Typography variant="h2" align="center" sx={classes.accentText}>Software Engineer</Typography>
       <SvgIcon component={Landscape} sx={classes.image} viewBox="0 0 2665 886" />
     </Box>
   );
 };
 
 export default Marquee;
-
-
-// import React from "react"
-// import Landscape from "../../images/landscape.svg"
-
-// const Marquee = () => (
-//   <section className="main-marquee">
-//     <div className="container">
-//       <div className="text-center">
-//         <h1 className="col-12">Brett Case</h1>
-//         <h2 className="col-12">Software Engineer</h2>
-//       </div>
-//     </div>
-
-//     <img src={Landscape} className="mountains" alt="mountain landscape" />
-//   </section>
-// )
-
-// export default Marquee
