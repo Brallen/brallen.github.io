@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Typography } from '@mui/material';
-import { Box } from '@mui/system';
 
+import ContentLayout from '../shared/layout/ContentLayout';
 import Headline from '../shared/partials/Headline';
 
 type CopyBlockProps = Readonly<{
@@ -12,20 +12,15 @@ type CopyBlockProps = Readonly<{
 
 const CopyBlock: React.FC<CopyBlockProps> = ({ headline, text }) => {
   return (
-    <>
-      <div id={headline?.toLowerCase().replace(' ', '')} className="anchor"></div>
-      <Box component="section" >
-        {headline !== undefined && (
-          <Headline>{headline}</Headline>
-        )}
-      </Box>
+    <ContentLayout>
+      {headline !== undefined && (
+        <Headline>{headline}</Headline>
+      )}
 
-      <Box component="section" >
-        {text !== undefined && (
-          <Typography variant="body1" align="center">{text}</Typography>
-        )}
-      </Box>
-    </>
+      {text !== undefined && (
+        <Typography variant="body1" align="center">{text}</Typography>
+      )}
+    </ContentLayout>
   );
 };
 

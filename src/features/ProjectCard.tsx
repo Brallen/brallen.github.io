@@ -15,9 +15,17 @@ const classes: { [className: string]: SxProps } = {
     py: { xs: 0, md: 4 },
     pl: { xs: 0, md: 4 },
   },
-  textContainer: {
+  textGridItem: {
     display: 'flex',
     alignItems: 'center',
+  },
+  textContainer: {
+    pt: { xs: 0, md: 4 },
+    pr: 4,
+    pb: 4,
+    pl: { xs: 4, md: 0 },
+    width: '100%',
+    textAlign: { xs: 'center', md: 'left' },
   },
 };
 
@@ -40,16 +48,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, headline, flairText
           <Box sx={classes.imageContainer}>
             <CardMedia
               component="img"
-              // alt="green iguana"
+              alt="Project Image" // update this with actual alt text
               image={imageUrl}
+              loading="lazy"
             />
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} sx={classes.textContainer}>
-          <Box >
+        <Grid item xs={12} md={6} sx={classes.textGridItem}>
+          <Box sx={classes.textContainer}>
             <Typography variant="h4">{headline}</Typography>
             <Typography variant="subtitle1">{flairText}</Typography>
-            <Typography variant="body1">{shortDescription}</Typography>
+            <Typography variant="body2">{shortDescription}</Typography>
             <Button variant="contained" disableElevation>{TEXT.buttonText}</Button>
           </Box>
         </Grid>

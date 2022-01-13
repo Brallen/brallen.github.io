@@ -84,7 +84,7 @@ const lightTheme = createTheme({
     h4: {
       fontFamily: 'ff-basic-gothic-pro, sans-serif',
       fontWeight: 400,
-      fontSize: '1.4rem',
+      fontSize: '1.5em',
     },
     subtitle1: {
       fontFamily: 'Lato, sans-serif',
@@ -95,14 +95,21 @@ const lightTheme = createTheme({
       fontWeight: 500,
       fontStyle: 'normal',
       fontSize: '1.25rem',
-      lineHeight: 2,
+      lineHeight: 1.75,
+    },
+    body2: {
+      fontFamily: 'houschka-rounded, sans-serif',
+      fontWeight: 500,
+      fontStyle: 'normal',
+      fontSize: '1.25rem',
+      lineHeight: 1.5,
     },
     button: {
       fontFamily: 'houschka-rounded, sans-serif',
       fontWeight: 500,
       fontStyle: 'normal',
-      fontSize: '1.25em',
-      lineHeight: 2,
+      fontSize: '1em',
+      lineHeight: 1.5,
     },
   },
 });

@@ -1,13 +1,7 @@
 import React from 'react';
 
-import { Container } from '@mui/material';
-import { SxProps } from '@mui/system';
-
+import ContentLayout from '../shared/layout/ContentLayout';
 import ProjectCard, { ProjectCardProps } from './ProjectCard';
-
-const classes: { [className: string]: SxProps } = {
-
-};
 
 type CardContainerProps = Readonly<{
   cards: ProjectCardProps[];
@@ -15,7 +9,7 @@ type CardContainerProps = Readonly<{
 
 const CardContainer: React.FC<CardContainerProps> = ({ cards }) => {
   return (
-    <Container component="section" maxWidth="md" sx={classes.background}>
+    <ContentLayout>
       {cards.map((card, index) => (
         <div key={`card-${index}`}>
           <ProjectCard
@@ -26,7 +20,7 @@ const CardContainer: React.FC<CardContainerProps> = ({ cards }) => {
           {/* <ProjectModal content={card.node} /> */}
         </div>
       ))}
-    </Container>
+    </ContentLayout>
   );
 };
 

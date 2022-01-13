@@ -17,7 +17,7 @@ const App: React.FC = () => (
 
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={LightTheme}>
-          <Box sx={{ backgroundColor: 'background.default' }}>
+          <Box sx={{ overflowX: 'hidden' }}>
             <DefaultHeader />
             <Box component="main">
               <Routes>
