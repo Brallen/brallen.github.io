@@ -7,25 +7,55 @@ const classes: { [className: string]: SxProps } = {
   card: {
     borderRadius: '15px',
     mb: 5,
+    '&:last-of-type': {
+      mb: 0,
+    },
   },
-  imageContainer: {
+  imageContainerLeft: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     py: { xs: 0, md: 4 },
     pl: { xs: 0, md: 4 },
   },
+  imageContainerRight: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    py: { xs: 0, md: 4 },
+    pr: { xs: 0, md: 4 },
+  },
   textGridItem: {
     display: 'flex',
     alignItems: 'center',
   },
-  textContainer: {
+  textContainerLeft: {
+    width: '100%',
+    textAlign: { xs: 'center', md: 'left' },
+    pt: { xs: 0, md: 4 },
+    pr: { xs: 4, md: 0 },
+    pb: 4,
+    pl: 4,
+  },
+  textContainerRight: {
+    width: '100%',
+    textAlign: { xs: 'center', md: 'left' },
     pt: { xs: 0, md: 4 },
     pr: 4,
     pb: 4,
     pl: { xs: 4, md: 0 },
-    width: '100%',
-    textAlign: { xs: 'center', md: 'left' },
+  },
+  flairText: {
+    mb: 2,
+  },
+  shortDescription: {
+    mb: 2,
+  },
+  button: {
+    borderRadius: '10px',
+    py: 1,
+    px: 2,
+    textTransform: 'none',
   },
 };
 
@@ -33,33 +63,38 @@ const TEXT = {
   buttonText: 'Learn More',
 };
 
-export type ProjectCardProps = Readonly<{
+export type ProjectCardContent = Readonly<{
   imageUrl: string,
   headline: string,
   flairText: string,
   shortDescription: string,
 }>;
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, headline, flairText, shortDescription }) => {
+type ProjectCardProps = Readonly<{
+  content: ProjectCardContent,
+  flipContent?: boolean,
+}>;
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false }) => {
   return (
     <Card elevation={0} sx={classes.card}>
       <Grid container spacing={4} sx={classes.container}>
-        <Grid item xs={12} md={6}>
-          <Box sx={classes.imageContainer}>
+        <Grid item xs={12} md={6} order={{ xs: 1, md: flipContent ? 2 : 1 }}>
+          <Box sx={flipContent ? classes.imageContainerRight : classes.imageContainerLeft}>
             <CardMedia
               component="img"
               alt="Project Image" // update this with actual alt text
-              image={imageUrl}
+              image={content.imageUrl}
               loading="lazy"
             />
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} sx={classes.textGridItem}>
-          <Box sx={classes.textContainer}>
-            <Typography variant="h4">{headline}</Typography>
-            <Typography variant="subtitle1">{flairText}</Typography>
-            <Typography variant="body2">{shortDescription}</Typography>
-            <Button variant="contained" disableElevation>{TEXT.buttonText}</Button>
+        <Grid item xs={12} md={6} sx={classes.textGridItem} order={{ xs: 2, md: flipContent ? 1 : 2 }}>
+          <Box sx={flipContent ? classes.textContainerLeft : classes.textContainerRight}>
+            <Typography variant="h4">{content.headline}</Typography>
+            <Typography variant="subtitle1" sx={classes.flairText}>{content.flairText}</Typography>
+            <Typography variant="body2" sx={classes.shortDescription}>{content.shortDescription}</Typography>
+            <Button variant="contained" disableElevation sx={classes.button}>{TEXT.buttonText}</Button>
           </Box>
         </Grid>
       </Grid>

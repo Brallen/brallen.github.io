@@ -8,11 +8,12 @@ import Headline from '../shared/partials/Headline';
 type CopyBlockProps = Readonly<{
   headline?: string;
   text?: string;
+  removeBottomPadding?: boolean;
 }>;
 
-const CopyBlock: React.FC<CopyBlockProps> = ({ headline, text }) => {
+const CopyBlock: React.FC<CopyBlockProps> = ({ headline, text, removeBottomPadding=false }) => {
   return (
-    <ContentLayout>
+    <ContentLayout removeBottomPadding={removeBottomPadding}>
       {headline !== undefined && (
         <Headline>{headline}</Headline>
       )}

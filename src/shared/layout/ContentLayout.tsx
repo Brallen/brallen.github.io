@@ -5,12 +5,12 @@ import { SxProps } from '@mui/system';
 
 const classes: { [className: string]: SxProps } = {
   container: {
-    pt: 7,
-    pb: 4.5,
+    pt: 3,
+    pb: 3,
     position: 'relative',
   },
-  removeBottomPadding: {
-    pt: 7,
+  containerNoPB: {
+    pt: 3,
     position: 'relative',
   },
 };

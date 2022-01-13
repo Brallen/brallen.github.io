@@ -5,7 +5,7 @@ import { SxProps } from '@mui/system';
 
 const classes: { [className: string]: SxProps } = {
   headline: {
-    mb: 3,
+    pb: 3,
 
     '&::after': {
       content: '""',
