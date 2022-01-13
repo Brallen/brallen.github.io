@@ -3,9 +3,9 @@ import React from 'react';
 import CardContainer from '../features/CardContainer';
 import CopyBlock from '../features/CopyBlock';
 import Marquee from '../features/Marquee';
-import { ProjectCardProps } from '../features/ProjectCard';
+import { ProjectCardContent } from '../features/ProjectCard';
 
-const cards: ProjectCardProps[] = [
+const cards: ProjectCardContent[] = [
   {
     imageUrl: 'https://source.unsplash.com/random/800x600',
     headline: 'Headline',
@@ -24,8 +24,10 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Marquee />
-      <CopyBlock headline="Who am I" text="This is the Home Page. It is the default page for the application." />
+      <CopyBlock headline="Who am I" text="Hello! I am a 23 year old software engineer currently working for Wacom in their web services department. I enjoy working with front-end web technologies, APIs, and designers to create websites that are intuitive and fast." />
+      <CopyBlock headline="Projects" removeBottomPadding/>
       <CardContainer cards={cards}/>
+      <CopyBlock headline="Contact" />
     </>
   );
 };
