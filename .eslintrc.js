@@ -63,5 +63,6 @@ module.exports = {
       },
     ],
     'no-unused-vars': [ 'warn', { args: 'none' }],
+    'require-jsdoc': 0,
   },
 };

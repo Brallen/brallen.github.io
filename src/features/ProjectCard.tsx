@@ -3,6 +3,8 @@ import React from 'react';
 import { Box, Button, Card, CardMedia, Grid, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 
+import { useDialogState } from '../util/DialogContext';
+
 const classes: { [className: string]: SxProps } = {
   card: {
     borderRadius: '15px',
@@ -76,6 +78,12 @@ type ProjectCardProps = Readonly<{
 }>;
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false }) => {
+  const { setIsDialogOpen } = useDialogState();
+
+  function toggleDialogOpen(): void {
+    setIsDialogOpen((currIsDialogOpen) => !currIsDialogOpen);
+  }
+
   return (
     <Card elevation={0} sx={classes.card}>
       <Grid container spacing={4} sx={classes.container}>
@@ -94,7 +102,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false 
             <Typography variant="h4">{content.headline}</Typography>
             <Typography variant="subtitle1" sx={classes.flairText}>{content.flairText}</Typography>
             <Typography variant="body2" sx={classes.shortDescription}>{content.shortDescription}</Typography>
-            <Button variant="contained" disableElevation sx={classes.button}>{TEXT.buttonText}</Button>
+            <Button variant="contained" disableElevation sx={classes.button} onClick={toggleDialogOpen}>{TEXT.buttonText}</Button>
           </Box>
         </Grid>
       </Grid>
