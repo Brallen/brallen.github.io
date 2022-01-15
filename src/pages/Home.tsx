@@ -1,24 +1,9 @@
 import React from 'react';
 
+import { cards } from '../data/cards';
 import CardContainer from '../features/CardContainer';
 import CopyBlock from '../features/CopyBlock';
 import Marquee from '../features/Marquee';
-import { ProjectCardContent } from '../features/ProjectCard';
-
-const cards: ProjectCardContent[] = [
-  {
-    imageUrl: 'https://source.unsplash.com/random/800x600',
-    headline: 'Headline',
-    flairText: 'Flair Text',
-    shortDescription: 'Short Description',
-  },
-  {
-    imageUrl: 'https://source.unsplash.com/random/800x600',
-    headline: 'Headline',
-    flairText: 'Flair Text',
-    shortDescription: 'Short Description',
-  },
-];
 
 const HomePage: React.FC = () => {
   return (

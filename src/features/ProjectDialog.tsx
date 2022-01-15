@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Button, Card, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Typography } from '@mui/material';
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 import { SxProps } from '@mui/system';
 
 import { useDialogState } from '../util/DialogContext';
@@ -13,22 +13,10 @@ const TEXT = {
   buttonText: 'Learn More',
 };
 
-export type ProjectDialogContent = Readonly<{
-  imageUrl: string,
-  headline: string,
-  flairText: string,
-  shortDescription: string,
-}>;
-
-type ProjectDialogProps = Readonly<{
-  content: ProjectDialogContent,
-  flipContent?: boolean,
-}>;
-
 // make this so it's only one modal that has content dynamically added using a shared modal content state
 // aka like what useDialogState does but with content instead of a bool
-const ProjectDialog: React.FC<ProjectDialogProps> = ({ content, flipContent = false }) => {
-  const { isDialogOpen, setIsDialogOpen } = useDialogState();
+const ProjectDialog: React.FC = () => {
+  const { dialogContent, isDialogOpen, setIsDialogOpen } = useDialogState();
 
   function toggleDialogOpen(): void {
     setIsDialogOpen((currIsDialogOpen) => !currIsDialogOpen);
@@ -42,7 +30,7 @@ const ProjectDialog: React.FC<ProjectDialogProps> = ({ content, flipContent = fa
       aria-labelledby="scroll-dialog-title"
       aria-describedby="scroll-dialog-description"
     >
-      <DialogTitle id="scroll-dialog-title">{flipContent ? 'hello 1' : 'hello 2'}</DialogTitle>
+      <DialogTitle id="scroll-dialog-title">{dialogContent?.text}</DialogTitle>
       <DialogContent>
         <DialogContentText
           id="scroll-dialog-description"

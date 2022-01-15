@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, Button, Card, CardMedia, Grid, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 
+import { ProjectCardContent } from '../shared/types/types';
 import { useDialogState } from '../util/DialogContext';
 
 const classes: { [className: string]: SxProps } = {
@@ -65,12 +66,6 @@ const TEXT = {
   buttonText: 'Learn More',
 };
 
-export type ProjectCardContent = Readonly<{
-  imageUrl: string,
-  headline: string,
-  flairText: string,
-  shortDescription: string,
-}>;
 
 type ProjectCardProps = Readonly<{
   content: ProjectCardContent,
@@ -78,10 +73,11 @@ type ProjectCardProps = Readonly<{
 }>;
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false }) => {
-  const { setIsDialogOpen } = useDialogState();
+  const { setDialogContent, setIsDialogOpen } = useDialogState();
 
   function toggleDialogOpen(): void {
     setIsDialogOpen((currIsDialogOpen) => !currIsDialogOpen);
+    setDialogContent(content.dialogContent);
   }
 
   return (
