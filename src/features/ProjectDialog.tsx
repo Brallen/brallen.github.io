@@ -1,12 +1,20 @@
 import React from 'react';
 
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
+import { Button, Dialog, DialogContent, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 
 import { useDialogState } from '../util/DialogContext';
 
 const classes: { [className: string]: SxProps } = {
-
+  dialogContent: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  title: {
+    py: 2,
+    px: 3,
+  },
 };
 
 const TEXT = {
@@ -30,19 +38,15 @@ const ProjectDialog: React.FC = () => {
       aria-labelledby="scroll-dialog-title"
       aria-describedby="scroll-dialog-description"
     >
-      <DialogTitle id="scroll-dialog-title">{dialogContent?.text}</DialogTitle>
-      <DialogContent>
-        <DialogContentText
-          id="scroll-dialog-description"
-          tabIndex={-1}
-        >
-
-        </DialogContentText>
+      <Typography id="scroll-dialog-title" variant="h3" sx={classes.title}>Headline</Typography>
+      <DialogContent sx={classes.dialogContent}>
+        <ul>
+          {dialogContent?.keyPoints.map((item, index) => (
+            <Typography key={`keyPoint-${index}`} component={'li'} variant="body2">{item}</Typography>
+          ))}
+        </ul>
+        <Button variant="contained" href={dialogContent?.linkUrl} rel="noreferrer nofollow" target="_blank">{dialogContent?.linkText}</Button>
       </DialogContent>
-      <DialogActions>
-        <Button onClick={toggleDialogOpen}>Cancel</Button>
-        <Button onClick={toggleDialogOpen}>Subscribe</Button>
-      </DialogActions>
     </Dialog>
   );
 };

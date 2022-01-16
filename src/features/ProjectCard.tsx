@@ -54,12 +54,6 @@ const classes: { [className: string]: SxProps } = {
   shortDescription: {
     mb: 2,
   },
-  button: {
-    borderRadius: '10px',
-    py: 1,
-    px: 2,
-    textTransform: 'none',
-  },
 };
 
 const TEXT = {
@@ -98,7 +92,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false 
             <Typography variant="h4">{content.headline}</Typography>
             <Typography variant="subtitle1" sx={classes.flairText}>{content.flairText}</Typography>
             <Typography variant="body2" sx={classes.shortDescription}>{content.shortDescription}</Typography>
-            <Button variant="contained" disableElevation sx={classes.button} onClick={toggleDialogOpen}>{TEXT.buttonText}</Button>
+            <Button variant="contained" disableElevation onClick={toggleDialogOpen}>{TEXT.buttonText}</Button>
           </Box>
         </Grid>
       </Grid>

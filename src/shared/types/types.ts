@@ -7,7 +7,7 @@ export type ProjectCardContent = Readonly<{
 }>;
 
 export type DialogContent = Readonly<{
-  text: string;
+  keyPoints: string[];
   linkText: string;
   linkUrl: string;
 }>;

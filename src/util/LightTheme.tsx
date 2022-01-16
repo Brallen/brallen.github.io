@@ -114,4 +114,22 @@ const lightTheme = createTheme({
   },
 });
 
+// Global styling overrides for MUI components
+lightTheme.components = {
+  MuiButton: {
+    styleOverrides: {
+      root: {
+        borderRadius: '10px',
+        textTransform: 'none',
+        padding: lightTheme.spacing(1, 2),
+        backgroundColor: lightTheme.palette.primary.dark,
+
+        '&:hover': {
+          backgroundColor: lightTheme.palette.primary.main,
+        },
+      },
+    },
+  },
+};
+
 export default lightTheme;
