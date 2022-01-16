@@ -82,7 +82,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false 
             <CardMedia
               component="img"
               alt="Project Image" // update this with actual alt text
-              image={content.imageUrl}
+              image={content.image.url}
               loading="lazy"
             />
           </Box>

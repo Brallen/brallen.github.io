@@ -1,5 +1,5 @@
 export type ProjectCardContent = Readonly<{
-  imageUrl: string,
+  image: ImageContent,
   headline: string,
   flairText: string,
   shortDescription: string,
@@ -7,7 +7,18 @@ export type ProjectCardContent = Readonly<{
 }>;
 
 export type DialogContent = Readonly<{
+  headline: string,
   keyPoints: string[];
-  linkText: string;
-  linkUrl: string;
+  images: ImageContent[];
+  link: LinkContent;
+}>;
+
+export type ImageContent = Readonly<{
+  url: string;
+  altText: string;
+}>;
+
+export type LinkContent = Readonly<{
+  text: string;
+  url: string;
 }>;
