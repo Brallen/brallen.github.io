@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import { Box, MobileStepper } from '@mui/material';
@@ -46,7 +47,7 @@ type CarouselProps = Readonly<{
 }>;
 
 const Carousel: React.FC<CarouselProps> = ({ images }) =>{
-  const [ activeSlide, setActiveSlide ] = React.useState<number>(0);
+  const [ activeSlide, setActiveSlide ] = useState<number>(0);
   const maxSteps = images.length;
 
   const handleNext = () => {

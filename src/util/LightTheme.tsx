@@ -86,9 +86,14 @@ const lightTheme = createTheme({
       fontWeight: 400,
       fontSize: '1.5em',
     },
+    h5: {
+      fontFamily: 'houschka-rounded, sans-serif',
+      fontWeight: 500,
+      fontSize: '1.5em',
+    },
     subtitle1: {
-      fontFamily: 'Lato, sans-serif',
-      fontWeight: 400,
+      fontFamily: 'houschka-rounded, sans-serif',
+      fontWeight: 500,
     },
     body1: {
       fontFamily: 'houschka-rounded, sans-serif',
@@ -122,10 +127,13 @@ lightTheme.components = {
         borderRadius: '10px',
         textTransform: 'none',
         padding: lightTheme.spacing(1, 2),
-        backgroundColor: lightTheme.palette.primary.dark,
 
-        '&:hover': {
-          backgroundColor: lightTheme.palette.primary.main,
+        containedPrimary: {
+          backgroundColor: lightTheme.palette.primary.dark,
+
+          '&:hover': {
+            backgroundColor: lightTheme.palette.primary.main,
+          },
         },
       },
     },

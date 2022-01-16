@@ -57,7 +57,7 @@ const ProjectDialog: React.FC = () => {
             <Typography key={`keyPoint-${index}`} component={'li'} variant="body2">{item}</Typography>
           ))}
         </ul>
-        <Button variant="contained" href={dialogContent?.link.url} rel="noreferrer nofollow" target="_blank">{dialogContent?.link.text}</Button>
+        <Button variant="contained" disableElevation href={dialogContent?.link.url} rel="noreferrer nofollow" target="_blank">{dialogContent?.link.text}</Button>
       </DialogContent>
     </Dialog>
   );
