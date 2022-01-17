@@ -1,15 +1,49 @@
 import React, { useState } from 'react';
 
-import { Button, TextField, Typography } from '@mui/material';
+import { Button, Paper, TextField, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
+
+const classes: { [className: string]: SxProps } = {
+  formContainer: {
+    borderRadius: '15px',
+    maxWidth: '350px',
+    p: 4,
+  },
+  formField: {
+    display: 'flex',
+    mb: 2,
+  },
+  errorMessage: {
+    color: 'error.main',
+    pt: 2,
+  },
+};
 
 const ContactForm: React.FC = () => {
   const [ status, setStatus ] = useState<string>('');
+  const [ name, setName ] = useState<string>('');
+  const [ email, setEmail ] = useState<string>('');
+  const [ message, setMessage ] = useState<string>('');
+
+  const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setName(event.target.value);
+  };
+
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+
+  const handleMessageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setMessage(event.target.value);
+  };
 
   const submitForm = (ev: any) => {
     ev.preventDefault();
     const form = ev.target;
-    const data = new FormData(form);
+    const data = new FormData();
+    data.append('name', name);
+    data.append('email', email);
+    data.append('message', message);
     const xhr = new XMLHttpRequest();
     xhr.open(form.method, form.action);
     xhr.setRequestHeader('Accept', 'application/json');
@@ -26,65 +60,40 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form
-      onSubmit={submitForm}
-      action="https://formspree.io/f/mbjpejew"
-      method="POST"
-    >
-      <TextField
-        variant="outlined"
-        label="Name"
-        size="small"
-      />
-      <div className="mb-3 text-left">
-        <label htmlFor="email" className="form-label">
-              Name:
-        </label>
-        <input
-          type="text"
-          className="form-control"
-          id="name"
-          name="name"
-          aria-label="Your name"
+    <Paper sx={classes.formContainer}>
+      <form
+        onSubmit={submitForm}
+        action="https://formspree.io/f/mbjpejew"
+        method="POST"
+      >
+        <TextField size="small" label="Name" variant="outlined" sx={classes.formField} value={name} onChange={handleNameChange} />
+        <TextField size="small" label="Email address" variant="outlined" sx={classes.formField} value={email} onChange={handleEmailChange} />
+        <TextField
+          label="Message"
+          placeholder="Enter your message here"
+          multiline
+          rows={2}
+          maxRows={Infinity}
+          sx={classes.formField}
+          value={message}
+          onChange={handleMessageChange}
         />
-      </div>
-      <div className="mb-3 text-left">
-        <label htmlFor="email" className="form-label">
-              Email address:
-        </label>
-        <input
-          type="email"
-          className="form-control"
-          id="email"
-          name="email"
-          aria-label="email address"
-        />
-      </div>
-      <div className="mb-3 text-left">
-        <label htmlFor="message" className="form-label">
-              Message:
-        </label>
-        <textarea
-          className="form-control"
-          name="message"
-          id="message"
-          aria-label="message"
-          placeholder="Enter your message here..."
-        />
-      </div>
-      {status === 'SUCCESS' ? (
-        <Typography variant="body2">Thanks for reaching out! I will get back to you soon.</Typography>
-      ) : (
-        <Button variant="contained" disableElevation color="secondary" type="submit" aria-label="submit contact form">
-          Submit
-        </Button>
-      )}
-      {status === 'ERROR' && (
-        <Typography variant="body2" sx={{ color: 'error.main' }}>
-          Something has gone wrong! Please refresh the page and try again.
-        </Typography>
-      )}
-    </form>
+        {status === 'SUCCESS' ? (
+            <Typography variant="body2">
+              Thanks for reaching out! I will get back to you soon.
+            </Typography>
+          ) : (
+            <Button variant="contained" disableElevation type="submit" aria-label="submit contact form">
+              Submit
+            </Button>
+          )}
+        {status === 'ERROR' && (
+          <Typography variant="body2" sx={classes.errorMessage}>
+            Something has gone wrong! Please refresh the page and try again.
+          </Typography>
+        )}
+      </form>
+    </Paper>
   );
 };
 
