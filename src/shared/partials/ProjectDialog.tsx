@@ -4,8 +4,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Button, Dialog, DialogContent, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 
-import { useDialogState } from '../util/DialogContext';
-import Carousel from './Carousel';
+import Carousel from '../../features/Carousel';
+import { useDialogState } from '../../util/DialogContext';
 
 const classes: { [className: string]: SxProps } = {
   container: {

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
+
+import { useScrollTargets } from '../../util/ScrollTargetsContext';
 
 const classes: { [className: string]: SxProps } = {
   headline: {
@@ -20,8 +22,15 @@ const classes: { [className: string]: SxProps } = {
 };
 
 const Headline: React.FC = ({ children }) => {
+  const headlineRef = useRef<HTMLHeadingElement>();
+  const { setScrollTargets } = useScrollTargets();
+
+  useEffect(() => {
+    setScrollTargets((prev) => [ ...prev, headlineRef ]);
+  }, [ headlineRef ]);
+
   return (
-    <Typography variant="h3" align="center" sx={classes.headline}>{children}</Typography>
+    <Typography variant="h3" align="center" ref={headlineRef} sx={classes.headline}>{children}</Typography>
   );
 };
 

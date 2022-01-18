@@ -1,10 +1,10 @@
 import React from 'react';
 
 import ContentLayout from '../shared/layout/ContentLayout';
+import ProjectCard from '../shared/partials/ProjectCard';
+import ProjectDialog from '../shared/partials/ProjectDialog';
 import { ProjectCardContent } from '../shared/types/types';
 import { DialogProvider } from '../util/DialogContext';
-import ProjectCard from './ProjectCard';
-import ProjectDialog from './ProjectDialog';
 
 type CardContainerProps = Readonly<{
   cards: ProjectCardContent[];

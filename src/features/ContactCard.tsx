@@ -4,7 +4,7 @@ import { Box, Card, Link, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 
 import ContentLayout from '../shared/layout/ContentLayout';
-import ContactForm from './ContactForm';
+import ContactForm from '../shared/partials/ContactForm';
 
 
 const classes: { [className: string]: SxProps } = {

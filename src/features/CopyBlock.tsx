@@ -11,7 +11,7 @@ type CopyBlockProps = Readonly<{
   removeBottomPadding?: boolean;
 }>;
 
-const CopyBlock: React.FC<CopyBlockProps> = ({ headline, text, removeBottomPadding=false }) => {
+const CopyBlock: React.FC<CopyBlockProps> = ({ headline, text, removeBottomPadding = false }) => {
   return (
     <ContentLayout removeBottomPadding={removeBottomPadding}>
       {headline !== undefined && (

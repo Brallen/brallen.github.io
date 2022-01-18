@@ -3,8 +3,8 @@ import React from 'react';
 import { Box, Button, Card, CardMedia, Grid, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 
-import { ProjectCardContent } from '../shared/types/types';
-import { useDialogState } from '../util/DialogContext';
+import { useDialogState } from '../../util/DialogContext';
+import { ProjectCardContent } from '../types/types';
 
 const classes: { [className: string]: SxProps } = {
   card: {

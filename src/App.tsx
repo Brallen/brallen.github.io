@@ -7,8 +7,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import FourOhFourPage from './pages/404';
 import HomePage from './pages/Home';
 import Footer from './shared/navigation/Footer';
-import DefaultHeader from './shared/navigation/header/DefaultHeader';
+import Header from './shared/navigation/Header';
 import LightTheme from './util/LightTheme';
+import { ScrollTargetsProvider } from './util/ScrollTargetsContext';
 
 const App: React.FC = () => (
   <Box className="app">
@@ -17,16 +18,18 @@ const App: React.FC = () => (
 
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={LightTheme}>
-          <Box sx={{ overflowX: 'hidden' }}>
-            <DefaultHeader />
-            <Box component="main">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="*" element={<FourOhFourPage />} />
-              </Routes>
+          <ScrollTargetsProvider>
+            <Box sx={{ overflowX: 'hidden' }}>
+              <Header />
+              <Box component="main">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="*" element={<FourOhFourPage />} />
+                </Routes>
+              </Box>
+              <Footer />
             </Box>
-            <Footer />
-          </Box>
+          </ScrollTargetsProvider>
         </ThemeProvider>
       </StyledEngineProvider>
     </Router>
