@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 
-type Reference = React.MutableRefObject<HTMLHeadingElement>;
+export type Reference = React.MutableRefObject<HTMLHeadingElement>;
 
 type ScrollTargetsProps = Readonly<{
   scrollTargets: Reference[];

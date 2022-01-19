@@ -4,6 +4,8 @@ declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;
 }
+
 // Allow import of js files
 declare module 'react-swipeable-views';
 declare module 'react-swipeable-views-utils';
+declare module 'react-scroll';

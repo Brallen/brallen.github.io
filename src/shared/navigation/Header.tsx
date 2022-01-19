@@ -1,14 +1,11 @@
 import React from 'react';
 
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
-import { Container, Theme, AppBar, useScrollTrigger, Slide, Drawer, IconButton, useMediaQuery } from '@mui/material';
-import Box from '@mui/material/Box';
+import { Theme, useMediaQuery, Button, Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
+import { animateScroll as scroll } from 'react-scroll';
 
-import { useScrollTargets } from '../../util/ScrollTargetsContext';
-import NavigationLink, { NavigationLinkProps } from './NavigationLink';
+import { Reference, useScrollTargets } from '../../util/ScrollTargetsContext';
 
 const classes: { [className: string]: SxProps } = {
   background: {
@@ -52,14 +49,20 @@ const Header: React.FC = () => {
   const { scrollTargets } = useScrollTargets();
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
 
+  const handleScrollTargetClick = (target: Reference) => {
+    scroll.scrollTo(target.current.getBoundingClientRect().top - 75, {
+      duration: 500,
+      smooth: true,
+    });
+  };
+
   return (
     <Box sx={classes.links}>
       <Box sx={classes.navLinkWrapper}>
         {scrollTargets?.map((target, index) => (
-          <>
-            {console.log(target)}
-            <NavigationLink key={index} text={`index: ${index}, target: ${target}`} url="www.google.com"/>
-          </>
+          <Button key={`scroll-${index}`} onClick={() => handleScrollTargetClick(target)} variant="text">
+            {target.current.innerText}
+          </Button>
         ))}
       </Box>
     </Box>
