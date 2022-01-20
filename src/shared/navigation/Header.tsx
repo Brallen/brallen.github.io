@@ -32,6 +32,10 @@ const classes: { [className: string]: SxProps } = {
     borderColor: 'secondary.main',
     mb: 1,
     color: 'text.primary',
+
+    '&:hover': {
+      backgroundColor: 'background.paper',
+    },
   },
   linksBackground: {
     borderRadius: '15px',
