@@ -8,7 +8,7 @@ import ContentLayout from '../layout/ContentLayout';
 
 const classes: { [className: string]: SxProps } = {
   trees: {
-    width: { xs: '200vw', md: '140vw' },
+    width: { xs: '200vw', md: '120vw' },
     height: 'auto',
     position: 'relative',
     left: '50%',

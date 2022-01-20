@@ -24,7 +24,8 @@ const App: React.FC = () => (
               <Box component="main">
                 <Routes>
                   <Route path="/" element={<HomePage />} />
-                  <Route path="*" element={<FourOhFourPage />} />
+                  <Route path="*" element={<HomePage />} />  {/* Send all URLs to the homepage for now until the 404 page is done */ }
+                  {/* <Route path="*" element={<FourOhFourPage />} /> */}
                 </Routes>
               </Box>
               <Footer />

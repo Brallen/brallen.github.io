@@ -8,13 +8,13 @@ import ContentLayout from '../shared/layout/ContentLayout';
 
 const classes: { [className: string]: SxProps } = {
   titleText: {
-    pt: 12,
+    pt: 15,
   },
   accentText: {
     pb: 8,
   },
   image: {
-    width: { xs: '200vw', md: '140vw' },
+    width: { xs: '200vw', md: '120vw' },
     height: 'auto',
     position: 'relative',
     left: '50%',

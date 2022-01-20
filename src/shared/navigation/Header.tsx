@@ -31,12 +31,16 @@ const classes: { [className: string]: SxProps } = {
     border: '1px solid',
     borderColor: 'secondary.main',
     mb: 1,
+    color: 'text.primary',
   },
   linksBackground: {
     borderRadius: '15px',
     border: '1px solid',
     borderColor: 'secondary.main',
     p: 1,
+  },
+  navButton: {
+    color: 'text.primary',
   },
 };
 
@@ -84,7 +88,7 @@ const Header: React.FC = () => {
         <ClickAwayListener onClickAway={closeNav}>
           <Box sx={classes.container}>
             <IconButton
-              aria-controls={isOpen ? 'composition-menu' : undefined}
+              aria-controls={isOpen ? 'navigation-menu' : undefined}
               aria-expanded={isOpen ? 'true' : undefined}
               aria-haspopup={isDesktop ? 'false' : 'true'}
               onClick={toggleNav}
@@ -94,10 +98,10 @@ const Header: React.FC = () => {
             </IconButton>
 
             <Slide direction="right" in={isOpen}>
-              <Paper component="nav" elevation={1} sx={classes.linksBackground}>
-                <Stack id="composition-menu" direction={{ xs: 'column', md: 'row' }}>
+              <Paper component="nav" elevation={1} id="navigation-menu" sx={classes.linksBackground}>
+                <Stack direction={{ xs: 'column', md: 'row' }}>
                   {scrollTargets?.map((target, index) => (
-                    <Button key={`nav-button-${index}`} onClick={() => handleScrollTargetClick(target)}>
+                    <Button key={`nav-button-${index}`} onClick={() => handleScrollTargetClick(target)} sx={classes.navButton}>
                       {target.current.innerText}
                     </Button>
                   ))}
