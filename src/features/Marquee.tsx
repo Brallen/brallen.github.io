@@ -8,7 +8,7 @@ import ContentLayout from '../shared/layout/ContentLayout';
 
 const classes: { [className: string]: SxProps } = {
   titleText: {
-    pt: 8,
+    pt: 12,
   },
   accentText: {
     pb: 8,
