@@ -1,3 +1,4 @@
+name: Build and Deploy
 on:
   push:
     branches:
@@ -7,33 +8,50 @@ jobs:
   job1:
     runs-on: [ubuntu-latest]
     steps:
-      - name: checkout master branch # checkout master branch
+      - name: Checkout Master Branch
         uses: actions/checkout@v2
+        ref: master
         with:
           persist-credentials: false
-      - name: remove all files # remove files currently in master branch (Old build files).
+
+      - name: Remove All Files # remove files currently in master branch (Old build files)
         run: |
           rm -rf *
-      - name: checkout dev branch # checkout dev branch into temp folder.
+
+      - name: Checkout Develop Branch # checkout dev branch
         uses: actions/checkout@v2
+        ref: develop
         with:
           path: temp
           persist-credentials: false
-      - name: Build project # go to temp folder and build to create files.
+      
+      - name: Setup Dependencies Cache
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'yarn'
+
+      - name: Install Dependencies
         run: |
           cd temp
-          yarn build
-      - name: move files # move the dist files into root dir and remove others.
+          yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Move files # move the dist files into root dir and remove others
         run: |
           mv temp/dist/* ./
           rm -rf temp
-      - name: Commit files for change # commit new build files
+
+      - name: Commit Files For Change # commit new build files
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
           git add .
-          git commit -m "Add changes"
-      - name: Push changes # push files into master branch
+          git commit -m "Build release"
+
+      - name: Push Changes To Master
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
