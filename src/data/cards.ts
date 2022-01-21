@@ -23,20 +23,12 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
-          altText: 'San Francisco - Oakland Bay Bridge, United States',
-          url: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom ID home page',
+          url: './images/projects/account-modal1.jpg',
         },
         {
-          altText: 'Bird',
-          url: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-        },
-        {
-          altText: 'Bali, Indonesia',
-          url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
-        },
-        {
-          altText: 'Goč, Serbia',
-          url: 'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom ID device page',
+          url: './images/projects/account-modal2.jpg',
         },
       ],
       link: {
@@ -47,7 +39,7 @@ export const cards: ProjectCardContent[] = [
   },
   {
     image: {
-      url: 'https://source.unsplash.com/random/800x600',
+      url: './images/projects/spotiguess-main.jpg',
       altText: 'Spotiguess Android app quiz screen',
     },
     headline: 'Spotiguess',
@@ -62,20 +54,16 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
-          altText: 'San Francisco - Oakland Bay Bridge, United States',
-          url: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Spotiguess correct guess',
+          url: './images/projects/spotiguess-modal1.jpg',
         },
         {
-          altText: 'Bird',
-          url: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Spotiguess incorrect guess',
+          url: './images/projects/spotiguess-modal2.jpg',
         },
         {
-          altText: 'Bali, Indonesia',
-          url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
-        },
-        {
-          altText: 'Goč, Serbia',
-          url: 'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Spotiguess settings page',
+          url: './images/projects/spotiguess-modal3.jpg',
         },
       ],
       link: {
@@ -86,8 +74,8 @@ export const cards: ProjectCardContent[] = [
   },
   {
     image: {
-      url: 'https://source.unsplash.com/random/800x600',
-      altText: 'A random image',
+      url: './images/projects/events-main.jpg',
+      altText: 'Wacom event page',
     },
     headline: 'Wacom Events',
     flairText: 'March 2020 - June 2020',
@@ -102,20 +90,12 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
-          altText: 'San Francisco - Oakland Bay Bridge, United States',
-          url: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom event page',
+          url: './images/projects/events-modal1.jpg',
         },
         {
-          altText: 'Bird',
-          url: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-        },
-        {
-          altText: 'Bali, Indonesia',
-          url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
-        },
-        {
-          altText: 'Goč, Serbia',
-          url: 'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom event page description',
+          url: './images/projects/events-modal2.jpg',
         },
       ],
       link: {
@@ -126,8 +106,8 @@ export const cards: ProjectCardContent[] = [
   },
   {
     image: {
-      url: 'https://source.unsplash.com/random/800x600',
-      altText: 'A random image',
+      url: './images/projects/teslar-main.jpg',
+      altText: 'Teslar home page',
     },
     headline: 'Teslar',
     flairText: 'September 2018 - June 2019',
@@ -142,20 +122,20 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
-          altText: 'San Francisco - Oakland Bay Bridge, United States',
-          url: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Teslar control panel',
+          url: './images/projects/teslar-modal1.jpg',
         },
         {
-          altText: 'Bird',
-          url: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Teslar media controls',
+          url: './images/projects/teslar-modal2.jpg',
         },
         {
-          altText: 'Bali, Indonesia',
-          url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+          altText: 'Teslar climate controls',
+          url: './images/projects/teslar-modal3.jpg',
         },
         {
-          altText: 'Goč, Serbia',
-          url: 'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Teslar charging controls',
+          url: './images/projects/teslar-modal4.jpg',
         },
       ],
       link: {
@@ -166,8 +146,8 @@ export const cards: ProjectCardContent[] = [
   },
   {
     image: {
-      url: 'https://source.unsplash.com/random/800x600',
-      altText: 'A random image',
+      url: './images/projects/developer-main.jpg',
+      altText: 'Wacom for Developers home page',
     },
     headline: 'Wacom for Developers',
     flairText: 'February 2020 - March 2020',
@@ -183,20 +163,16 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
-          altText: 'San Francisco - Oakland Bay Bridge, United States',
-          url: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom for Developers resources page',
+          url: './images/projects/developer-modal1.jpg',
         },
         {
-          altText: 'Bird',
-          url: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom for Developers use cases page',
+          url: './images/projects/developer-modal2.jpg',
         },
         {
-          altText: 'Bali, Indonesia',
-          url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
-        },
-        {
-          altText: 'Goč, Serbia',
-          url: 'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom for Developers Universal Ink use case page',
+          url: './images/projects/developer-modal3.jpg',
         },
       ],
       link: {
@@ -207,8 +183,8 @@ export const cards: ProjectCardContent[] = [
   },
   {
     image: {
-      url: 'https://source.unsplash.com/random/800x600',
-      altText: 'A random image',
+      url: './images/projects/creativeenterprise-main.jpg',
+      altText: 'Wacom Creative Enterprise home page',
     },
     headline: 'Creative Enterprise',
     flairText: 'June 2018 - September 2018',
@@ -222,20 +198,16 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
-          altText: 'San Francisco - Oakland Bay Bridge, United States',
-          url: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom Creative Enterprise products page',
+          url: './images/projects/creativeenterprise-modal1.jpg',
         },
         {
-          altText: 'Bird',
-          url: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom Creative Enterprise contact form',
+          url: './images/projects/creativeenterprise-modal2.jpg',
         },
         {
-          altText: 'Bali, Indonesia',
-          url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
-        },
-        {
-          altText: 'Goč, Serbia',
-          url: 'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+          altText: 'Wacom Creative Enterprise IT integrations page',
+          url: './images/projects/creativeenterprise-modal3.jpg',
         },
       ],
       link: {

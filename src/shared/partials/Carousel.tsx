@@ -2,12 +2,12 @@ import * as React from 'react';
 import { useState } from 'react';
 
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
-import { Box, MobileStepper } from '@mui/material';
+import { Box, MobileStepper, Theme } from '@mui/material';
 import { SxProps } from '@mui/system';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
-import { ImageContent } from '../shared/types/types';
+import { ImageContent } from '../types/types';
 
 const classes: { [className: string]: SxProps } = {
   container: {
@@ -18,6 +18,8 @@ const classes: { [className: string]: SxProps } = {
     display: 'block',
     overflow: 'hidden',
     width: '100%',
+    objectFit: 'contain',
+    maxHeight: (theme: Theme) => theme.spacing(40),
     px: 3,
   },
   carouselControlContainer: {

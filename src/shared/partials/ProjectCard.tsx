@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Button, Card, CardMedia, Grid, Typography } from '@mui/material';
+import { Box, Button, Card, CardMedia, Grid, Theme, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 
 import { useDialogState } from '../../util/DialogContext';
@@ -18,6 +18,7 @@ const classes: { [className: string]: SxProps } = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    height: '100%',
     py: { xs: 0, md: 4 },
     pl: { xs: 0, md: 4 },
   },
@@ -25,8 +26,13 @@ const classes: { [className: string]: SxProps } = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    height: '100%',
     py: { xs: 0, md: 4 },
     pr: { xs: 0, md: 4 },
+  },
+  cardImage: {
+    objectFit: 'contain',
+    maxHeight: (theme: Theme) => theme.spacing(40),
   },
   textGridItem: {
     display: 'flex',
@@ -60,7 +66,6 @@ const TEXT = {
   buttonText: 'Learn More',
 };
 
-
 type ProjectCardProps = Readonly<{
   content: ProjectCardContent,
   flipContent?: boolean,
@@ -81,9 +86,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false 
           <Box sx={flipContent ? classes.imageContainerRight : classes.imageContainerLeft}>
             <CardMedia
               component="img"
+              loading="lazy"
               alt={content.image.altText}
               image={content.image.url}
-              loading="lazy"
+              sx={classes.cardImage}
             />
           </Box>
         </Grid>

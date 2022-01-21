@@ -70,10 +70,8 @@ const ContactForm: React.FC = () => {
         <TextField size="small" label="Email address" variant="outlined" sx={classes.formField} value={email} onChange={handleEmailChange} />
         <TextField
           label="Message"
-          placeholder="Enter your message here"
           multiline
           rows={2}
-          maxRows={Infinity}
           sx={classes.formField}
           value={message}
           onChange={handleMessageChange}
