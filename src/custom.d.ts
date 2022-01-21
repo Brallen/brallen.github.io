@@ -5,6 +5,10 @@ declare module '*.svg' {
   export default content;
 }
 
+// Custom module so there is not longer an error
+// when importing JPG in typescript to use with webpack
+declare module '*.jpg';
+
 // Allow import of js files
 declare module 'react-swipeable-views';
 declare module 'react-swipeable-views-utils';

@@ -81,7 +81,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false 
           <Box sx={flipContent ? classes.imageContainerRight : classes.imageContainerLeft}>
             <CardMedia
               component="img"
-              alt="Project Image" // update this with actual alt text
+              alt={content.image.altText}
               image={content.image.url}
               loading="lazy"
             />

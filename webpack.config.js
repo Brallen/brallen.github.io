@@ -1,5 +1,6 @@
 const path = require('path');
 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const dist = path.resolve(__dirname, 'dist');
 
@@ -38,6 +39,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
       filename: 'index.html',
+      favicon: 'src/images/favicon.ico',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public/images', to: 'images' },
+      ],
     }),
   ],
 };
