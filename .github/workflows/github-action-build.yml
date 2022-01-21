@@ -8,36 +8,35 @@ jobs:
   job1:
     runs-on: [ubuntu-latest]
     steps:
-      - name: Checkout Master Branch
-        uses: actions/checkout@v2
-        ref: master
-        with:
-          persist-credentials: false
+      # - name: Checkout Master Branch
+      #   uses: actions/checkout@v2
+      #   with:
+      #     ref: master
+      #     persist-credentials: false
 
-      - name: Remove All Files # remove files currently in master branch (Old build files)
-        run: |
-          rm -rf *
+      # - name: Remove All Files # remove files currently in master branch (Old build files)
+      #   run: |
+      #     rm -rf *
 
       - name: Checkout Develop Branch # checkout dev branch
         uses: actions/checkout@v2
-        ref: develop
         with:
+          ref: develop
           path: temp
           persist-credentials: false
       
-      - name: Setup Dependencies Cache
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-          cache: 'yarn'
+      # - name: Setup Dependencies Cache
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: '16'
+      #     cache: 'yarn'
 
-      - name: Install Dependencies
+      - name: Install Dependencies and Build
         run: |
           cd temp
           yarn install
+          yarn build
 
-      - name: Build
-        run: yarn build
 
       - name: Move files # move the dist files into root dir and remove others
         run: |
