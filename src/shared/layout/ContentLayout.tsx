@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Container } from '@mui/material';
+import { Box, Container, Grid } from '@mui/material';
 import { SxProps } from '@mui/system';
 
 const classes: { [className: string]: SxProps } = {
@@ -26,7 +26,7 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({ children, altBackgroundCo
 
   return (
     <Box component={component} sx={{ bgcolor: altBackgroundColor ? 'info.main' : 'background.default' }}>
-      <Container fixed sx={containerStyles}>
+      <Container fixed maxWidth="md" sx={containerStyles}>
         {children}
       </Container>
     </Box>
