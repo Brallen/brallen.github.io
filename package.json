@@ -32,10 +32,10 @@
     "start": "webpack serve --open",
     "lint": "eslint './**/*.{js,ts,tsx}'",
     "lint-fix": "yarn lint --fix",
-    "build": "yarn lint && webpack"
+    "build": "yarn lint && webpack --env production"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "*.{ts,tsx}": [
       "eslint --fix"
     ]
   },
