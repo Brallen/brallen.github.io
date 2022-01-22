@@ -38,12 +38,15 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Select Build Files # move the dist files into root dir and remove others
+      - name: Remove All Files but Build
         run: |
-          mkdir temp
-          mv * temp/
-          mv temp/dist/* ./
-          rm -rf temp/
+          shopt -s extglob dotglob
+          rm -v !(dist)
+
+      - name: Move files out of dist # move the dist files into root dir and remove others
+        run: |
+          mv dist/* ./
+          rm -rf dist
 
       - name: Commit Files For Change # commit new build files
         run: |
