@@ -39,8 +39,7 @@ jobs:
         run: yarn build
 
       - name: Remove All Files but Build
-        run: git branch
-          # rm -v !("dist")
+        run: rm -v !("dist")
 
       - name: Move files out of dist # move the dist files into root dir and remove others
         run: |
