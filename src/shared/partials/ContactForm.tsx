@@ -19,22 +19,40 @@ const classes: { [className: string]: SxProps } = {
   },
 };
 
+const TEXT = {
+  submitButtonText: 'Submit',
+  successText: 'Thanks for reaching out! I will get back to you soon.',
+  errorText: 'Something has gone wrong! Please try again.',
+};
+
 const ContactForm: React.FC = () => {
   const [ status, setStatus ] = useState<string>('');
+  const [ submitDisabled, setSubmitDisabled ] = useState<boolean>(true);
   const [ name, setName ] = useState<string>('');
   const [ email, setEmail ] = useState<string>('');
   const [ message, setMessage ] = useState<string>('');
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
+    validateForm();
   };
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
+    validateForm();
   };
 
   const handleMessageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(event.target.value);
+    validateForm();
+  };
+
+  const validateForm = () => {
+    if (name.length > 0 && email.length > 0 && message.length > 0) {
+      setSubmitDisabled(false);
+    } else {
+      setSubmitDisabled(true);
+    }
   };
 
   const submitForm = (ev: any) => {
@@ -67,7 +85,7 @@ const ContactForm: React.FC = () => {
         method="POST"
       >
         <TextField size="small" label="Name" variant="outlined" sx={classes.formField} value={name} onChange={handleNameChange} />
-        <TextField size="small" label="Email address" variant="outlined" sx={classes.formField} value={email} onChange={handleEmailChange} />
+        <TextField type="email" size="small" label="Email address" variant="outlined" sx={classes.formField} value={email} onChange={handleEmailChange} />
         <TextField
           label="Message"
           multiline
@@ -78,16 +96,16 @@ const ContactForm: React.FC = () => {
         />
         {status === 'SUCCESS' ? (
             <Typography variant="body2">
-              Thanks for reaching out! I will get back to you soon.
+              {TEXT.successText}
             </Typography>
           ) : (
-            <Button variant="contained" disableElevation type="submit" aria-label="submit contact form">
-              Submit
+            <Button variant="contained" disableElevation disabled={submitDisabled} type="submit" aria-label="submit contact form">
+              {TEXT.submitButtonText}
             </Button>
           )}
         {status === 'ERROR' && (
           <Typography variant="body2" sx={classes.errorMessage}>
-            Something has gone wrong! Please refresh the page and try again.
+            {TEXT.errorText}
           </Typography>
         )}
       </form>
