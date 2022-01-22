@@ -40,7 +40,8 @@ jobs:
 
       - name: Select Build Files # move the dist files into root dir and remove others
         run: |
-          mv * temp/ 
+          mkdir temp
+          mv * temp/
           mv temp/dist/* ./
           rm -rf temp/
 
