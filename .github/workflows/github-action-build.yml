@@ -14,18 +14,6 @@ jobs:
         with:
           ref: develop
       
-      - name: Push Changes To Master
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
-          force: true
-
-      - name: Checkout Master Branch
-        uses: actions/checkout@v2
-        with:
-          ref: master
-      
       - name: Setup Dependencies Cache
         uses: actions/setup-node@v2
         with:
@@ -38,19 +26,9 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Remove All Files but Build
-        run: |
-          shopt -s extglob dotglob
-          rm -rfv !(dist|.git)
-
-      - name: Move files out of dist # move the dist files into root dir and remove others
-        run: |
-          mv dist/* ./
-          rm -rf dist
-
-      - name: Commit Files For Change # commit new build files
-        run: |
-          git config --local user.email "github-actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add .
-          git commit -m "Build release"
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: master
