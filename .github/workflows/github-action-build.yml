@@ -41,7 +41,7 @@ jobs:
       - name: Remove All Files but Build
         run: |
           shopt -s extglob dotglob
-          rm -rfv !(dist)
+          rm -rfv !(dist|.git)
 
       - name: Move files out of dist # move the dist files into root dir and remove others
         run: |
