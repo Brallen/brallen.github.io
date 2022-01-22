@@ -38,13 +38,11 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Remove All Files but Build
-        run: rm -v !("dist")
-
-      - name: Move files out of dist # move the dist files into root dir and remove others
+      - name: Select Build Files # move the dist files into root dir and remove others
         run: |
-          mv dist/* ./
-          rm -rf dist
+          mv * temp/ 
+          mv temp/dist/* ./
+          rm -rf temp/
 
       - name: Commit Files For Change # commit new build files
         run: |
