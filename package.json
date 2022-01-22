@@ -35,7 +35,7 @@
     "build": "yarn lint && webpack --env production"
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "*.{js,ts,tsx}": [
       "eslint --fix"
     ]
   },
