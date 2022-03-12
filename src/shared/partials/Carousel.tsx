@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import { Box, MobileStepper, Theme } from '@mui/material';
 import { SxProps } from '@mui/system';
+import LazyLoad from 'react-lazyload';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
@@ -75,12 +76,14 @@ const Carousel: React.FC<CarouselProps> = ({ images }) =>{
         {images.map((slide, index) => (
           <div key={`slide-${index}`}>
             {Math.abs(activeSlide - index) <= 2 ? (
-              <Box
-                component="img"
-                sx={classes.image}
-                src={slide.url}
-                alt={slide.altText}
-              />
+              <LazyLoad offset={150} once>
+                <Box
+                  component="img"
+                  sx={classes.image}
+                  src={slide.url}
+                  alt={slide.altText}
+                />
+              </LazyLoad>
             ) : null}
           </div>
         ))}

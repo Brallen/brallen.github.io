@@ -13,3 +13,4 @@ declare module '*.jpg';
 declare module 'react-swipeable-views';
 declare module 'react-swipeable-views-utils';
 declare module 'react-scroll';
+declare module 'react-lazyload';

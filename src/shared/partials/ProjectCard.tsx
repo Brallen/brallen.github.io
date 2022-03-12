@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Box, Button, Card, CardMedia, Grid, Theme, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
+import LazyLoad from 'react-lazyload';
 
 import { useDialogState } from '../../util/DialogContext';
 import { ProjectCardContent } from '../types/types';
@@ -84,13 +85,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false 
       <Grid container spacing={4} sx={classes.container}>
         <Grid item xs={12} md={6} order={{ xs: 1, md: flipContent ? 2 : 1 }}>
           <Box sx={flipContent ? classes.imageContainerRight : classes.imageContainerLeft}>
-            <CardMedia
-              component="img"
-              loading="lazy"
-              alt={content.image.altText}
-              image={content.image.url}
-              sx={classes.cardImage}
-            />
+            <LazyLoad offset={150} once>
+              <CardMedia
+                component="img"
+                alt={content.image.altText}
+                image={content.image.url}
+                sx={classes.cardImage}
+              />
+            </LazyLoad>
           </Box>
         </Grid>
         <Grid item xs={12} md={6} sx={classes.textGridItem} order={{ xs: 2, md: flipContent ? 1 : 2 }}>
