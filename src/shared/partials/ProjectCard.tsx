@@ -85,7 +85,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ content, flipContent = false 
       <Grid container spacing={4} sx={classes.container}>
         <Grid item xs={12} md={6} order={{ xs: 1, md: flipContent ? 2 : 1 }}>
           <Box sx={flipContent ? classes.imageContainerRight : classes.imageContainerLeft}>
-            <LazyLoad offset={150} once>
+            <LazyLoad offset={250} once>
               <CardMedia
                 component="img"
                 alt={content.image.altText}

@@ -76,7 +76,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) =>{
         {images.map((slide, index) => (
           <div key={`slide-${index}`}>
             {Math.abs(activeSlide - index) <= 2 ? (
-              <LazyLoad offset={150} once>
+              <LazyLoad offset={250} once>
                 <Box
                   component="img"
                   sx={classes.image}
