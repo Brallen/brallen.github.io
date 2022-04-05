@@ -87,35 +87,39 @@ const Header: React.FC = () => {
   };
 
   return (
-    <Box component="header" sx={classes.header}>
-      <Container fixed sx={classes.centeringContainer}>
-        <ClickAwayListener onClickAway={closeNav}>
-          <Box sx={classes.container}>
-            <IconButton
-              aria-controls={isOpen ? 'navigation-menu' : undefined}
-              aria-expanded={isOpen ? 'true' : undefined}
-              aria-haspopup={isDesktop ? 'false' : 'true'}
-              onClick={toggleNav}
-              sx={classes.toggleButton}
-            >
-              {isOpen ? (<Close />) : (<Menu />)}
-            </IconButton>
+    <>
+      {scrollTargets?.length > 0 && (
+        <Box component="header" sx={classes.header}>
+          <Container fixed sx={classes.centeringContainer}>
+            <ClickAwayListener onClickAway={closeNav}>
+              <Box sx={classes.container}>
+                <IconButton
+                  aria-controls={isOpen ? 'navigation-menu' : undefined}
+                  aria-expanded={isOpen ? 'true' : undefined}
+                  aria-haspopup={isDesktop ? 'false' : 'true'}
+                  onClick={toggleNav}
+                  sx={classes.toggleButton}
+                >
+                  {isOpen ? (<Close />) : (<Menu />)}
+                </IconButton>
 
-            <Slide direction="right" in={isOpen}>
-              <Paper component="nav" elevation={1} id="navigation-menu" sx={classes.linksBackground}>
-                <Stack direction={{ xs: 'column', md: 'row' }}>
-                  {scrollTargets?.map((target, index) => (
-                    <Button key={`nav-button-${index}`} onClick={() => handleScrollTargetClick(target)} sx={classes.navButton}>
-                      {target.current.innerText}
-                    </Button>
-                  ))}
-                </Stack>
-              </Paper>
-            </Slide>
-          </Box>
-        </ClickAwayListener>
-      </Container>
-    </Box>
+                <Slide direction="right" in={isOpen}>
+                  <Paper component="nav" elevation={1} id="navigation-menu" sx={classes.linksBackground}>
+                    <Stack direction={{ xs: 'column', md: 'row' }}>
+                      {scrollTargets?.map((target, index) => (
+                        <Button key={`nav-button-${index}`} onClick={() => handleScrollTargetClick(target)} sx={classes.navButton}>
+                          {target.current.innerText}
+                        </Button>
+                      ))}
+                    </Stack>
+                  </Paper>
+                </Slide>
+              </Box>
+            </ClickAwayListener>
+          </Container>
+        </Box>
+      )}
+    </>
   );
 };
 
