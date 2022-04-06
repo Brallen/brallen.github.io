@@ -2,6 +2,7 @@ import React from 'react';
 
 import { SvgIcon } from '@mui/material';
 import { SxProps } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 import Trees from '../../images/trees.svg';
 import ContentLayout from '../layout/ContentLayout';
@@ -18,9 +19,11 @@ const classes: { [className: string]: SxProps } = {
 };
 
 const Footer: React.FC = () => (
-  <ContentLayout component="footer" removeBottomPadding>
-    <SvgIcon component={Trees} sx={classes.trees} viewBox="0 0 2607 227" />
-  </ContentLayout>
+  <Link to={'/grade-calculator'}>
+    <ContentLayout component="footer" removeBottomPadding>
+      <SvgIcon component={Trees} sx={classes.trees} viewBox="0 0 2607 227" />
+    </ContentLayout>
+  </Link>
 );
 
 export default Footer;

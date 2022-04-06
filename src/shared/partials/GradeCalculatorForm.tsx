@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import { SignalCellularNull } from '@mui/icons-material';
 import { Button, Paper, TextField, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 
