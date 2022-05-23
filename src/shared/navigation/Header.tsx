@@ -88,7 +88,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {scrollTargets?.length > 0 && (
+      {scrollTargets?.length > 1 && (
         <Box component="header" sx={classes.header}>
           <Container fixed sx={classes.centeringContainer}>
             <ClickAwayListener onClickAway={closeNav}>

@@ -5,7 +5,7 @@ import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import { SxProps } from '@mui/system';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-// import FourOhFourPage from './pages/404';
+import FourOhFourPage from './pages/404';
 import GradeCalculatorPage from './pages/GradeCalculator';
 import HomePage from './pages/Home';
 import Footer from './shared/navigation/Footer';
@@ -39,8 +39,7 @@ const App: React.FC = () => (
                   <Route path="/" element={<HomePage />} />
                   <Route path="/grade-calculator" element={<GradeCalculatorPage />} />
 
-                  <Route path="*" element={<HomePage />} />  {/* Send all URLs to the homepage for now until the 404 page is done */ }
-                  {/* <Route path="*" element={<FourOhFourPage />} /> */}
+                  <Route path="*" element={<FourOhFourPage />} />
                 </Routes>
               </Box>
               <Footer />
