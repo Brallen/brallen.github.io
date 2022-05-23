@@ -42,6 +42,11 @@ module.exports = (env) => {
         filename: 'index.html',
         favicon: 'src/images/favicon.ico',
       }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'public/404.html'),
+        filename: '404.html',
+        favicon: 'src/images/favicon.ico',
+      }),
       new CopyWebpackPlugin({
         patterns: [
           { from: 'public/images', to: 'images' },
