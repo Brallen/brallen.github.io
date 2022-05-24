@@ -88,7 +88,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {scrollTargets?.length > 1 && (
+      {scrollTargets?.length > 1 && ( // render if more than 1 since the first is always visible from page load
         <Box component="header" sx={classes.header}>
           <Container fixed sx={classes.centeringContainer}>
             <ClickAwayListener onClickAway={closeNav}>

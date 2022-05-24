@@ -27,6 +27,10 @@ const Headline: React.FC = ({ children }) => {
 
   useEffect(() => {
     setScrollTargets((prev) => [ ...prev, headlineRef ]);
+
+    return () => {
+      setScrollTargets((prevTargets) => prevTargets.filter((target) => target.current !== headlineRef.current)); // if component unmounts, remove it from the scroll targets
+    };
   }, [ headlineRef ]);
 
   return (
