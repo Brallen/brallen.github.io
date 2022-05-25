@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Button, Paper, TextField, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
@@ -34,29 +34,38 @@ const GradeCalculatorForm: React.FC = () => {
   const [ adjustedScore, setAdjustedScore ] = useState<number>(undefined);
 
   const handleScoreChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setScore(Number(event.target.value));
-    validateForm();
+    if (event.target.value.length === 0) {
+      setScore(undefined);
+    } else {
+      setScore(Number(event.target.value));
+    }
   };
 
   const handleTotalScoreChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTotalScore(Number(event.target.value));
-    validateForm();
+    if (event.target.value.length === 0) {
+      setTotalScore(undefined);
+    } else {
+      setTotalScore(Number(event.target.value));
+    }
   };
 
   const handleFloorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFloor(Number(event.target.value));
-    validateForm();
+    if (event.target.value.length === 0) {
+      setFloor(undefined);
+    } else {
+      setFloor(Number(event.target.value));
+    }
   };
 
-  const validateForm = () => {
-    if (!isNaN(Number(score)) && !isNaN(Number(totalScore)) && !isNaN(Number(floor))) {
+  useEffect(() => { // validate form at least not empty
+    if (!isNaN(score) && !isNaN(totalScore) && !isNaN(floor)) {
       setSubmitDisabled(false);
     } else {
       setSubmitDisabled(true);
     }
-  };
+  }, [ score, totalScore, floor ]);
 
-  const calculateAdjustedScore = (event: any) => {
+  const calculateAdjustedScore = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const flooredScorePercentage = (score * (100 - floor)) / totalScore;
     const adjustedPercentage = (flooredScorePercentage + floor) / 100;

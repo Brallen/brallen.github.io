@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Button, Paper, TextField, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
@@ -34,56 +34,54 @@ const ContactForm: React.FC = () => {
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
-    validateForm();
   };
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
-    validateForm();
   };
 
   const handleMessageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(event.target.value);
-    validateForm();
   };
 
-  const validateForm = () => {
+  useEffect(() => { // validate form at least not empty
     if (name.length > 0 && email.length > 0 && message.length > 0) {
       setSubmitDisabled(false);
     } else {
       setSubmitDisabled(true);
     }
-  };
+  }, [ name, email, message ]);
 
-  const submitForm = (ev: any) => {
-    ev.preventDefault();
-    const form = ev.target;
-    const data = new FormData();
-    data.append('name', name);
-    data.append('email', email);
-    data.append('message', message);
-    const xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader('Accept', 'application/json');
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        form.reset();
-        setStatus('SUCCESS');
-      } else {
-        setStatus('ERROR');
-      }
+
+  const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const data = {
+      'name': name,
+      'email': email,
+      'message': message,
     };
-    xhr.send(data);
+
+    const response = await fetch('https://formspree.io/f/mbjpejew', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'accept': 'application/json',
+      },
+      body: JSON.stringify({
+        data: data,
+      }),
+    });
+
+    if (response.status === 200) {
+      setStatus('SUCCESS');
+    } else {
+      setStatus('ERROR');
+    }
   };
 
   return (
     <Paper sx={classes.formContainer}>
-      <form
-        onSubmit={submitForm}
-        action="https://formspree.io/f/mbjpejew"
-        method="POST"
-      >
+      <form onSubmit={submitForm}>
         <TextField size="small" label="Name" variant="outlined" sx={classes.formField} value={name} onChange={handleNameChange} />
         <TextField type="email" size="small" label="Email address" variant="outlined" sx={classes.formField} value={email} onChange={handleEmailChange} />
         <TextField
