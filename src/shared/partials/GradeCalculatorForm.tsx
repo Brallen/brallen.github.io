@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Button, Paper, TextField, Typography } from '@mui/material';
+import { Paper, TextField, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 
 const classes: { [className: string]: SxProps } = {
@@ -16,57 +16,46 @@ const classes: { [className: string]: SxProps } = {
   adjustedScore: {
     pt: 2,
   },
+  adjustedText: {
+    fontWeight: '600',
+  },
 };
 
 const TEXT = {
-  submitButtonText: 'Calculate',
   scoreText: 'Student\'s Score',
   totalScoreText: 'Assignment Score',
   floorText: 'Floor Percentage',
-  adjustedScoreText: 'Adjusted Score:',
+  adjustedScoreText: 'Adjusted Score',
+};
+
+type FormValue = number | undefined;
+
+const getAdjustedValueFromFormField = (value: string):FormValue => {
+  return value.length === 0 ? undefined : Number(value);
+};
+
+const applyStateChange = (fn: (a:FormValue) => void, value:FormValue) => fn(value);
+
+const updateFormValueState = (fn: (a: FormValue) => void, value: string) => {
+  const adjustedValue = getAdjustedValueFromFormField(value);
+  applyStateChange(fn, adjustedValue);
 };
 
 const GradeCalculatorForm: React.FC = () => {
-  const [ submitDisabled, setSubmitDisabled ] = useState<boolean>(true);
   const [ score, setScore ] = useState<number>(undefined);
   const [ totalScore, setTotalScore ] = useState<number>(undefined);
   const [ floor, setFloor ] = useState<number>(40);
   const [ adjustedScore, setAdjustedScore ] = useState<number>(undefined);
 
-  const handleScoreChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.value.length === 0) {
-      setScore(undefined);
-    } else {
-      setScore(Number(event.target.value));
-    }
-  };
-
-  const handleTotalScoreChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.value.length === 0) {
-      setTotalScore(undefined);
-    } else {
-      setTotalScore(Number(event.target.value));
-    }
-  };
-
-  const handleFloorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.value.length === 0) {
-      setFloor(undefined);
-    } else {
-      setFloor(Number(event.target.value));
-    }
-  };
-
   useEffect(() => { // validate form at least not empty
     if (!isNaN(score) && !isNaN(totalScore) && !isNaN(floor)) {
-      setSubmitDisabled(false);
+      calculateAdjustedScore();
     } else {
-      setSubmitDisabled(true);
+      setAdjustedScore(undefined);
     }
   }, [ score, totalScore, floor ]);
 
-  const calculateAdjustedScore = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const calculateAdjustedScore = () => {
     const flooredScorePercentage = (score * (100 - floor)) / totalScore;
     const adjustedPercentage = (flooredScorePercentage + floor) / 100;
     setAdjustedScore(adjustedPercentage * totalScore);
@@ -74,20 +63,29 @@ const GradeCalculatorForm: React.FC = () => {
 
   return (
     <Paper sx={classes.formContainer}>
-      <form onSubmit={calculateAdjustedScore}>
-        <TextField type="number" label={TEXT.scoreText} sx={classes.formField} value={score === undefined ? '' : score} onChange={handleScoreChange} />
-        <TextField type="number" label={TEXT.totalScoreText} sx={classes.formField} value={totalScore === undefined ? '' : totalScore} onChange={handleTotalScoreChange} />
-        <TextField type="number" label={TEXT.floorText} sx={classes.formField} value={floor === undefined ? '' : floor} onChange={handleFloorChange} />
+      <form>
+        <TextField type="number"
+          label={TEXT.scoreText}
+          sx={classes.formField}
+          value={score === undefined ? '' : score}
+          onChange={(event) => updateFormValueState(setScore, event.target.value)} />
 
-        <Button variant="contained" disableElevation disabled={submitDisabled} type="submit" aria-label="Calculate Score">
-          {TEXT.submitButtonText}
-        </Button>
+        <TextField type="number"
+          label={TEXT.totalScoreText}
+          sx={classes.formField}
+          value={totalScore === undefined ? '' : totalScore}
+          onChange={(event) => updateFormValueState(setTotalScore, event.target.value)} />
 
-        {!isNaN(adjustedScore) && (
-          <Typography variant="body2" sx={classes.adjustedScore}>
-            {TEXT.adjustedScoreText} {adjustedScore}
-          </Typography>
-        )}
+        <TextField type="number"
+          label={TEXT.floorText}
+          sx={classes.formField}
+          value={floor === undefined ? '' : floor}
+          onChange={(event) => updateFormValueState(setFloor, event.target.value)} />
+
+        <Typography variant="body2" sx={classes.adjustedScore}>
+          {TEXT.adjustedScoreText}:
+          {!isNaN(adjustedScore) && <Typography sx={classes.adjustedText}>{adjustedScore.toFixed(2)}</Typography>}
+        </Typography>
       </form>
     </Paper>
   );

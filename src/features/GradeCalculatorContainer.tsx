@@ -1,12 +1,19 @@
 import React from 'react';
 
-import { Box, Card, Typography } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Box, Card, Link as MuiLink, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
+import { Link as ReactLink } from 'react-router-dom';
 
 import ContentLayout from '../shared/layout/ContentLayout';
 import GradeCalculatorForm from '../shared/partials/GradeCalculatorForm';
 
 const classes: { [className: string]: SxProps } = {
+  backLink: {
+    mb: 2,
+    display: 'inline-flex',
+    alignItems: 'center',
+  },
   card: {
     borderRadius: '15px',
     backgroundColor: 'primary.main',
@@ -36,11 +43,21 @@ const classes: { [className: string]: SxProps } = {
 
 const TEXT = {
   headlineText: 'Adjusted Grade Calculator',
+  backToHomeLinkText: 'Back to Home',
 };
 
 const GradeCalculatorContainer: React.FC = () => {
   return (
     <ContentLayout>
+      <MuiLink
+        component={ReactLink}
+        to={'/'}
+        color="inherit"
+        underline="none"
+        variant="body1"
+        sx={classes.backLink}>
+        <ArrowBackIcon/>{TEXT.backToHomeLinkText}
+      </MuiLink>
       <Card elevation={0} sx={classes.card}>
         <Box sx={classes.cardContent}>
           <Typography variant="body1" sx={classes.cardText}>{TEXT.headlineText}</Typography>
