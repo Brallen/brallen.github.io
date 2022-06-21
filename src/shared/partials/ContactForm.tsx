@@ -93,14 +93,14 @@ const ContactForm: React.FC = () => {
           onChange={handleMessageChange}
         />
         {status === 'SUCCESS' ? (
-            <Typography variant="body2">
-              {TEXT.successText}
-            </Typography>
-          ) : (
-            <Button variant="contained" disableElevation disabled={submitDisabled} type="submit" aria-label="submit contact form">
-              {TEXT.submitButtonText}
-            </Button>
-          )}
+          <Typography variant="body2">
+            {TEXT.successText}
+          </Typography>
+        ) : (
+          <Button variant="contained" disableElevation disabled={submitDisabled} type="submit" aria-label="submit contact form">
+            {TEXT.submitButtonText}
+          </Button>
+        )}
         {status === 'ERROR' && (
           <Typography variant="body2" sx={classes.errorMessage}>
             {TEXT.errorText}
