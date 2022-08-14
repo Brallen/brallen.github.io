@@ -20,7 +20,7 @@ const classes: { [className: string]: SxProps } = {
     overflow: 'hidden',
     width: '100%',
     objectFit: 'contain',
-    maxHeight: (theme: Theme) => theme.spacing(40),
+    aspectRatio: '16 / 9',
     px: 3,
   },
   carouselControlContainer: {

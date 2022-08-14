@@ -33,7 +33,7 @@ const classes: { [className: string]: SxProps } = {
   },
   cardImage: {
     objectFit: 'contain',
-    maxHeight: (theme: Theme) => theme.spacing(40),
+    aspectRatio: '16 / 9',
   },
   textGridItem: {
     display: 'flex',
