@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
-import { Box, MobileStepper, Theme } from '@mui/material';
+import { Box, MobileStepper } from '@mui/material';
 import { SxProps } from '@mui/system';
 import LazyLoad from 'react-lazyload';
 import SwipeableViews from 'react-swipeable-views';

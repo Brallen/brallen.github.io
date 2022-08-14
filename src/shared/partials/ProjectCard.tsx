@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Button, Card, CardMedia, Grid, Theme, Typography } from '@mui/material';
+import { Box, Button, Card, CardMedia, Grid, Typography } from '@mui/material';
 import { SxProps } from '@mui/system';
 import LazyLoad from 'react-lazyload';
 
