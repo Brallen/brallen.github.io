@@ -10,7 +10,7 @@ export type DialogContent = Readonly<{
   headline: string,
   keyPoints: string[];
   images: ImageContent[];
-  link: LinkContent;
+  link?: LinkContent;
 }>;
 
 export type ImageContent = Readonly<{
