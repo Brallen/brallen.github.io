@@ -4,6 +4,66 @@ import { ProjectCardContent } from '../shared/types/types';
 export const cards: ProjectCardContent[] = [
   {
     image: {
+      url: './images/projects/planigize-home-1.png',
+      altText: 'Planigize home page',
+    },
+    headline: 'Planigize',
+    flairText: 'Fall 2020 - Spring 2022',
+    shortDescription: '6-person startup to help personal trainers establish an online presence and sell their workout plans.',
+    dialogContent: {
+      headline: 'Planigize',
+      keyPoints: [
+        'Helped develop business plan, including monetization strategy',
+        'Established compensation structure as equity',
+        'Designed website from scratch using Adobe XD',
+        'Built front-end from scratch using React',
+      ],
+      images: [
+        {
+          altText: 'Planigize home page landing',
+          url: './images/projects/planigize-home-1.png',
+        },
+        {
+          altText: 'Planigize home page tabs',
+          url: './images/projects/planigize-home-2.png',
+        },
+        {
+          altText: 'Planigize home page call to action',
+          url: './images/projects/planigize-home-3.png',
+        },
+        {
+          altText: 'Planigize sign in ',
+          url: './images/projects/planigize-sign-in.png',
+        },
+        {
+          altText: 'Planigize sign up',
+          url: './images/projects/planigize-sign-up.png',
+        },
+        {
+          altText: 'Planigize trainer information',
+          url: './images/projects/planigize-trainer.png',
+        },
+        {
+          altText: 'Planigize day page overview',
+          url: './images/projects/planigize-days-1.png',
+        },
+        {
+          altText: 'Planigize day page calendar',
+          url: './images/projects/planigize-days-2.png',
+        },
+        {
+          altText: 'Planigize day page trainer information',
+          url: './images/projects/planigize-days-3.png',
+        },
+        {
+          altText: 'Planigize day page extra programs',
+          url: './images/projects/planigize-days-4.png',
+        },
+      ],
+    },
+  },
+  {
+    image: {
       url: './images/projects/account-main.jpg',
       altText: 'Wacom ID home page',
     },
