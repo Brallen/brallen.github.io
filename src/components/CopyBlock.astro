@@ -1,0 +1,34 @@
+---
+export interface Props {
+  headline?: string;
+  text?: string;
+}
+
+const { headline, text } = Astro.props;
+---
+
+<div class="flow">
+	{headline !== undefined &&
+		<h3 class="headline">{headline}</h3>
+	}
+
+	{text !== undefined &&
+		<p>{text}</p>
+	}
+</div>
+
+<style>
+	div {
+		text-align: center;
+	}
+
+	.headline::after {
+		content: '';
+		display: block;
+		background-color: var(--color-text-primary);
+		height: .25rem;
+		width: 10rem;
+		margin-top: .5rem;
+		margin-inline: auto;
+	}
+</style>

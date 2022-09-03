@@ -1,0 +1,40 @@
+---
+import type { ProjectCardContent } from '../types/types';
+import { Image } from '@astrojs/image/components';
+
+export interface Props {
+  content: ProjectCardContent,
+  flipContent?: boolean,
+}
+
+const { content, flipContent } = Astro.props;
+
+const TEXT = {
+  buttonText: 'Learn More',
+};
+---
+
+<div class="card">
+	<div class="image">
+		<Image src={import(/* @vite-ignore */content.image.url)} width={400} aspectRatio="16:9" alt={content.image.altText} />
+	</div>
+	<div class="content flow">
+		<h4>{content.headline}</h4>
+		<h5>{content.flairText}</h5>
+		<p>{content.shortDescription}</p>
+		<button>{TEXT.buttonText}</button>
+	</div>
+</div>
+
+<style>
+	.card {
+		border-radius: 1rem;
+		background-color: var(--color-bg-secondary);
+		overflow: hidden;
+	}
+
+	img {
+		object-fit: contain;
+		aspect-ratio: 16 / 9;
+	}
+</style>

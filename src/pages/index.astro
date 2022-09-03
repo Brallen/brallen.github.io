@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from '@astrojs/image/components';
+import heroImage from '../assets/images/landscape.svg';
+import CopyBlock from '../components/CopyBlock.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ContactForm from '../components/ContactForm.jsx';
+
+import { cards } from '../assets/data/cards';
+---
+
+<Layout title="Brett Case - Software Engineer">
+	<main id="main-content" tabindex="-1">
+		<section class="marquee">
+			<div class="wrapper">
+				<h1>Brett Case</h1>
+				<h2>Software Engineer</h2>
+				<Image class="image" src={heroImage} width={2665} height={886} alt="Drawing of a mountain and trees with reflections on a lake" />
+			</div>
+		</section>
+
+		<section class="wrapper">
+			<CopyBlock
+				headline="Who am I"
+				text="Hello! I am a software engineer in the Pacific Northwest currently working for Wacom in their web services department. I enjoy working with front-end web technologies, APIs, and designers to create websites that are intuitive and fast."
+			/>
+		</section>
+
+		<section class="wrapper">
+			<ContactForm client:visible />
+		</section>
+
+
+		
+
+		<section class="wrapper">
+			<CopyBlock headline="Projects" />
+	
+			<ul role="list">
+				{cards.map(card => <ProjectCard content={card} />)}
+			</ul>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.wrapper {
+		margin: auto;
+		max-width: min(100% - 5rem, 100ch);
+	}
+
+	.marquee {
+		background-color: var(--color-bg-tertiary);
+		text-align: center;
+		padding-top: calc(8 * var(--base-spacing-md));
+	}
+
+	.marquee .image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+		max-width: none;
+		width: 120vw;
+  }
+</style>
