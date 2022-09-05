@@ -1,5 +1,6 @@
 ---
 import { Image } from '@astrojs/image/components';
+
 import heroImage from '../assets/images/landscape.svg';
 
 export interface Props {
@@ -11,19 +12,19 @@ const { headline, subHeadline } = Astro.props;
 ---
 
 <section class="marquee | text-center bg-tertiary-500">
-	<div class="wrapper">
-		<h1 class="pad-top-900">{headline}</h1>
-		<h2 class="gap-bottom-700">{subHeadline}</h2>
-		<Image class="image" src={heroImage} width={2665} height={886} alt="Drawing of a mountain and trees with reflections on a lake" />
-	</div>
+  <div class="wrapper">
+    <h1 class="pad-top-900">{headline}</h1>
+    <h2 class="gap-bottom-700">{subHeadline}</h2>
+    <Image class="image" src={heroImage} width={2665} height={886} alt="Drawing of a mountain and trees with reflections on a lake" />
+  </div>
 </section>
 
 <style>
-	.marquee .image {
+  .marquee .image {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-		max-width: none;
-		width: 120vw;
+    max-width: none;
+    width: 120vw;
   }
 </style>

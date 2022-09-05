@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
         'accept': 'application/json',
       },
       body: JSON.stringify({
-        data
+        data,
       }),
     });
 
@@ -78,8 +78,7 @@ const ContactForm: React.FC = () => {
           <label htmlFor="message">{TEXT.message}</label>
         </div>
         {status === 'SUCCESS' ?
-          <p>{TEXT.successText}</p>
-        :
+          <p>{TEXT.successText}</p> :
           <button type="submit" aria-label="submit contact form" disabled={submitDisabled}>
             {TEXT.submitButtonText}
           </button>

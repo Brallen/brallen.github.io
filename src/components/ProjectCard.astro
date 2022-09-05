@@ -1,6 +1,7 @@
 ---
-import type { ProjectCardContent } from '../types/types';
 import { Image } from '@astrojs/image/components';
+
+import type { ProjectCardContent } from '../types/types';
 
 export interface Props {
   content: ProjectCardContent;
@@ -15,34 +16,34 @@ const TEXT = {
 ---
 
 <div class="card | bg-neutral-100" data-state={flipContent ? 'flipped' : 'normal'}>
-	<div class="image">
-		<Image src={import(/* @vite-ignore */content.image.url)} alt={content.image.altText} />
-	</div>
-	<div class="content flow">
-		<div>
-			<h4>{content.headline}</h4>
-			<h5>{content.flairText}</h5>
-		</div>
-		<p>{content.shortDescription}</p>
-		<button>{TEXT.learnMore}</button>
-	</div>
+  <div class="image">
+    <Image src={import(/* @vite-ignore */content.image.url)} alt={content.image.altText} />
+  </div>
+  <div class="content flow">
+    <div>
+      <h4>{content.headline}</h4>
+      <h5>{content.flairText}</h5>
+    </div>
+    <p>{content.shortDescription}</p>
+    <button>{TEXT.learnMore}</button>
+  </div>
 </div>
 
 <style>
-	.card {
-		display: grid;
-		row-gap: 1.5rem;
-		column-gap: 1.5rem;
-		align-items: center;
-		grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
-	}
+  .card {
+    display: grid;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+  }
 
-	.image {
-		margin-inline: auto;
-	}
+  .image {
+    margin-inline: auto;
+  }
 
-	img {
-		object-fit: contain;
-		aspect-ratio: 16 / 9;
-	}
+  img {
+    object-fit: contain;
+    aspect-ratio: 16 / 9;
+  }
 </style>

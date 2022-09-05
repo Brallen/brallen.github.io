@@ -8,23 +8,23 @@ const { headline, text } = Astro.props;
 ---
 
 <div class="flow text-center gap-bottom-700">
-	{headline !== undefined &&
-		<h3 class="headline">{headline}</h3>
-	}
+  {headline !== undefined &&
+    <h3 class="headline">{headline}</h3>
+  }
 
-	{text !== undefined &&
-		<p>{text}</p>
-	}
+  {text !== undefined &&
+    <p>{text}</p>
+  }
 </div>
 
 <style>
-	.headline::after {
-		content: '';
-		display: block;
-		background-color: var(--color-primary-700);
-		height: .2rem;
-		width: 10rem;
-		margin-top: .5rem;
-		margin-inline: auto;
-	}
+  .headline::after {
+    content: '';
+    display: block;
+    background-color: var(--color-primary-700);
+    height: .2rem;
+    width: 10rem;
+    margin-top: .5rem;
+    margin-inline: auto;
+  }
 </style>

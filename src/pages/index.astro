@@ -1,49 +1,48 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CopyBlock from '../components/CopyBlock.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import ContactForm from '../components/ContactForm.jsx';
-import Marquee from '../components/Marquee.astro';
-
 import { cards } from '../assets/data/cards';
+import ContactForm from '../components/ContactForm.jsx';
+import CopyBlock from '../components/CopyBlock.astro';
+import Marquee from '../components/Marquee.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Brett Case - Software Engineer">
-	<main class="stack" id="main-content" tabindex="-1">
-		<Marquee headline="Brett Case" subHeadline="Software Enginner" />
+  <main class="stack" id="main-content" tabindex="-1">
+    <Marquee headline="Brett Case" subHeadline="Software Enginner" />
 
-		<section class="wrapper">
-			<CopyBlock
-				headline="Who am I"
-				text="Hello! I am a software engineer in the Pacific Northwest currently working for Wacom in their web services department. I enjoy working with front-end web technologies, APIs, and designers to create websites that are intuitive and fast."
-			/>
-		</section>
-		
-		<section class="wrapper">
-			<CopyBlock headline="Projects" />
-			
-			<ul class="stack" role="list">
-				{cards.map((card, index) => <ProjectCard content={card} flipContent={index % 2 === 1} />)}
-			</ul>
-		</section>
+    <section class="wrapper">
+      <CopyBlock
+        headline="Who am I"
+        text="Hello! I am a software engineer in the Pacific Northwest currently working for Wacom in their web services department. I enjoy working with front-end web technologies, APIs, and designers to create websites that are intuitive and fast."
+      />
+    </section>
 
-		<section class="card | wrapper | bg-primary-500 color-neutral-100 text-center">
-			<div class="contact-content | flow">
-				<p>Find me around the internet at</p>
-				<a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<em>.com/</em>Brallen</a>
-				<a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow">LinkedIn<em>.com/in/</em>BrettCase</a>
-				<p>Or send me an email to get in touch</p>
-			</div>
-			<ContactForm client:visible />
-		</section>
-	</main>
+    <section class="wrapper">
+      <CopyBlock headline="Projects" />
+
+      <ul class="stack" role="list">
+        {cards.map((card, index) => <ProjectCard content={card} flipContent={index % 2 === 1} />)}
+      </ul>
+    </section>
+
+    <section class="card | wrapper | bg-primary-500 color-neutral-100 text-center">
+      <div class="contact-content | flow">
+        <p>Find me around the internet at</p>
+        <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<em>.com/</em>Brallen</a>
+        <a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow">LinkedIn<em>.com/in/</em>BrettCase</a>
+        <p>Or send me an email to get in touch</p>
+      </div>
+      <ContactForm client:visible />
+    </section>
+  </main>
 </Layout>
 
 <style>
-	.contact-content a {
-		--flow-spacing: .50rem;
+  .contact-content a {
+    --flow-spacing: .50rem;
 
-		display: block;
-		text-underline-offset: .165rem;
-	}
+    display: block;
+    text-underline-offset: .165rem;
+  }
 </style>

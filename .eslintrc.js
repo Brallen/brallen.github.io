@@ -18,33 +18,23 @@ module.exports = {
   ],
   overrides: [
     {
-      // Define the configuration for `.astro` file.
       files: [ '*.astro' ],
-      // Allows Astro components to be parsed.
       parser: 'astro-eslint-parser',
       extends: [
         'plugin:astro/recommended',
-
       ],
-      // Parse the script in `.astro` as TypeScript by adding the following configuration.
-      // It's the setting you need when using TypeScript.
       parserOptions: {
-        parser: '@typescript-eslint/parser',
+        // parser: '@typescript-eslint/parser',
         extraFileExtensions: [ '.astro' ],
-      },
-      rules: {
-        // override/add rules settings here, such as:
-        // "astro/no-set-html-directive": "error"
       },
     },
     {
       files: [ '*.ts', '*.tsx' ],
+      // parser: '@typescript-eslint/parser',
       extends: [
         'plugin:react/recommended',
-
         'plugin:react/jsx-runtime',
       ],
-      parser: '@typescript-eslint/parser',
       plugins: [ '@typescript-eslint' ],
     },
   ],
@@ -54,7 +44,6 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-var-requires': 'off',
     'react/prop-types': 0,
-    'react/jsx-filename-extension': [ 1, { 'extensions': [ '.js', '.jsx', '.ts', '.tsx', '.astro' ] }],
     'new-cap': 0,
     'max-len': [ 'error', {
       'code': 120,
@@ -92,7 +81,7 @@ module.exports = {
     ],
     'no-unused-vars': [ 'warn', { args: 'none' }],
     'require-jsdoc': 0,
-    'indent': 'off',
+    'indent': [ 'error', 2 ],
     '@typescript-eslint/indent': [ 'error', 2 ],
   },
 };
