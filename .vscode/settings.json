@@ -7,6 +7,7 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
+    "astro"
   ],
   "editor.tabSize": 2,
   "cSpell.words": [

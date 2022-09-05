@@ -13,12 +13,8 @@ module.exports = {
     },
   },
   extends: [
-    // Recommended rules from @eslint-plugin-react
-    'plugin:react/recommended',
-    // Recommended ruleset for @typescript-eslint/eslint-plugin
     'plugin:@typescript-eslint/recommended',
     'google',
-    'plugin:astro/recommended',
   ],
   overrides: [
     {
@@ -26,6 +22,10 @@ module.exports = {
       files: [ '*.astro' ],
       // Allows Astro components to be parsed.
       parser: 'astro-eslint-parser',
+      extends: [
+        'plugin:astro/recommended',
+
+      ],
       // Parse the script in `.astro` as TypeScript by adding the following configuration.
       // It's the setting you need when using TypeScript.
       parserOptions: {
@@ -37,15 +37,24 @@ module.exports = {
         // "astro/no-set-html-directive": "error"
       },
     },
+    {
+      files: [ '*.ts', '*.tsx' ],
+      extends: [
+        'plugin:react/recommended',
+
+        'plugin:react/jsx-runtime',
+      ],
+      parser: '@typescript-eslint/parser',
+      plugins: [ '@typescript-eslint' ],
+    },
   ],
   plugins: [
     'import',
   ],
   rules: {
-    // Override recommended rules + add additional ESLint rules
-    // const example = require('example');
     '@typescript-eslint/no-var-requires': 'off',
     'react/prop-types': 0,
+    'react/jsx-filename-extension': [ 1, { 'extensions': [ '.js', '.jsx', '.ts', '.tsx', '.astro' ] }],
     'new-cap': 0,
     'max-len': [ 'error', {
       'code': 120,
