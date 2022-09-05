@@ -1,7 +1,8 @@
 ---
 import '../assets/styles/reset.css';
-import '../assets/styles/composition.css';
-import '../assets/styles/utility.css';
+import '../assets/styles/composition/_index.scss';
+import '../assets/styles/_utilities.scss';
+import '../assets/styles/block/_index.scss';
 
 export interface Props {
   title: string;
@@ -29,34 +30,3 @@ const TEXT = {
     <slot />
   </body>
 </html>
-
-<style>
-  :root {
-    --color-neutral-100: hsl(0, 0%, 100%);
-    --color-neutral-500: hsl(0, 0%, 62%);
-    --color-neutral-800: hsl(22, 19%, 11%);
-    --color-neutral-900: hsl(195, 25%, 16%);
-
-    --color-primary-500: hsl(175, 12%, 35%);
-    --color-primary-700: hsl(195, 25%, 16%);
-
-    --color-secondary-100: hsl(28, 100%, 95%);
-    --color-secondary-500: hsl(35, 53%, 56%);
-
-    --color-tertiary-500: hsl(193, 90%, 92%);
-
-    --color-error-500: hsl(18, 52%, 40%);
-
-    --spacing-300: .5rem;
-    --spacing-500: 1rem;
-    --spacing-700: 2.5rem;
-    --spacing-900: 10rem;
-
-    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-    --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-
-    --font-family-heading: "ff-basic-gothic-pro", sans-serif;
-    --font-family-body: "houschka-rounded", sans-serif;
-  }
-</style>

@@ -16,15 +16,3 @@ const { headline, text } = Astro.props;
     <p>{text}</p>
   }
 </div>
-
-<style>
-  .headline::after {
-    content: '';
-    display: block;
-    background-color: var(--color-primary-700);
-    height: .2rem;
-    width: 10rem;
-    margin-top: .5rem;
-    margin-inline: auto;
-  }
-</style>

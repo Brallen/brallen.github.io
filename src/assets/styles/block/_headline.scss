@@ -1,0 +1,11 @@
+.headline {
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--color-primary-700);
+    height: 0.1875rem;
+    width: 10rem;
+    margin-top: var(--spacing-400);
+    margin-inline: auto;
+  }
+}

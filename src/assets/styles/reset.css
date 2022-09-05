@@ -40,6 +40,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  line-height: var(--spacing-ratio, 1.5);
+  font-family: sans-serif;
   font-family: var(--font-family-body, sans-serif);
   letter-spacing: 0.00938em;
   overflow-x: hidden;

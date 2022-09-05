@@ -15,7 +15,7 @@ const TEXT = {
 };
 ---
 
-<div class="card | bg-neutral-100" data-state={flipContent ? 'flipped' : 'normal'}>
+<div class="card | bg-neutral-100" data-type="project" data-state={flipContent ? 'flipped' : 'normal'}>
   <div class="image">
     <Image src={import(/* @vite-ignore */content.image.url)} alt={content.image.altText} />
   </div>
@@ -25,25 +25,6 @@ const TEXT = {
       <h5>{content.flairText}</h5>
     </div>
     <p>{content.shortDescription}</p>
-    <button>{TEXT.learnMore}</button>
+    <button class="button">{TEXT.learnMore}</button>
   </div>
 </div>
-
-<style>
-  .card {
-    display: grid;
-    row-gap: 1.5rem;
-    column-gap: 1.5rem;
-    align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
-  }
-
-  .image {
-    margin-inline: auto;
-  }
-
-  img {
-    object-fit: contain;
-    aspect-ratio: 16 / 9;
-  }
-</style>

@@ -1,0 +1,22 @@
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: var(--card-padding, 2rem);
+
+  &[data-type="project"] {
+    display: grid;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+    
+    .image {
+      margin-inline: auto;
+      
+      img {
+        object-fit: contain;
+        aspect-ratio: 16 / 9;
+      }
+    }
+  }
+}
