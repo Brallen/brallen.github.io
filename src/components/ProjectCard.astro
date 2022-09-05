@@ -3,34 +3,42 @@ import type { ProjectCardContent } from '../types/types';
 import { Image } from '@astrojs/image/components';
 
 export interface Props {
-  content: ProjectCardContent,
-  flipContent?: boolean,
+  content: ProjectCardContent;
+  flipContent?: boolean;
 }
 
 const { content, flipContent } = Astro.props;
 
 const TEXT = {
-  buttonText: 'Learn More',
+  learnMore: 'Learn More',
 };
 ---
 
-<div class="card">
+<div class="card | bg-neutral-100" data-state={flipContent ? 'flipped' : 'normal'}>
 	<div class="image">
-		<Image src={import(/* @vite-ignore */content.image.url)} width={400} aspectRatio="16:9" alt={content.image.altText} />
+		<Image src={import(/* @vite-ignore */content.image.url)} alt={content.image.altText} />
 	</div>
 	<div class="content flow">
-		<h4>{content.headline}</h4>
-		<h5>{content.flairText}</h5>
+		<div>
+			<h4>{content.headline}</h4>
+			<h5>{content.flairText}</h5>
+		</div>
 		<p>{content.shortDescription}</p>
-		<button>{TEXT.buttonText}</button>
+		<button>{TEXT.learnMore}</button>
 	</div>
 </div>
 
 <style>
 	.card {
-		border-radius: 1rem;
-		background-color: var(--color-bg-secondary);
-		overflow: hidden;
+		display: grid;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+		align-items: center;
+		grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+	}
+
+	.image {
+		margin-inline: auto;
 	}
 
 	img {

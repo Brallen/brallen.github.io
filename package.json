@@ -6,7 +6,6 @@
   "author": "Brett Case",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",

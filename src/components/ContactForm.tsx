@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 const TEXT = {
+  name: 'Name',
+  emailAddress: 'Email address',
+  message: 'Message',
   submitButtonText: 'Submit',
   successText: 'Thanks for reaching out! I will get back to you soon.',
   errorText: 'Something has gone wrong! Please try again.',
@@ -36,9 +39,9 @@ const ContactForm: React.FC = () => {
   const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = {
-      'name': name,
-      'email': email,
-      'message': message,
+      name,
+      email,
+      message,
     };
 
     const response = await fetch('https://formspree.io/f/mbjpejew', {
@@ -48,7 +51,7 @@ const ContactForm: React.FC = () => {
         'accept': 'application/json',
       },
       body: JSON.stringify({
-        data: data,
+        data
       }),
     });
 
@@ -60,19 +63,19 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={submitForm}>
+    <div className='card | bg-neutral-100'>
+      <form className='flow' onSubmit={submitForm}>
         <div>
           <input id="name" type="text" value={name} onChange={handleNameChange}/>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">{TEXT.name}</label>
         </div>
         <div>
           <input id="email" type="email" value={email} onChange={handleEmailChange}/>
-          <label htmlFor="email">Email address</label>
+          <label htmlFor="email">{TEXT.emailAddress}</label>
         </div>
         <div>
           <textarea id="message" rows={2} value={message} onChange={handleMessageChange}/>
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">{TEXT.message}</label>
         </div>
         {status === 'SUCCESS' ?
           <p>{TEXT.successText}</p>

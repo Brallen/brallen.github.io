@@ -1,9 +1,17 @@
 ---
+import '../assets/styles/reset.css';
+import '../assets/styles/composition.css';
+import '../assets/styles/utility.css';
+
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+
+const TEXT = {
+	skipToContent: "Skip to content"
+};
 ---
 
 <!DOCTYPE html>
@@ -16,38 +24,33 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/ico" href="/favicon.ico" />
     <link rel="stylesheet" href="https://use.typekit.net/tts5cfx.css" />
 	</head>
-	<body>
+	<body class="bg-secondary-100">
+			<a href="#main-content">{TEXT.skipToContent}</a>
 			<slot />
 	</body>
 </html>
 
 <style>
 	:root {
-		--base-color-neutral-100: hsl(0, 0%, 100%);
-		--base-color-neutral-500: hsl(0, 0%, 62%);
-		--base-color-neutral-800: hsl(22, 19%, 11%);
-		--base-color-neutral-900: hsl(195, 25%, 16%);
+		--color-neutral-100: hsl(0, 0%, 100%);
+		--color-neutral-500: hsl(0, 0%, 62%);
+		--color-neutral-800: hsl(22, 19%, 11%);
+		--color-neutral-900: hsl(195, 25%, 16%);
 		
-		--base-color-primary-500: hsl(175, 12%, 35%);
-		--base-color-primary-700: hsl(195, 25%, 16%);
+		--color-primary-500: hsl(175, 12%, 35%);
+		--color-primary-700: hsl(195, 25%, 16%);
 		
-		--base-color-secondary-100: hsl(28, 100%, 95%);
-		--base-color-secondary-500: hsl(35, 53%, 56%);
+		--color-secondary-100: hsl(28, 100%, 95%);
+		--color-secondary-500: hsl(35, 53%, 56%);
 		
-		--base-color-tertiary-500: hsl(193, 90%, 92%);
+		--color-tertiary-500: hsl(193, 90%, 92%);
 		
-		--base-color-error-500: hsl(18, 52%, 40%);
+		--color-error-500: hsl(18, 52%, 40%);
 		
-		--base-spacing-sm: .5rem;
-		--base-spacing-md: 1rem;
-		--base-spacing-lg: 2rem;
-		
-		--color-bg-primary: var(--base-color-secondary-100);
-		--color-bg-secondary: var(--base-color-neutral-100);
-		--color-bg-tertiary: var(--base-color-tertiary-500);
-		
-		--color-text-primary: var(--base-color-neutral-900);
-		--color-text-secondary: var(--base-color-primary-700);
+		--spacing-300: .5rem;
+		--spacing-500: 1rem;
+		--spacing-700: 2.5rem;
+		--spacing-900: 10rem;
 		
 		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
@@ -55,140 +58,5 @@ const { title } = Astro.props;
 		
 		--font-family-heading: "ff-basic-gothic-pro", sans-serif;
 		--font-family-body: "houschka-rounded", sans-serif;
-
-		--flow-spacing: var(--base-spacing-, 1rem);
-	}
-
-	body {
-		background-color: var(--color-bg-primary);
-	}
-</style>
-
-<!-- CSS Reset & Base Styles -->
-<style is:global>
-	/* Box sizing rules */
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-	}
-
-	/* Remove default margin */
-	body,
-	h1,
-	h2,
-	h3,
-	h4,
-	p,
-	figure,
-	blockquote,
-	dl,
-	dd {
-		margin: 0;
-	}
-
-	/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-	ul[role='list'],
-	ol[role='list'] {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	/* Set core root defaults */
-	html:focus-within {
-		scroll-behavior: smooth;
-	}
-
-	/* Set core body defaults */
-	body {
-		min-height: 100vh;
-		text-rendering: optimizeSpeed;
-		line-height: 1.5;
-		font-family: var(--font-family-body, sans-serif);
-		letter-spacing: 0.00938em;
-		overflow-x: hidden;
-	}
-
-	/* A elements that don't have a class get default styles */
-	a:not([class]) {
-		text-decoration-skip-ink: auto;
-	}
-
-	/* Make images easier to work with */
-	img,
-	picture {
-		max-width: 100%;
-		height: auto;
-		display: block;
-	}
-
-	/* Inherit fonts for inputs and buttons */
-	input,
-	button,
-	textarea,
-	select {
-		font: inherit;
-	}
-
-	/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-	@media (prefers-reduced-motion: reduce) {
-		html:focus-within {
-		scroll-behavior: auto;
-		}
-		
-		*,
-		*::before,
-		*::after {
-			animation-duration: 0.01ms !important;
-			animation-iteration-count: 1 !important;
-			transition-duration: 0.01ms !important;
-			scroll-behavior: auto !important;
-		}
-	}
-
-	/* Base Styles */
-	h1 {
-		letter-spacing: 0.1em;
-		font-family: var(--font-family-heading);
-		font-weight: 700;
-		font-size: var(--font-size-xl);
-	}
-	
-	h2 {
-		letter-spacing: 0.15em;
-		font-family: var(--font-family-body);
-		font-weight: 300;
-		font-size: var(--font-size-lg);
-	}
-	
-	h3 {
-		font-family: var(--font-family-heading);
-		font-weight: 400;
-		font-size: 1.8rem;
-	}
-	
-	h4 {
-		font-family: var(--font-family-heading);
-		font-weight: 400;
-		font-size: 1.5rem;
-	}
-	
-	h5 {
-		font-family: var(--font-family-body);
-		font-weight: 500;
-		font-size: 1rem;
-		line-height: 1.75;
-	}
-	
-	p {
-		font-family: var(--font-family-body);
-		font-weight: 500;
-		font-size: var(--font-size-base);
-		line-height: 1.75;
-	}
-
-	.flow > * + * {
-		margin-top: var(--flow-spacing, 1rem);
 	}
 </style>

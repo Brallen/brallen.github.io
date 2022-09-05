@@ -1,0 +1,66 @@
+h1 {
+  letter-spacing: 0.1em;
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+}
+
+h2 {
+  letter-spacing: 0.15em;
+  font-family: var(--font-family-body);
+  font-weight: 300;
+  font-size: var(--font-size-lg);
+}
+
+h3 {
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-family: var(--font-family-body);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+p {
+  font-family: var(--font-family-body);
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  line-height: 1.75;
+}
+
+a {
+  font-family: var(--font-family-body);
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  line-height: 1.75;
+  color: currentColor;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacing, 1.5rem);
+}
+
+.stack > * + * {
+  margin-top: var(--stack-spacing, 2.5rem);
+}
+
+.wrapper {
+  margin-inline: auto;
+  max-width: min(100% - 5rem, 55rem);
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: var(--card-padding, 2rem);
+}

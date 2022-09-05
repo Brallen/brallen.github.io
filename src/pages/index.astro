@@ -1,23 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from '@astrojs/image/components';
-import heroImage from '../assets/images/landscape.svg';
 import CopyBlock from '../components/CopyBlock.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ContactForm from '../components/ContactForm.jsx';
+import Marquee from '../components/Marquee.astro';
 
 import { cards } from '../assets/data/cards';
 ---
 
 <Layout title="Brett Case - Software Engineer">
-	<main id="main-content" tabindex="-1">
-		<section class="marquee">
-			<div class="wrapper">
-				<h1>Brett Case</h1>
-				<h2>Software Engineer</h2>
-				<Image class="image" src={heroImage} width={2665} height={886} alt="Drawing of a mountain and trees with reflections on a lake" />
-			</div>
-		</section>
+	<main class="stack" id="main-content" tabindex="-1">
+		<Marquee headline="Brett Case" subHeadline="Software Enginner" />
 
 		<section class="wrapper">
 			<CopyBlock
@@ -25,41 +18,32 @@ import { cards } from '../assets/data/cards';
 				text="Hello! I am a software engineer in the Pacific Northwest currently working for Wacom in their web services department. I enjoy working with front-end web technologies, APIs, and designers to create websites that are intuitive and fast."
 			/>
 		</section>
-
-		<section class="wrapper">
-			<ContactForm client:visible />
-		</section>
-
-
 		
-
 		<section class="wrapper">
 			<CopyBlock headline="Projects" />
-	
-			<ul role="list">
-				{cards.map(card => <ProjectCard content={card} />)}
+			
+			<ul class="stack" role="list">
+				{cards.map((card, index) => <ProjectCard content={card} flipContent={index % 2 === 1} />)}
 			</ul>
+		</section>
+
+		<section class="card | wrapper | bg-primary-500 color-neutral-100 text-center">
+			<div class="contact-content | flow">
+				<p>Find me around the internet at</p>
+				<a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<em>.com/</em>Brallen</a>
+				<a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow">LinkedIn<em>.com/in/</em>BrettCase</a>
+				<p>Or send me an email to get in touch</p>
+			</div>
+			<ContactForm client:visible />
 		</section>
 	</main>
 </Layout>
 
 <style>
-	.wrapper {
-		margin: auto;
-		max-width: min(100% - 5rem, 100ch);
-	}
+	.contact-content a {
+		--flow-spacing: .50rem;
 
-	.marquee {
-		background-color: var(--color-bg-tertiary);
-		text-align: center;
-		padding-top: calc(8 * var(--base-spacing-md));
+		display: block;
+		text-underline-offset: .165rem;
 	}
-
-	.marquee .image {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-		max-width: none;
-		width: 120vw;
-  }
 </style>

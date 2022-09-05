@@ -7,7 +7,7 @@ export interface Props {
 const { headline, text } = Astro.props;
 ---
 
-<div class="flow">
+<div class="flow text-center gap-bottom-700">
 	{headline !== undefined &&
 		<h3 class="headline">{headline}</h3>
 	}
@@ -18,15 +18,11 @@ const { headline, text } = Astro.props;
 </div>
 
 <style>
-	div {
-		text-align: center;
-	}
-
 	.headline::after {
 		content: '';
 		display: block;
-		background-color: var(--color-text-primary);
-		height: .25rem;
+		background-color: var(--color-primary-700);
+		height: .2rem;
 		width: 10rem;
 		margin-top: .5rem;
 		margin-inline: auto;
