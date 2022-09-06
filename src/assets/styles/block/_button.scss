@@ -1,15 +1,26 @@
+@use '../_vars';
+
 .button {
   display: inline-block;
   border: none;
   padding: var(--spacing-300) var(--spacing-500);
-  cursor: pointer;
   min-width: var(--spacing-800);
-  transition: background-color 250ms ease-in-out;
   color: var(--color-neutral-100);
   background-color: var(--color-primary-500);
   border-radius: .5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color vars.$default-transition-time ease-in-out;
 
   &:hover {
     background-color: var(--color-primary-700);
+  }
+
+  &[disabled] {
+    background-color: var(--color-neutral-500);
+
+    &:hover {
+      background-color: var(--color-neutral-500);
+    }
   }
 }

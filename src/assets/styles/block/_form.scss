@@ -1,0 +1,15 @@
+@use '../_vars';
+
+.form-field {
+  position: relative;
+  
+  input, textarea {
+    width: 100%;
+  }
+
+  label {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

@@ -63,23 +63,23 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className='card | bg-neutral-100'>
+    <div className='card | bg-neutral-100 color-primary-700 gap-top-600' data-type='form'>
       <form className='flow' onSubmit={submitForm}>
-        <div>
+        <div className='form-field'>
           <input id="name" type="text" value={name} onChange={handleNameChange}/>
           <label htmlFor="name">{TEXT.name}</label>
         </div>
-        <div>
+        <div className='form-field'>
           <input id="email" type="email" value={email} onChange={handleEmailChange}/>
           <label htmlFor="email">{TEXT.emailAddress}</label>
         </div>
-        <div>
+        <div className='form-field'>
           <textarea id="message" rows={2} value={message} onChange={handleMessageChange}/>
           <label htmlFor="message">{TEXT.message}</label>
         </div>
         {status === 'SUCCESS' ?
           <p>{TEXT.successText}</p> :
-          <button type="submit" aria-label="submit contact form" disabled={submitDisabled}>
+          <button type="submit" aria-label="submit contact form" className="button" disabled={submitDisabled}>
             {TEXT.submitButtonText}
           </button>
         }

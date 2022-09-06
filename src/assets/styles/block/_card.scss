@@ -4,9 +4,8 @@
   padding: var(--card-padding, 2rem);
 
   &[data-type="project"] {
+    --card-padding: 0;
     display: grid;
-    row-gap: 1.5rem;
-    column-gap: 1.5rem;
     align-items: center;
     grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
     
@@ -18,5 +17,14 @@
         aspect-ratio: 16 / 9;
       }
     }
+
+    .content {
+      padding: 1.5rem;
+    }
+  }
+  
+  &[data-type="form"] {
+    margin-inline: auto;
+    max-width: 25rem;
   }
 }

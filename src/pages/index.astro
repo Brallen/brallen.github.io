@@ -29,8 +29,8 @@ import Layout from '../layouts/Layout.astro';
     <section class="card | wrapper | bg-primary-500 color-neutral-100 text-center">
       <div class="contact-content | flow">
         <p>Find me around the internet at</p>
-        <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<em>.com/</em>Brallen</a>
-        <a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow">LinkedIn<em>.com/in/</em>BrettCase</a>
+        <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<span>.com/</span>Brallen</a>
+        <a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow">LinkedIn<span>.com/in/</span>BrettCase</a>
         <p>Or send me an email to get in touch</p>
       </div>
       <ContactForm client:visible />
@@ -40,9 +40,16 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .contact-content a {
-    --flow-spacing: .50rem;
-
+    font-size: var(--font-size-lg);
     display: block;
     text-underline-offset: .165rem;
+  }
+
+  .contact-content a:not(:first-of-type) {
+    --flow-spacing: .5rem;
+  }
+
+  .contact-content span {
+    font-size: var(--font-size-base);
   }
 </style>
