@@ -11,3 +11,8 @@
   --grid-placement: auto-fit;
   --grid-min-item-size: clamp(16rem, 50vw, 26rem);
 }
+
+.grid[data-rows='masonry'] {
+  grid-template-rows: masonry;
+  align-items: start;
+}

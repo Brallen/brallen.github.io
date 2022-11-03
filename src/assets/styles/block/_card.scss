@@ -1,13 +1,13 @@
 .card {
-  background: var(--color-dark);
-  color: var(--color-light);
-  padding: var(--space-m-l);
+  padding: var(--space-s-m);
   border-radius: var(--border-radius);
-  max-width: unset;
   overflow: hidden;
-}
 
-.card ::selection {
-  color: var(--color-dark);
-  background: var(--color-secondary);
+  &[data-type='project'] {
+    padding: 0;
+
+    .content {
+      padding: var(--space-s-m);
+    }
+  }
 }

@@ -7,9 +7,9 @@ export interface Props {
 const { headline, text } = Astro.props;
 ---
 
-<div class="flow text-center gap-bottom-700">
+<div class="flow text-center center-child-margins">
   {headline !== undefined &&
-    <h3 class="headline">{headline}</h3>
+    <h2>{headline}</h2>
   }
 
   {text !== undefined &&

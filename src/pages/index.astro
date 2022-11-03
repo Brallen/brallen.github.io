@@ -8,25 +8,25 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Brett Case - Software Engineer">
-  <main class="stack" id="main-content" tabindex="-1">
+  <main id="main-content" tabindex="-1">
     <Marquee headline="Brett Case" subHeadline="Software Engineer" />
 
-    <section class="wrapper">
+    <article class="region wrapper">
       <CopyBlock
         headline="Who am I"
         text="Hello! I am a software engineer in the Pacific Northwest currently working for Wacom in their web services department. I enjoy working with front-end web technologies, APIs, and designers to create websites that are intuitive and fast."
       />
-    </section>
+    </article>
 
-    <section class="wrapper">
+    <article class="region wrapper">
       <CopyBlock headline="Projects" />
 
-      <ul class="stack" role="list">
+      <ul class="grid" role="list" data-rows="masonry" data-layout="50-50">
         {cards.map((card, index) => <ProjectCard content={card} flipContent={index % 2 === 1} />)}
       </ul>
-    </section>
+    </article>
 
-    <section class="card | wrapper | bg-primary-500 color-neutral-100 text-center">
+    <article class="card | region wrapper bg-primary-500 color-neutral-100 text-center">
       <div class="contact-content | flow">
         <p>Find me around the internet at</p>
         <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<span>.com/</span>Brallen</a>
@@ -34,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
         <p>Or send me an email to get in touch</p>
       </div>
       <ContactForm client:visible />
-    </section>
+    </article>
   </main>
 </Layout>
 
