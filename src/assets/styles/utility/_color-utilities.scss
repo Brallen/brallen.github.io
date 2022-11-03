@@ -1,0 +1,13 @@
+@use '../../design-tokens/_colors';
+
+@each $color, $shades in colors.$light-colors {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background-color: var(--color-#{$color}-#{$shade});
+    }
+
+    .color-#{$color}-#{$shade} {
+      color: var(--color-#{$color}-#{$shade});
+    }
+  }
+}

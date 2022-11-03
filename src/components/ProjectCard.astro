@@ -8,14 +8,14 @@ export interface Props {
   flipContent?: boolean;
 }
 
-const { content, flipContent } = Astro.props;
+const { content } = Astro.props;
 
 const TEXT = {
   learnMore: 'Learn More',
 };
 ---
 
-<div class="card | bg-neutral-100" data-type="project" data-state={flipContent ? 'flipped' : 'normal'}>
+<li class="card | bg-neutral-100">
   <div class="image">
     <Image src={import(/* @vite-ignore */content.image.url)} alt={content.image.altText} />
   </div>
@@ -27,4 +27,4 @@ const TEXT = {
     <p>{content.shortDescription}</p>
     <button class="button">{TEXT.learnMore}</button>
   </div>
-</div>
+</li>
