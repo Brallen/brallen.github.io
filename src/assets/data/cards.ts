@@ -96,41 +96,7 @@ export const cards: ProjectCardContent[] = [
       },
     },
   },
-  {
-    image: {
-      url: '../assets/images/projects/spotiguess-main.jpg',
-      altText: 'Spotiguess Android app quiz screen',
-    },
-    headline: 'Spotiguess',
-    flairText: 'February 2019',
-    shortDescription: 'Android app using Spotify API to get a random song, play a preview, and have the user guess from 4 choices which song it is.',
-    dialogContent: {
-      headline: 'Spotiguess',
-      keyPoints: [
-        'Responsible for overall design (Adobe XD)',
-        'Created all API calls to Spotify (Java)',
-        'Created Settings page to adjust genre and number of rounds (Java)',
-      ],
-      images: [
-        {
-          altText: 'Spotiguess correct guess',
-          url: '../assets/images/projects/spotiguess-modal1.jpg',
-        },
-        {
-          altText: 'Spotiguess incorrect guess',
-          url: '../assets/images/projects/spotiguess-modal2.jpg',
-        },
-        {
-          altText: 'Spotiguess settings page',
-          url: '../assets/images/projects/spotiguess-modal3.jpg',
-        },
-      ],
-      link: {
-        url: 'https://github.com/spotiguess-guessthatname/GuessThatName',
-        text: 'View on GitHub',
-      },
-    },
-  },
+
   {
     image: {
       url: '../assets/images/projects/events-main.jpg',
@@ -159,6 +125,43 @@ export const cards: ProjectCardContent[] = [
       ],
       link: {
         url: 'https://www.wacom.com/events',
+        text: 'View Site',
+      },
+    },
+  },
+  {
+    image: {
+      url: '../assets/images/projects/developer-main.jpg',
+      altText: 'Wacom for Developers home page',
+    },
+    headline: 'Wacom for Developers',
+    flairText: 'February 2020 - March 2020',
+    shortDescription: 'Developer site showcasing different APIs and SDKs that Wacom has to offer. Site offers downloads and documentation for Wacom tools.',
+    dialogContent: {
+      headline: 'Wacom for Developers',
+      keyPoints: [
+        'Tech lead for the 3 weeks of develop time',
+        'Built most of the components from scratch',
+        'Integrated components with a CMS',
+        'Retrofit old Dashboard to work with new components and SDK downloads',
+        'Handled internationalization of site language support and video providers',
+      ],
+      images: [
+        {
+          altText: 'Wacom for Developers resources page',
+          url: '../assets/images/projects/developer-modal1.jpg',
+        },
+        {
+          altText: 'Wacom for Developers use cases page',
+          url: '../assets/images/projects/developer-modal2.jpg',
+        },
+        {
+          altText: 'Wacom for Developers Universal Ink use case page',
+          url: '../assets/images/projects/developer-modal3.jpg',
+        },
+      ],
+      link: {
+        url: 'https://developer.wacom.com',
         text: 'View Site',
       },
     },
@@ -205,41 +208,40 @@ export const cards: ProjectCardContent[] = [
   },
   {
     image: {
-      url: '../assets/images/projects/developer-main.jpg',
-      altText: 'Wacom for Developers home page',
+      url: '../assets/images/projects/spotiguess-main.jpg',
+      altText: 'Spotiguess Android app quiz screen',
     },
-    headline: 'Wacom for Developers',
-    flairText: 'February 2020 - March 2020',
-    shortDescription: 'Developer site showcasing different APIs and SDKs that Wacom has to offer. Site offers downloads and documentation for Wacom tools.',
+    headline: 'Spotiguess',
+    flairText: 'February 2019',
+    shortDescription: 'Android app using Spotify API to get a random song, play a preview, and have the user guess from 4 choices which song it is.',
     dialogContent: {
-      headline: 'Wacom for Developers',
+      headline: 'Spotiguess',
       keyPoints: [
-        'Tech lead for the 3 weeks of develop time',
-        'Built most of the components from scratch',
-        'Integrated components with a CMS',
-        'Retrofit old Dashboard to work with new components and SDK downloads',
-        'Handled internationalization of site language support and video providers',
+        'Responsible for overall design (Adobe XD)',
+        'Created all API calls to Spotify (Java)',
+        'Created Settings page to adjust genre and number of rounds (Java)',
       ],
       images: [
         {
-          altText: 'Wacom for Developers resources page',
-          url: '../assets/images/projects/developer-modal1.jpg',
+          altText: 'Spotiguess correct guess',
+          url: '../assets/images/projects/spotiguess-modal1.jpg',
         },
         {
-          altText: 'Wacom for Developers use cases page',
-          url: '../assets/images/projects/developer-modal2.jpg',
+          altText: 'Spotiguess incorrect guess',
+          url: '../assets/images/projects/spotiguess-modal2.jpg',
         },
         {
-          altText: 'Wacom for Developers Universal Ink use case page',
-          url: '../assets/images/projects/developer-modal3.jpg',
+          altText: 'Spotiguess settings page',
+          url: '../assets/images/projects/spotiguess-modal3.jpg',
         },
       ],
       link: {
-        url: 'https://developer.wacom.com',
-        text: 'View Site',
+        url: 'https://github.com/spotiguess-guessthatname/GuessThatName',
+        text: 'View on GitHub',
       },
     },
   },
+
   {
     image: {
       url: '../assets/images/projects/creativeenterprise-main.jpg',

@@ -1,6 +1,6 @@
 body {
-  color: var(--color-dark);
-  background: var(--color-light);
+  color: var(--color-primary-700);
+  background: var(--color-secondary-100);
   font-size: var(--step-1);
   font-family: var(--ff-body);
   line-height: 1.4;
@@ -26,6 +26,7 @@ h1 {
 h2 {
   font-size: var(--step-4);
   font-weight: 400;
+  text-decoration: underline;
 }
 
 h3 {
@@ -66,7 +67,7 @@ a:hover {
 }
 
 :focus {
-  outline: 2px solid;
+  outline: 3px solid var(--color-primary-700);
   outline-offset: 0.3ch;
 }
 
@@ -80,6 +81,6 @@ main:focus {
 
 /* Base selection styles that invert whatever colors are rendered */
 ::selection {
-  background: var(--color-dark);
-  color: var(--color-light);
+  background: var(--color-primary-700);
+  color: var(--color-neutral-100);
 }

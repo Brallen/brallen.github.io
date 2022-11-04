@@ -18,22 +18,30 @@ import Layout from '../layouts/Layout.astro';
       />
     </article>
 
-    <article class="region wrapper">
+    <article class="region wrapper flow">
       <CopyBlock headline="Projects" />
 
-      <ul class="grid" role="list" data-rows="masonry" data-layout="50-50">
+      <ul class="grid | center-child-margins" role="list" data-rows="masonry" data-layout="50-50">
         {cards.map((card, index) => <ProjectCard content={card} flipContent={index % 2 === 1} />)}
       </ul>
     </article>
 
-    <article class="card | region wrapper bg-primary-500 color-neutral-100 text-center">
-      <div class="contact-content | flow">
-        <p>Find me around the internet at</p>
-        <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<span>.com/</span>Brallen</a>
-        <a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow">LinkedIn<span>.com/in/</span>BrettCase</a>
-        <p>Or send me an email to get in touch</p>
+    <article class="region wrapper flow">
+      <CopyBlock headline="Contact" />
+
+      <div class="card | grid | bg-primary-500 color-neutral-100 text-center" data-layout="50-50">
+        <div class="contact-content | flow center-child-margins">
+          <p>Find me around the internet at</p>
+          <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<span>.com/</span>Brallen</a>
+          <a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow">LinkedIn<span>.com/in/</span>BrettCase</a>
+        </div>
+        <div class="contact-content | flow center-child-margins">
+          <p>Or send me an email to get in touch</p>
+          <div>
+            <ContactForm client:visible />
+          </div>
+        </div>
       </div>
-      <ContactForm client:visible />
     </article>
   </main>
 </Layout>
