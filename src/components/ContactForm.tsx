@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className='card | bg-neutral-100 color-primary-700 gap-top-600' data-type='form'>
+    <div className='card | bg-neutral-100 color-primary-700' data-type='form'>
       <form className='flow' onSubmit={submitForm}>
         <div className='form-field'>
           <input id="name" type="text" value={name} onChange={handleNameChange}/>

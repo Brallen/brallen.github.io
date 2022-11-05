@@ -22,7 +22,7 @@ import Layout from '../layouts/Layout.astro';
       <CopyBlock headline="Projects" />
 
       <ul class="grid | center-child-margins" role="list" data-rows="masonry" data-layout="50-50">
-        {cards.map((card, index) => <ProjectCard content={card} flipContent={index % 2 === 1} />)}
+        {cards.map((card) => <ProjectCard content={card} />)}
       </ul>
     </article>
 
@@ -45,19 +45,3 @@ import Layout from '../layouts/Layout.astro';
     </article>
   </main>
 </Layout>
-
-<style>
-  .contact-content a {
-    font-size: var(--font-size-lg);
-    display: block;
-    text-underline-offset: .165rem;
-  }
-
-  .contact-content a:not(:first-of-type) {
-    --flow-spacing: .5rem;
-  }
-
-  .contact-content span {
-    font-size: var(--font-size-base);
-  }
-</style>
