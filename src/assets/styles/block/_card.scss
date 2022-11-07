@@ -1,17 +1,42 @@
 .card {
   padding: var(--space-s-m);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-
+  
   &[data-type='project'] {
     padding: 0;
-
+    
     .image {
       max-height: 30rem;
     }
-
+    
     .content {
       padding: var(--space-s-m);
+    }
+    
+    .card-content {
+      display: grid;
+      transition: transform var(--transition-bounce);
+      transform-style: preserve-3d;
+    }
+    
+    &:hover .card-content {
+      transform: rotateY(.5turn);
+    }
+    
+    .card-front,
+    .card-back {
+      grid-area: 1 / 1 / 2 / 2;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
+    
+    .card-front-content,
+    .card-back-content {
+      overflow: hidden;
+      border-radius: var(--border-radius);
+    }
+    
+    .card-back {
+      transform: rotateY(.5turn);
     }
   }
 }
