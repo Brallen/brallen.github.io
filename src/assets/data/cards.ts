@@ -63,7 +63,7 @@ export const cards: ProjectCardContent[] = [
   },
   {
     image: {
-      url: '../assets/images/projects/account-main.jpg',
+      url: '../assets/images/projects/account-main.png',
       altText: 'Wacom ID home page',
     },
     headline: 'Wacom ID',
@@ -82,12 +82,32 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
-          altText: 'Wacom ID home page',
-          url: '../assets/images/projects/account-modal1.jpg',
+          altText: 'Wacom ID devices slider',
+          url: '../assets/images/projects/account-dialog-1.png',
         },
         {
-          altText: 'Wacom ID device page',
-          url: '../assets/images/projects/account-modal2.jpg',
+          altText: 'Wacom ID device details page',
+          url: '../assets/images/projects/account-dialog-2.png',
+        },
+        {
+          altText: 'Wacom ID software offers slider',
+          url: '../assets/images/projects/account-dialog-3.png',
+        },
+        {
+          altText: 'Wacom ID list of software offers for a device',
+          url: '../assets/images/projects/account-dialog-4.png',
+        },
+        {
+          altText: 'Wacom ID software offer detail page',
+          url: '../assets/images/projects/account-dialog-5.png',
+        },
+        {
+          altText: 'Wacom ID profile page',
+          url: '../assets/images/projects/account-dialog-6.png',
+        },
+        {
+          altText: 'Wacom ID sign in page',
+          url: '../assets/images/projects/account-dialog-7.png',
         },
       ],
       link: {
@@ -96,11 +116,10 @@ export const cards: ProjectCardContent[] = [
       },
     },
   },
-
   {
     image: {
-      url: '../assets/images/projects/events-main.jpg',
-      altText: 'Wacom event page',
+      url: '../assets/images/projects/events-main.png',
+      altText: 'Wacom events home page',
     },
     headline: 'Wacom Events',
     flairText: 'March 2020 - June 2020',
@@ -115,12 +134,12 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
-          altText: 'Wacom event page',
-          url: '../assets/images/projects/events-modal1.jpg',
+          altText: 'Connected Ink home page',
+          url: '../assets/images/projects/events-dialog-1.png',
         },
         {
-          altText: 'Wacom event page description',
-          url: '../assets/images/projects/events-modal2.jpg',
+          altText: 'Connected Ink sessions page',
+          url: '../assets/images/projects/events-dialog-2.png',
         },
       ],
       link: {
@@ -131,7 +150,7 @@ export const cards: ProjectCardContent[] = [
   },
   {
     image: {
-      url: '../assets/images/projects/developer-main.jpg',
+      url: '../assets/images/projects/developer-main.png',
       altText: 'Wacom for Developers home page',
     },
     headline: 'Wacom for Developers',
@@ -148,16 +167,20 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
+          altText: 'Wacom for Developers home page cards',
+          url: '../assets/images/projects/developer-dialog-1.png',
+        },
+        {
+          altText: 'Wacom for Developers home page resources',
+          url: '../assets/images/projects/developer-dialog-2.png',
+        },
+        {
+          altText: 'Wacom for Developers home page video player',
+          url: '../assets/images/projects/developer-dialog-3.png',
+        },
+        {
           altText: 'Wacom for Developers resources page',
-          url: '../assets/images/projects/developer-modal1.jpg',
-        },
-        {
-          altText: 'Wacom for Developers use cases page',
-          url: '../assets/images/projects/developer-modal2.jpg',
-        },
-        {
-          altText: 'Wacom for Developers Universal Ink use case page',
-          url: '../assets/images/projects/developer-modal3.jpg',
+          url: '../assets/images/projects/developer-dialog-4.png',
         },
       ],
       link: {
@@ -185,19 +208,19 @@ export const cards: ProjectCardContent[] = [
       images: [
         {
           altText: 'Teslar control panel',
-          url: '../assets/images/projects/teslar-modal1.jpg',
+          url: '../assets/images/projects/teslar-dialog-1.jpg',
         },
         {
           altText: 'Teslar media controls',
-          url: '../assets/images/projects/teslar-modal2.jpg',
+          url: '../assets/images/projects/teslar-dialog-2.jpg',
         },
         {
           altText: 'Teslar climate controls',
-          url: '../assets/images/projects/teslar-modal3.jpg',
+          url: '../assets/images/projects/teslar-dialog-3.jpg',
         },
         {
           altText: 'Teslar charging controls',
-          url: '../assets/images/projects/teslar-modal4.jpg',
+          url: '../assets/images/projects/teslar-dialog-4.jpg',
         },
       ],
       link: {
@@ -224,15 +247,15 @@ export const cards: ProjectCardContent[] = [
       images: [
         {
           altText: 'Spotiguess correct guess',
-          url: '../assets/images/projects/spotiguess-modal1.jpg',
+          url: '../assets/images/projects/spotiguess-dialog-1.jpg',
         },
         {
           altText: 'Spotiguess incorrect guess',
-          url: '../assets/images/projects/spotiguess-modal2.jpg',
+          url: '../assets/images/projects/spotiguess-dialog-2.jpg',
         },
         {
           altText: 'Spotiguess settings page',
-          url: '../assets/images/projects/spotiguess-modal3.jpg',
+          url: '../assets/images/projects/spotiguess-dialog-3.jpg',
         },
       ],
       link: {
@@ -244,7 +267,7 @@ export const cards: ProjectCardContent[] = [
 
   {
     image: {
-      url: '../assets/images/projects/creativeenterprise-main.jpg',
+      url: '../assets/images/projects/ce-main.png',
       altText: 'Wacom Creative Enterprise home page',
     },
     headline: 'Creative Enterprise',
@@ -259,16 +282,16 @@ export const cards: ProjectCardContent[] = [
       ],
       images: [
         {
-          altText: 'Wacom Creative Enterprise products page',
-          url: '../assets/images/projects/creativeenterprise-modal1.jpg',
+          altText: 'Wacom Creative Enterprise example products',
+          url: '../assets/images/projects/ce-dialog-1.png',
         },
         {
           altText: 'Wacom Creative Enterprise contact form',
-          url: '../assets/images/projects/creativeenterprise-modal2.jpg',
+          url: '../assets/images/projects/ce-dialog-2.png',
         },
         {
-          altText: 'Wacom Creative Enterprise IT integrations page',
-          url: '../assets/images/projects/creativeenterprise-modal3.jpg',
+          altText: 'Wacom Creative Enterprise product details page',
+          url: '../assets/images/projects/ce-dialog-3.png',
         },
       ],
       link: {
