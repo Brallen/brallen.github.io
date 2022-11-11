@@ -22,6 +22,10 @@
   margin-right: auto;
 }
 
+.no-max-width {
+  max-width: unset;
+}
+
 .flow > * + * {
   margin-top: var(--flow-spacing, 1em);
 }

@@ -15,35 +15,19 @@ const TEXT = {
 };
 ---
 
-<li class="card" data-type="project">
-  <div class="card-content">
-    <div class="card-front">
-      <div class="card-front-content | bg-neutral-100">
-        <div class="center-child-margins">
-          <Image class="image" src={import(/* @vite-ignore */content.image.url)} alt={content.image.altText} />
-        </div>
-        <div class="content | flow">
-          <div>
-            <h4>{content.headline}</h4>
-            <h5>{content.flairText}</h5>
-          </div>
-          <p>{content.shortDescription}</p>
-          <button class="button">{TEXT.learnMore}</button>
-        </div>
-      </div>
+<li class="card | grid | no-max-width" data-type="project" data-layout="50-50">
+  <div class="center-child-margins">
+    <Image class="image" src={import(/* @vite-ignore */content.image.url)} alt={content.image.altText} />
+  </div>
+  <div class="content | flow bg-neutral-100">
+    <div>
+      <h4>{content.headline}</h4>
+      <h5>{content.flairText}</h5>
     </div>
-    <div class="card-back">
-      <div class="card-back-content | bg-neutral-100">
-        <div class="center-child-margins">
-          <Image class="image" src={import(/* @vite-ignore */content.dialogContent.images[0].url)} alt={content.image.altText} />
-        </div>
-        <div class="content | flow">
-          <ul>
-            {content.dialogContent.keyPoints.map((point) => <li>{point}</li>)}
-          </ul>
-          {content.dialogContent.link && <button class="button">{content.dialogContent.link?.text}</button>}
-        </div>
-      </div>
-    </div>
+    <p>{content.shortDescription}</p>
+    <ul>
+      {content.dialogContent.keyPoints.map((point) => <li>{point}</li>)}
+    </ul>
+    {content.dialogContent.link && <button class="button">{content.dialogContent.link?.text}</button>}
   </div>
 </li>

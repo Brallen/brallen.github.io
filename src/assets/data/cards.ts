@@ -72,12 +72,8 @@ export const cards: ProjectCardContent[] = [
     dialogContent: {
       headline: 'Wacom ID',
       keyPoints: [
-        'Tech lead',
-        'Designed Sign In/Sign Up workflow',
-        'Built most components',
-        'Integrated components with a CMS',
+        'Tech lead building components with CMS and Google Analytics integrations',
         'Handled data privacy requirements for GDPR and CCPA',
-        'Integrated Google Analytics',
         'Handled internationalization of site language support and video providers',
       ],
       images: [
@@ -127,10 +123,9 @@ export const cards: ProjectCardContent[] = [
     dialogContent: {
       headline: 'Wacom Events',
       keyPoints: [
-        'Built many static components',
         'Designed and built modular and customizable \'add to calendar\' component',
         'Helped design and build modular form component for use in all sign ups',
-        'Integrated components with a CMS',
+        'Built components with CMS integration',
       ],
       images: [
         {
@@ -160,7 +155,6 @@ export const cards: ProjectCardContent[] = [
       headline: 'Wacom for Developers',
       keyPoints: [
         'Tech lead for the 3 weeks of develop time',
-        'Built most of the components from scratch',
         'Integrated components with a CMS',
         'Retrofit old Dashboard to work with new components and SDK downloads',
         'Handled internationalization of site language support and video providers',

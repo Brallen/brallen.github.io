@@ -21,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
     <article class="region wrapper flow">
       <CopyBlock headline="Projects" />
 
-      <ul class="grid | center-child-margins" role="list" data-rows="masonry" data-layout="50-50">
+      <ul class="flow center-child-margins" role="list">
         {cards.map((card) => <ProjectCard content={card} />)}
       </ul>
     </article>

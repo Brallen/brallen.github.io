@@ -3,40 +3,18 @@
   
   &[data-type='project'] {
     padding: 0;
+    align-items: center;
     
     .image {
       max-height: 30rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-elevation-high);
     }
     
     .content {
-      padding: var(--space-s-m);
-    }
-    
-    .card-content {
-      display: grid;
-      transition: transform var(--transition-bounce);
-      transform-style: preserve-3d;
-    }
-    
-    &:hover .card-content {
-      transform: rotateY(.5turn);
-    }
-    
-    .card-front,
-    .card-back {
-      grid-area: 1 / 1 / 2 / 2;
-      backface-visibility: hidden;
-      transform-style: preserve-3d;
-    }
-    
-    .card-front-content,
-    .card-back-content {
-      overflow: hidden;
+      // box-shadow: var(--shadow-elevation-high);
       border-radius: var(--border-radius);
-    }
-    
-    .card-back {
-      transform: rotateY(.5turn);
+      padding: var(--space-s-m);
     }
   }
 }

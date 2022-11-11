@@ -7,4 +7,24 @@
   --transition-bounce: 1500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
+  --shadow-color: 30deg 26% 59%;
+  --shadow-elevation-low:
+    0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.36),
+    0.5px 0.6px 0.9px -1.3px hsl(var(--shadow-color) / 0.35),
+    1.3px 1.4px 2.1px -2.6px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium:
+    0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.3),
+    0.8px 0.9px 1.3px -0.6px hsl(var(--shadow-color) / 0.3),
+    1.6px 1.7px 2.6px -1.3px hsl(var(--shadow-color) / 0.29),
+    3.3px 3.5px 5.3px -1.9px hsl(var(--shadow-color) / 0.29),
+    6.4px 6.8px 10.4px -2.6px hsl(var(--shadow-color) / 0.28);
+  --shadow-elevation-high:
+    0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.29),
+    0.8px 1.6px 1.8px -0.5px hsl(var(--shadow-color) / 0.27),
+    1.5px 3px 3.4px -0.9px hsl(var(--shadow-color) / 0.26),
+    2.6px 5.2px 5.8px -1.4px hsl(var(--shadow-color) / 0.24),
+    4.4px 8.7px 9.8px -1.9px hsl(var(--shadow-color) / 0.22),
+    7.1px 14.2px 16px -2.4px hsl(var(--shadow-color) / 0.2),
+    11.2px 22.3px 25.1px -2.8px hsl(var(--shadow-color) / 0.19),
+    16.8px 33.5px 37.7px -3.3px hsl(var(--shadow-color) / 0.17);
 }
