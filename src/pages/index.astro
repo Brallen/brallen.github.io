@@ -21,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
     <article class="region wrapper flow">
       <CopyBlock headline="Projects" />
 
-      <ul class="flow center-child-margins" role="list">
+      <ul class="grid | center-child-margins" role="list" data-rows="masonry" data-layout="50-50">
         {cards.map((card) => <ProjectCard content={card} />)}
       </ul>
     </article>
@@ -29,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
     <article class="region wrapper flow">
       <CopyBlock headline="Contact" />
 
-      <div class="card | grid | bg-primary-500 color-neutral-100 text-center" data-layout="50-50">
+      <div class="card | grid | apply-border-radius bg-primary-500 color-neutral-100 text-center" data-layout="50-50">
         <div class="contact-content | flow center-child-margins">
           <p>Find me around the internet at</p>
           <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<span>.com/</span>Brallen</a>
@@ -38,7 +38,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="contact-content | flow center-child-margins">
           <p>Or send me an email to get in touch</p>
           <div>
-            <!-- <ContactForm client:visible /> -->
+            <ContactForm client:visible />
           </div>
         </div>
       </div>

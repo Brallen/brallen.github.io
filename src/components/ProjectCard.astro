@@ -9,17 +9,13 @@ export interface Props {
 }
 
 const { content } = Astro.props;
-
-const TEXT = {
-  learnMore: 'Learn More',
-};
 ---
 
-<li class="card | grid | no-max-width" data-type="project" data-layout="50-50">
+<li class="card | flow flow-spacing-s no-max-width" data-type="project">
   <div class="center-child-margins">
-    <Image class="image" src={import(/* @vite-ignore */content.image.url)} alt={content.image.altText} />
+    <Image class="image | apply-border-radius" src={import(/* @vite-ignore */content.image.url)} alt={content.image.altText} />
   </div>
-  <div class="content | flow bg-neutral-100">
+  <div class="content | apply-border-radius flow bg-neutral-100">
     <div>
       <h4>{content.headline}</h4>
       <h5>{content.flairText}</h5>

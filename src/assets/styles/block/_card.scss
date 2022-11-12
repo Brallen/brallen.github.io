@@ -3,17 +3,19 @@
   
   &[data-type='project'] {
     padding: 0;
-    align-items: center;
     
     .image {
       max-height: 30rem;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow-elevation-high);
+      box-shadow: var(--shadow-elevation-medium);
+      transition: transform var(--transition-bounce), box-shadow var(--transition-bounce);
+
+      &:hover { //This needs to be updated for mobile and maybe even swapped out with a carousel
+        transform: scale(1.25);
+        box-shadow: var(--shadow-elevation-high);
+      }
     }
     
     .content {
-      // box-shadow: var(--shadow-elevation-high);
-      border-radius: var(--border-radius);
       padding: var(--space-s-m);
     }
   }
