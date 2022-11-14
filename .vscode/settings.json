@@ -16,9 +16,13 @@
     "Autosize",
     "bgcolor",
     "houschka",
+    "iconoir",
     "lazyload",
     "Planigize",
+    "Spotiguess",
     "svgr",
-    "Swipeable"
+    "Swipeable",
+    "Swiper",
+    "teslar"
   ],
 }

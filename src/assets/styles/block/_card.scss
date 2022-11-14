@@ -6,13 +6,6 @@
     
     .image {
       max-height: 30rem;
-      box-shadow: var(--shadow-elevation-medium);
-      transition: transform var(--transition-bounce), box-shadow var(--transition-bounce);
-
-      &:hover { //This needs to be updated for mobile and maybe even swapped out with a carousel
-        transform: scale(1.25);
-        box-shadow: var(--shadow-elevation-high);
-      }
     }
     
     .content {

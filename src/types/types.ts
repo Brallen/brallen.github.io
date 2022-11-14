@@ -1,13 +1,7 @@
 export type ProjectCardContent = Readonly<{
-  image: ImageContent,
   headline: string,
   flairText: string,
   shortDescription: string,
-  dialogContent: DialogContent,
-}>;
-
-export type DialogContent = Readonly<{
-  headline: string,
   keyPoints: string[];
   images: ImageContent[];
   link?: LinkContent;

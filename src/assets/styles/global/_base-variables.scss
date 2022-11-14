@@ -1,5 +1,5 @@
 :root {
-  --gutter: var(--space-l);
+  --gutter: var(--space-m);
   --border-radius: var(--step--1);
   --transition-base: 250ms ease;
   --transition-movement: 200ms linear;
@@ -7,27 +7,4 @@
   --transition-bounce: 400ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
   --tracking: -0.05ch;
   --tracking-s: -0.075ch;
-
-  // This color is the hsl of color-secondary-100. Needs to be in this format for the below calculations
-  --shadow-color: 30deg 26% 59%;
-
-  --shadow-elevation-low:
-    0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.36),
-    0.5px 0.6px 0.9px -1.3px hsl(var(--shadow-color) / 0.35),
-    1.3px 1.4px 2.1px -2.6px hsl(var(--shadow-color) / 0.34);
-  --shadow-elevation-medium:
-    0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.3),
-    0.8px 0.9px 1.3px -0.6px hsl(var(--shadow-color) / 0.3),
-    1.6px 1.7px 2.6px -1.3px hsl(var(--shadow-color) / 0.29),
-    3.3px 3.5px 5.3px -1.9px hsl(var(--shadow-color) / 0.29),
-    6.4px 6.8px 10.4px -2.6px hsl(var(--shadow-color) / 0.28);
-  --shadow-elevation-high:
-    0.2px 0.3px 0.3px hsl(var(--shadow-color) / 0.53),
-    0.3px 0.4px 0.4px -0.7px hsl(var(--shadow-color) / 0.47),
-    0.7px 0.9px 0.9px -1.4px hsl(var(--shadow-color) / 0.4),
-    1.7px 2.3px 2.1px -2.1px hsl(var(--shadow-color) / 0.33),
-    3.8px 5.1px 4.8px -2.9px hsl(var(--shadow-color) / 0.27),
-    7.2px 9.6px 9px -3.6px hsl(var(--shadow-color) / 0.2),
-    12.3px 16.4px 15.4px -4.3px hsl(var(--shadow-color) / 0.13),
-    19.3px 25.8px 24.2px -5px hsl(var(--shadow-color) / 0.07);
 }

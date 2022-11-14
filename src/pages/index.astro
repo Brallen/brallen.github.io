@@ -1,10 +1,12 @@
 ---
 import { cards } from '../assets/data/cards';
-import ContactForm from '../components/ContactForm.jsx';
+import ContactForm from '../components/ContactForm';
 import CopyBlock from '../components/CopyBlock.astro';
 import Marquee from '../components/Marquee.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+// import ProjectCard as OldPC from '../components/ProjectCard.astro';
+import ProjectCard from '../components/ProjectCard';
 import Layout from '../layouts/Layout.astro';
+
 ---
 
 <Layout title="Brett Case - Software Engineer">
@@ -22,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
       <CopyBlock headline="Projects" />
 
       <ul class="grid | center-child-margins" role="list" data-rows="masonry" data-layout="50-50">
-        {cards.map((card) => <ProjectCard content={card} />)}
+        {cards.map((card) => <ProjectCard content={card} client:idle/>)}
       </ul>
     </article>
 
@@ -38,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="contact-content | flow center-child-margins">
           <p>Or send me an email to get in touch</p>
           <div>
-            <ContactForm client:visible />
+            <!-- <ContactForm client:visible /> -->
           </div>
         </div>
       </div>
