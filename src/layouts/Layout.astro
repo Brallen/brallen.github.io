@@ -7,10 +7,6 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-
-const TEXT = {
-  skipToContent: 'Skip to content',
-};
 ---
 
 <!DOCTYPE html>
@@ -24,22 +20,7 @@ const TEXT = {
     <link rel="stylesheet" href="https://use.typekit.net/tts5cfx.css" />
   </head>
   <body>
-    <a class="skip-link | button" href="#main-content">{TEXT.skipToContent}</a>
     <slot />
     <Footer />
   </body>
 </html>
-
-<style lang="scss">
-  .skip-link {
-    position: absolute;
-    z-index: 99;
-    top: 1rem;
-    left: 1rem;
-    transform: translateY(-200%);
-
-    &:is(:focus, :active) {
-      transform: translateY(0);
-    }
-  }
-</style>

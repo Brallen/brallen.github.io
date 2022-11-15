@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const TEXT = {
   name: 'Name',
@@ -11,7 +11,6 @@ const TEXT = {
 
 const ContactForm: React.FC = () => {
   const [ status, setStatus ] = useState<string>('');
-  const [ submitDisabled, setSubmitDisabled ] = useState<boolean>(true);
   const [ name, setName ] = useState<string>('');
   const [ email, setEmail ] = useState<string>('');
   const [ message, setMessage ] = useState<string>('');
@@ -28,16 +27,11 @@ const ContactForm: React.FC = () => {
     setMessage(event.target.value);
   };
 
-  useEffect(() => { // validate form at least not empty
-    if (name.length > 0 && email.length > 0 && message.length > 0) {
-      setSubmitDisabled(false);
-    } else {
-      setSubmitDisabled(true);
-    }
-  }, [ name, email, message ]);
-
   const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    // one last check before submitting form
+    if (name.length === 0 || email.length === 0 || message.length === 0) return;
+
     const data = {
       name,
       email,
@@ -50,9 +44,7 @@ const ContactForm: React.FC = () => {
         'content-type': 'application/json',
         'accept': 'application/json',
       },
-      body: JSON.stringify({
-        data,
-      }),
+      body: JSON.stringify({ data }),
     });
 
     if (response.status === 200) {
@@ -66,24 +58,26 @@ const ContactForm: React.FC = () => {
     <div className='card | apply-border-radius bg-neutral-100 color-primary-700' data-type='form'>
       <form className='flow' onSubmit={submitForm}>
         <div className='form-field'>
-          <input id="name" type="text" value={name} onChange={handleNameChange}/>
+          <input id="name" type="text" value={name} onChange={handleNameChange} placeholder=" " required/>
           <label htmlFor="name">{TEXT.name}</label>
         </div>
         <div className='form-field'>
-          <input id="email" type="email" value={email} onChange={handleEmailChange}/>
+          <input id="email" type="email" value={email} onChange={handleEmailChange} placeholder=" " required/>
           <label htmlFor="email">{TEXT.emailAddress}</label>
         </div>
         <div className='form-field'>
-          <textarea id="message" rows={2} value={message} onChange={handleMessageChange}/>
+          <textarea id="message" rows={2} value={message} onChange={handleMessageChange} placeholder=" " required/>
           <label htmlFor="message">{TEXT.message}</label>
         </div>
-        {status === 'SUCCESS' ?
-          <p>{TEXT.successText}</p> :
-          <button type="submit" aria-label="submit contact form" className="button" disabled={submitDisabled}>
-            {TEXT.submitButtonText}
-          </button>
+        {
+          status === 'SUCCESS' ?
+            <p>{TEXT.successText}</p> :
+            <button type="submit" aria-label="submit contact form" className="button" disabled={name.length === 0 || email.length === 0 || message.length === 0}>
+              {TEXT.submitButtonText}
+            </button>
         }
-        {status === 'ERROR' &&
+        {
+          status === 'ERROR' &&
           <p>{TEXT.errorText}</p>
         }
       </form>

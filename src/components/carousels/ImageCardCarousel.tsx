@@ -1,6 +1,6 @@
 import type React from 'react';
 
-import { EffectCards, Navigation } from 'swiper';
+import { EffectCards } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -19,15 +19,14 @@ const ImageCardCarousel: React.FC<ImageCardCarouselProps> = ({ images }) => {
     <Swiper
       effect={'cards'}
       grabCursor={true}
-      modules={[ EffectCards, Navigation ]}
+      modules={[ EffectCards ]}
     >
       <SwiperPrevButton />
 
       {images.map((image, index) =>
         <SwiperSlide className="apply-border-radius" key={`image-${index}`}>
           <img className='image | apply-border-radius' src={image.url} alt={image.altText} />
-        </SwiperSlide>,
-      )}
+        </SwiperSlide>)}
 
       <SwiperNextButton />
     </Swiper>

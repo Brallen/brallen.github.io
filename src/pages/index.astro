@@ -1,12 +1,10 @@
 ---
 import { cards } from '../assets/data/cards';
-import ContactForm from '../components/ContactForm';
+import ContactCard from '../components/ContactCard.astro';
 import CopyBlock from '../components/CopyBlock.astro';
 import Marquee from '../components/Marquee.astro';
-// import ProjectCard as OldPC from '../components/ProjectCard.astro';
 import ProjectCard from '../components/ProjectCard';
 import Layout from '../layouts/Layout.astro';
-
 ---
 
 <Layout title="Brett Case - Software Engineer">
@@ -31,19 +29,7 @@ import Layout from '../layouts/Layout.astro';
     <article class="region wrapper flow">
       <CopyBlock headline="Contact" />
 
-      <div class="card | grid | apply-border-radius bg-primary-500 color-neutral-100 text-center" data-layout="50-50">
-        <div class="contact-content | flow center-child-margins">
-          <p>Find me around the internet at</p>
-          <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<span>.com/</span>Brallen</a>
-          <a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow">LinkedIn<span>.com/in/</span>BrettCase</a>
-        </div>
-        <div class="contact-content | flow center-child-margins">
-          <p>Or send me an email to get in touch</p>
-          <div>
-            <!-- <ContactForm client:visible /> -->
-          </div>
-        </div>
-      </div>
+      <ContactCard />
     </article>
   </main>
 </Layout>

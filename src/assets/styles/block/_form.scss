@@ -3,11 +3,35 @@
   
   input, textarea {
     width: 100%;
+    padding: var(--space-3xs) var(--space-xs);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-primary-700);
   }
 
   label {
     position: absolute;
-    left: 0;
+    padding-inline: var(--space-3xs);
+    background-color: var(--color-neutral-100);
+    border-radius: var(--border-radius);
+    left: var(--space-xs);
+    top: 50%;
+    transform: translateY(-50%); 
+    transition: top var(--transition-base), font-size var(--transition-base);
+  }
+
+  textarea + label {
     top: 0;
+    transform: translateY(20%);
+    transition: transform var(--transition-base), font-size var(--transition-base);
+  }
+
+  input:is(:active, :hover, :focus, :not(:placeholder-shown)) + label {
+    top: 0;
+    font-size: var(--step-0);
+  }
+
+  textarea:is(:active, :hover, :focus, :not(:placeholder-shown)) + label {
+    transform: translateY(-50%);
+    font-size: var(--step-0);
   }
 }

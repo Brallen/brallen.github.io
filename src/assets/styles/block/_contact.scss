@@ -1,15 +1,25 @@
 .contact-content {
-  a {
-    font-size: var(--step-1);
-    display: block;
-    text-underline-offset: .165rem;
+  .social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    &:not(:first-of-type) {
-      --flow-spacing: .5rem;
+    & > * {
+      width: fit-content;
     }
-  }
-  
-  span {
-    font-size: var(--step-0);
+    
+    & > :first-child {
+      font-size: var(--step-5);
+      line-height: 0;
+    }
+
+    & > :last-child {
+      font-size: var(--step-1);
+      display: block;
+      
+      span {
+        font-size: var(--step-0);
+      }
+    }
   }
 }
