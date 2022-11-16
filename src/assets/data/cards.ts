@@ -14,43 +14,43 @@ export const cards: ProjectCardContent[] = [
     images: [
       {
         altText: 'Planigize home page landing',
-        url: '/images/projects/planigize-home-1.png',
+        url: '/images/projects/planigize-1.webp',
       },
       {
         altText: 'Planigize home page tabs',
-        url: '/images/projects/planigize-home-2.png',
+        url: '/images/projects/planigize-2.webp',
       },
       {
         altText: 'Planigize home page call to action',
-        url: '/images/projects/planigize-home-3.png',
+        url: '/images/projects/planigize-3.webp',
       },
       {
         altText: 'Planigize sign in ',
-        url: '/images/projects/planigize-sign-in.png',
+        url: '/images/projects/planigize-4.webp',
       },
       {
         altText: 'Planigize sign up',
-        url: '/images/projects/planigize-sign-up.png',
+        url: '/images/projects/planigize-5.webp',
       },
       {
         altText: 'Planigize trainer information',
-        url: '/images/projects/planigize-trainer.png',
+        url: '/images/projects/planigize-6.webp',
       },
       {
         altText: 'Planigize day page overview',
-        url: '/images/projects/planigize-days-1.png',
+        url: '/images/projects/planigize-7.webp',
       },
       {
         altText: 'Planigize day page calendar',
-        url: '/images/projects/planigize-days-2.png',
+        url: '/images/projects/planigize-8.webp',
       },
       {
         altText: 'Planigize day page trainer information',
-        url: '/images/projects/planigize-days-3.png',
+        url: '/images/projects/planigize-9.webp',
       },
       {
         altText: 'Planigize day page extra programs',
-        url: '/images/projects/planigize-days-4.png',
+        url: '/images/projects/planigize-10.webp',
       },
     ],
   },
@@ -65,36 +65,36 @@ export const cards: ProjectCardContent[] = [
     ],
     images: [
       {
-        url: '/images/projects/account-main.png',
         altText: 'Wacom ID home page',
+        url: '/images/projects/account-1.webp',
       },
       {
         altText: 'Wacom ID devices slider',
-        url: '/images/projects/account-dialog-1.png',
+        url: '/images/projects/account-2.webp',
       },
       {
         altText: 'Wacom ID device details page',
-        url: '/images/projects/account-dialog-2.png',
+        url: '/images/projects/account-3.webp',
       },
       {
         altText: 'Wacom ID software offers slider',
-        url: '/images/projects/account-dialog-3.png',
+        url: '/images/projects/account-4.webp',
       },
       {
         altText: 'Wacom ID list of software offers for a device',
-        url: '/images/projects/account-dialog-4.png',
+        url: '/images/projects/account-5.webp',
       },
       {
         altText: 'Wacom ID software offer detail page',
-        url: '/images/projects/account-dialog-5.png',
+        url: '/images/projects/account-6.webp',
       },
       {
         altText: 'Wacom ID profile page',
-        url: '/images/projects/account-dialog-6.png',
+        url: '/images/projects/account-7.webp',
       },
       {
         altText: 'Wacom ID sign in page',
-        url: '/images/projects/account-dialog-7.png',
+        url: '/images/projects/account-8.webp',
       },
     ],
     link: {
@@ -113,16 +113,16 @@ export const cards: ProjectCardContent[] = [
     ],
     images: [
       {
-        url: '/images/projects/events-main.png',
         altText: 'Wacom events home page',
+        url: '/images/projects/events-1.webp',
       },
       {
         altText: 'Connected Ink home page',
-        url: '/images/projects/events-dialog-1.png',
+        url: '/images/projects/events-2.webp',
       },
       {
         altText: 'Connected Ink sessions page',
-        url: '/images/projects/events-dialog-2.png',
+        url: '/images/projects/events-3.webp',
       },
     ],
     link: {
@@ -142,24 +142,24 @@ export const cards: ProjectCardContent[] = [
     ],
     images: [
       {
-        url: '/images/projects/developer-main.png',
         altText: 'Wacom for Developers home page',
+        url: '/images/projects/developer-1.webp',
       },
       {
         altText: 'Wacom for Developers home page cards',
-        url: '/images/projects/developer-dialog-1.png',
+        url: '/images/projects/developer-2.webp',
       },
       {
         altText: 'Wacom for Developers home page resources',
-        url: '/images/projects/developer-dialog-2.png',
+        url: '/images/projects/developer-3.webp',
       },
       {
         altText: 'Wacom for Developers home page video player',
-        url: '/images/projects/developer-dialog-3.png',
+        url: '/images/projects/developer-4.webp',
       },
       {
         altText: 'Wacom for Developers resources page',
-        url: '/images/projects/developer-dialog-4.png',
+        url: '/images/projects/developer-5.webp',
       },
     ],
     link: {
@@ -179,24 +179,24 @@ export const cards: ProjectCardContent[] = [
     ],
     images: [
       {
-        url: '/images/projects/teslar-main.jpg',
         altText: 'Teslar home page',
+        url: '/images/projects/teslar-1.webp',
       },
       {
         altText: 'Teslar control panel',
-        url: '/images/projects/teslar-dialog-1.jpg',
+        url: '/images/projects/teslar-2.webp',
       },
       {
         altText: 'Teslar media controls',
-        url: '/images/projects/teslar-dialog-2.jpg',
+        url: '/images/projects/teslar-3.webp',
       },
       {
         altText: 'Teslar climate controls',
-        url: '/images/projects/teslar-dialog-3.jpg',
+        url: '/images/projects/teslar-4.webp',
       },
       {
         altText: 'Teslar charging controls',
-        url: '/images/projects/teslar-dialog-4.jpg',
+        url: '/images/projects/teslar-5.webp',
       },
     ],
     link: {
@@ -215,20 +215,20 @@ export const cards: ProjectCardContent[] = [
     ],
     images: [
       {
-        url: '/images/projects/spotiguess-main.jpg',
         altText: 'Spotiguess Android app quiz screen',
+        url: '/images/projects/spotiguess-1.webp',
       },
       {
         altText: 'Spotiguess correct guess',
-        url: '/images/projects/spotiguess-dialog-1.jpg',
+        url: '/images/projects/spotiguess-2.webp',
       },
       {
         altText: 'Spotiguess incorrect guess',
-        url: '/images/projects/spotiguess-dialog-2.jpg',
+        url: '/images/projects/spotiguess-3.webp',
       },
       {
         altText: 'Spotiguess settings page',
-        url: '/images/projects/spotiguess-dialog-3.jpg',
+        url: '/images/projects/spotiguess-4.webp',
       },
     ],
     link: {
@@ -248,20 +248,20 @@ export const cards: ProjectCardContent[] = [
     ],
     images: [
       {
-        url: '/images/projects/ce-main.png',
         altText: 'Wacom Creative Enterprise home page',
+        url: '/images/projects/ce-1.webp',
       },
       {
         altText: 'Wacom Creative Enterprise example products',
-        url: '/images/projects/ce-dialog-1.png',
+        url: '/images/projects/ce-2.webp',
       },
       {
         altText: 'Wacom Creative Enterprise contact form',
-        url: '/images/projects/ce-dialog-2.png',
+        url: '/images/projects/ce-3.webp',
       },
       {
         altText: 'Wacom Creative Enterprise product details page',
-        url: '/images/projects/ce-dialog-3.png',
+        url: '/images/projects/ce-4.webp',
       },
     ],
     link: {

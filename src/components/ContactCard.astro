@@ -3,6 +3,11 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import ContactForm from '../components/ContactForm';
+
+const TEXT = {
+  githubLabel: 'Github Icon to Brett\'s page',
+  linkedInLabel: 'LinkedIn Icon to Brett\'s page',
+};
 ---
 
 <div class="card | grid | apply-border-radius bg-primary-500 color-neutral-100 text-center" data-layout="50-50">
@@ -10,11 +15,11 @@ import ContactForm from '../components/ContactForm';
     <p>Find me around the internet at</p>
     <div class="grid" data-layout="reverse-50-50">
       <div class="social-link">
-        <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow"><FontAwesomeIcon icon={faGithub} /></a>
+        <a href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow"aria-label={TEXT.githubLabel}><FontAwesomeIcon icon={faGithub} /></a>
         <a class="arrow" href="https://github.com/Brallen" target="_blank" rel="noreferrer nofollow">GitHub<span>.com/</span>Brallen</a>
       </div>
       <div class="social-link">
-        <a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow"><FontAwesomeIcon icon={faLinkedin} /></a>
+        <a href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow" aria-label={TEXT.linkedInLabel}><FontAwesomeIcon icon={faLinkedin} /></a>
         <a class="arrow" href="https://linkedin.com/in/brettcase" target="_blank" rel="noreferrer nofollow">LinkedIn<span>.com/in/</span>BrettCase</a>
       </div>
     </div>
