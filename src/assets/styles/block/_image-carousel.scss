@@ -19,6 +19,8 @@
   .button[data-type='carousel'] {
     position: absolute;
     z-index: 99;
+    width: 1.2em;
+    height: 1.2em;
     
     &[data-direction='next'] {
       right: calc(-1 * var(--space-m));

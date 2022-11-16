@@ -14,7 +14,7 @@
   &[data-layout='reverse-50-50'] {
     --grid-placement: auto-fit;
     --grid-min-item-size: clamp(14rem, 50vw, 18rem);
-    gap: var(--space-s);
+    gap: var(--space-l);
   }
 
   &[data-rows='masonry'] {

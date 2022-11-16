@@ -1,6 +1,7 @@
 import type React from 'react';
 
-import { NavArrowLeft } from 'iconoir-react';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useSwiper } from 'swiper/react';
 
 const TEXT = {
@@ -19,7 +20,7 @@ const SwiperPrevButton: React.FC = () => {
       onClick={() => swiper.slidePrev()}
       aria-label={TEXT.goToPrev}
     >
-      <NavArrowLeft aria-label={TEXT.prevAlt} />
+      <FontAwesomeIcon aria-label={TEXT.prevAlt} icon={faChevronLeft} />
     </button>
   );
 };

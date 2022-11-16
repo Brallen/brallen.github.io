@@ -1,6 +1,7 @@
 import type React from 'react';
 
-import { NavArrowRight } from 'iconoir-react';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useSwiper } from 'swiper/react';
 
 const TEXT = {
@@ -19,7 +20,7 @@ const SwiperNextButton: React.FC = () => {
       onClick={() => swiper.slideNext()}
       aria-label={TEXT.goToNext}
     >
-      <NavArrowRight aria-label={TEXT.nextAlt} />
+      <FontAwesomeIcon aria-label={TEXT.nextAlt} icon={faChevronRight} />
     </button>
   );
 };

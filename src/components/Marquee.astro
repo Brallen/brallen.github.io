@@ -1,8 +1,4 @@
 ---
-import { Image } from '@astrojs/image/components';
-
-import heroImage from '../assets/images/landscape.svg';
-
 export interface Props {
   headline?: string;
   subHeadline?: string;
@@ -15,6 +11,6 @@ const { headline, subHeadline } = Astro.props;
   <div class="wrapper flow flow-spacing-s center-child-margins text-center">
     <h1>{headline}</h1>
     <h3>{subHeadline}</h3>
-    <Image class="page-width-image" src={heroImage} width={2665} height={886} alt="Drawing of a mountain and trees with reflections on a lake" />
+    <img class="page-width-image" src="/images/landscape.svg" width={2665} height={886} alt="Drawing of a mountain and trees with reflections on a lake" />
   </div>
 </article>
