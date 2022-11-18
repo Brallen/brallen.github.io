@@ -20,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ content }) => {
         <ul>
           {content.keyPoints.map((point, index) => <li key={`point-${index}`}>{point}</li>)}
         </ul>
-        {content.link && <button className="button">{content.link?.text}</button>}
+        {content.link && <a className="button" href={content.link.url} target="_blank" rel="noreferrer nofollow">{content.link?.text}</a>}
       </div>
     </div>
   );
