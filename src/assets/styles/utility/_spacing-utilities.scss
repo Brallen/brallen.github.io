@@ -1,6 +1,7 @@
 .region {
   padding-top: var(--region-space, var(--space-m-l));
   padding-bottom: var(--region-space, var(--space-m-l));
+  overflow-x: hidden;
 }
 
 .wrapper {
