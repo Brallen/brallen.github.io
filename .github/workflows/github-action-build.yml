@@ -1,34 +1,34 @@
-name: Build and Deploy
+# name: Build and Deploy
 
-on:
-  push:
-    branches:
-      - develop
+# on:
+#   push:
+#     branches:
+#       - develop
 
-jobs:
-  build-deploy:
-    runs-on: [ubuntu-latest]
-    steps:
-      - name: Checkout Develop Branch
-        uses: actions/checkout@v2
-        with:
-          ref: develop
+# jobs:
+#   build-deploy:
+#     runs-on: [ubuntu-latest]
+#     steps:
+#       - name: Checkout Develop Branch
+#         uses: actions/checkout@v2
+#         with:
+#           ref: develop
       
-      - name: Setup Dependencies Cache
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-          cache: 'yarn'
+#       - name: Setup Dependencies Cache
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: '16'
+#           cache: 'yarn'
 
-      - name: Install Dependencies
-        run: yarn install
+#       - name: Install Dependencies
+#         run: yarn install
 
-      - name: Build
-        run: yarn build
+#       - name: Build
+#         run: yarn build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: master
+#       - name: Deploy
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./dist
+#           publish_branch: master
