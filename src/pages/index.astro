@@ -1,0 +1,35 @@
+---
+import { cards } from '../assets/data/cards';
+import ContactCard from '../components/ContactCard.astro';
+import CopyBlock from '../components/CopyBlock.astro';
+import Marquee from '../components/Marquee.astro';
+import ProjectCard from '../components/ProjectCard';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Brett Case - Software Engineer" description="The background and projects of Brett Case's software engineering career">
+  <main id="main-content" tabindex="-1">
+    <Marquee headline="Brett Case" subHeadline="Software Engineer" />
+
+    <article class="region wrapper">
+      <CopyBlock
+        headline="Who am I"
+        text="Hello! I am a software engineer in the Pacific Northwest currently working for Wacom in their web services department. I enjoy working with front-end web technologies, APIs, and designers to create websites that are intuitive and fast."
+      />
+    </article>
+
+    <article class="region wrapper flow">
+      <CopyBlock headline="Projects" />
+
+      <ul class="grid | center-child-margins" role="list" data-rows="masonry" data-layout="50-50">
+        {cards.map((card) => <ProjectCard content={card} client:idle/>)}
+      </ul>
+    </article>
+
+    <article class="region wrapper flow">
+      <CopyBlock headline="Contact" />
+
+      <ContactCard />
+    </article>
+  </main>
+</Layout>

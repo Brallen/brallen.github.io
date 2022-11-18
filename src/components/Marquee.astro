@@ -1,0 +1,16 @@
+---
+export interface Props {
+  headline?: string;
+  subHeadline?: string;
+}
+
+const { headline, subHeadline } = Astro.props;
+---
+
+<article class="marquee | bg-tertiary-500">
+  <div class="wrapper flow flow-spacing-s center-child-margins text-center">
+    <h1>{headline}</h1>
+    <h3>{subHeadline}</h3>
+    <img class="page-width-image" src="/images/landscape.svg" width={2665} height={886} alt="Drawing of a mountain and trees with reflections on a lake" />
+  </div>
+</article>

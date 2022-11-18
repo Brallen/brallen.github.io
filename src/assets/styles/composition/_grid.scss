@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--grid-placement, auto-fill),
+    minmax(var(--grid-min-item-size, 16rem), 1fr)
+  );
+  gap: var(--space-m-l);
+
+  &[data-layout='50-50'] {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 50vw, 26rem);
+  }
+  
+  &[data-layout='reverse-50-50'] {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(14rem, 50vw, 18rem);
+    gap: var(--space-l);
+  }
+
+  &[data-rows='masonry'] {
+    grid-template-rows: masonry;
+    align-items: start;
+  }
+}

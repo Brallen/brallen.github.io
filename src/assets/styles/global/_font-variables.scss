@@ -1,0 +1,12 @@
+:root {
+  --step--1: clamp(0.83rem, calc(0.82rem + 0.08vw), 0.88rem);
+  --step-0: clamp(1.00rem, calc(0.92rem + 0.39vw), 1.25rem);
+  --step-1: clamp(1.20rem, calc(1.02rem + 0.88vw), 1.77rem);
+  --step-2: clamp(1.44rem, calc(1.11rem + 1.65vw), 2.50rem);
+  --step-3: clamp(1.73rem, calc(1.17rem + 2.80vw), 3.53rem);
+  --step-4: clamp(2.07rem, calc(1.17rem + 4.54vw), 5.00rem);
+  --step-5: clamp(2.49rem, calc(1.07rem + 7.11vw), 7.07rem);
+
+  --ff-heading: "ff-basic-gothic-pro", sans-serif;
+  --ff-body: "houschka-rounded", sans-serif;
+}

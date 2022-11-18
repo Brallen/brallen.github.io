@@ -1,0 +1,18 @@
+---
+export interface Props {
+  headline?: string;
+  text?: string;
+}
+
+const { headline, text } = Astro.props;
+---
+
+<div class="flow text-center center-child-margins">
+  {headline !== undefined &&
+    <h2>{headline}</h2>
+  }
+
+  {text !== undefined &&
+    <p>{text}</p>
+  }
+</div>

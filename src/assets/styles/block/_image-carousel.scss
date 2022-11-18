@@ -1,0 +1,33 @@
+.swiper {
+  display: flex;
+  align-items: center;
+
+  &.swiper-cards {
+    width: 90%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .swiper-slide-shadow {
+      background: none;
+    }
+  }
+
+  .button[data-type='carousel'] {
+    position: absolute;
+    z-index: 99;
+    width: 1.2em;
+    height: 1.2em;
+    
+    &[data-direction='next'] {
+      right: calc(-1 * var(--space-m));
+    }
+    
+    &[data-direction='prev'] {
+      left: calc(-1 * var(--space-m));
+    }
+  }
+}

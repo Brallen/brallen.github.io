@@ -1,0 +1,75 @@
+.region {
+  padding-top: var(--region-space, var(--space-m-l));
+  padding-bottom: var(--region-space, var(--space-m-l));
+}
+
+.wrapper {
+  max-width: var(--wrapper-max-width, 85rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  position: relative;
+}
+
+.center-child-margins > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-self-margins {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.no-max-width {
+  max-width: unset;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacing, 1em);
+}
+
+.flow-spacing-s > * {
+  --flow-spacing: var(--space-s);
+}
+
+.flow-spacing-m > * {
+  --flow-spacing: var(--space-m);
+}
+
+.flow-spacing-l > * {
+  --flow-spacing: var(--space-l);
+}
+
+.flow-spacing-xl > * {
+  --flow-spacing: var(--space-xl);
+}
+
+.flow-spacing-2x > * {
+  --flow-spacing: var(--space-2xl);
+}
+
+.flow-spacing-3xl > * {
+  --flow-spacing: var(--space-3xl);
+}
+
+.flow-spacing-s-m > * {
+  --flow-spacing: var(--space-s-m);
+}
+
+.flow-spacing-m-l > * {
+  --flow-spacing: var(--space-m-l);
+}
+
+.flow-spacing-l-xl > * {
+  --flow-spacing: var(--space-l-xl);
+}
+
+.flow-spacing-xl-2xl > * {
+  --flow-spacing: var(--space-xl-2xl);
+}
+
+.flow-spacing-2x-3xl > * {
+  --flow-spacing: var(--space-2xl-3xl);
+}

@@ -13,18 +13,35 @@ module.exports = {
     },
   },
   extends: [
-    // Recommended rules from @eslint-plugin-react
-    'plugin:react/recommended',
-    // Recommended ruleset for @typescript-eslint/eslint-plugin
     'plugin:@typescript-eslint/recommended',
     'google',
+  ],
+  overrides: [
+    {
+      files: [ '*.astro' ],
+      parser: 'astro-eslint-parser',
+      extends: [
+        'plugin:astro/recommended',
+      ],
+      parserOptions: {
+        // parser: '@typescript-eslint/parser',
+        extraFileExtensions: [ '.astro' ],
+      },
+    },
+    {
+      files: [ '*.ts', '*.tsx' ],
+      // parser: '@typescript-eslint/parser',
+      extends: [
+        'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
+      ],
+      plugins: [ '@typescript-eslint' ],
+    },
   ],
   plugins: [
     'import',
   ],
   rules: {
-    // Override recommended rules + add additional ESLint rules
-    // const example = require('example');
     '@typescript-eslint/no-var-requires': 'off',
     'react/prop-types': 0,
     'new-cap': 0,
@@ -64,7 +81,7 @@ module.exports = {
     ],
     'no-unused-vars': [ 'warn', { args: 'none' }],
     'require-jsdoc': 0,
-    'indent': 'off',
+    'indent': [ 'error', 2 ],
     '@typescript-eslint/indent': [ 'error', 2 ],
   },
 };

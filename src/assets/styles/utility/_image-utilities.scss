@@ -1,0 +1,12 @@
+.page-width-image {
+  max-width: unset;
+  width: 120vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  &.preserve-height {
+    max-width: unset;
+    width: auto;
+  }
+}

@@ -7,15 +7,24 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
+    "astro"
   ],
   "editor.tabSize": 2,
   "cSpell.words": [
+    "astro",
+    "astrojs",
     "Autosize",
     "bgcolor",
+    "fontawesome",
+    "fortawesome",
     "houschka",
+    "iconoir",
     "lazyload",
     "Planigize",
+    "Spotiguess",
     "svgr",
-    "Swipeable"
+    "Swipeable",
+    "Swiper",
+    "teslar"
   ],
 }

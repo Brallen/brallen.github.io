@@ -1,0 +1,31 @@
+.button {
+  display: inline-block;
+  border: none;
+  padding: var(--space-xs) var(--space-s);
+  min-width: var(--space-3xl);
+  color: var(--color-neutral-100);
+  background-color: var(--color-primary-500);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+
+  &:hover {
+    background-color: var(--color-primary-700);
+  }
+
+  &[disabled] {
+    background-color: var(--color-neutral-500);
+
+    &:hover {
+      background-color: var(--color-neutral-500);
+    }
+  }
+
+  &[data-type='carousel'] {
+    min-width: unset;
+    line-height: 0;
+    padding: 0;
+    border-radius: 100vmax;
+  }
+}

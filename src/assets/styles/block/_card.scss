@@ -1,0 +1,15 @@
+.card {
+  padding: var(--space-s-m);
+  
+  &[data-type='project'] {
+    padding: 0;
+    
+    .image {
+      max-height: 30rem;
+    }
+    
+    .content {
+      padding: var(--space-s-m);
+    }
+  }
+}
