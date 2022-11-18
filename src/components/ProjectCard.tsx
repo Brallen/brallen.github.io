@@ -9,7 +9,7 @@ export interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ content }) => {
   return (
-    <li className="card | flow flow-spacing-s no-max-width" data-type="project">
+    <div className="card | flow flow-spacing-s" data-type="project">
       <ImageCardCarousel images={content.images} />
       <div className="content | apply-border-radius flow bg-neutral-100">
         <div>
@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ content }) => {
         </ul>
         {content.link && <button className="button">{content.link?.text}</button>}
       </div>
-    </li>
+    </div>
   );
 };
 
