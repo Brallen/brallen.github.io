@@ -4,12 +4,12 @@ export const cards: ProjectCardContent[] = [
   {
     headline: 'Planigize',
     flairText: 'Fall 2020 - Spring 2022',
-    shortDescription: '6-person startup to help personal trainers establish an online presence and sell their workout plans.',
+    shortDescription: '6-person startup to help personal trainers establish an online presence and sell their workout plans directly to customers.',
     keyPoints: [
-      'Helped develop business plan, including monetization strategy',
-      'Established compensation structure as equity',
-      'Designed website from scratch using Adobe XD',
-      'Built front-end from scratch using React',
+      'Developed business plan and monetization strategy',
+      'Worked with lawyers to create company as a LLC in the state of California',
+      'Led design of website using Adobe XD',
+      'Built frontend from scratch using React, MUI, CSS-in-JS, and AWS',
     ],
     images: [
       {
@@ -59,9 +59,9 @@ export const cards: ProjectCardContent[] = [
     flairText: 'October 2019 - January 2020',
     shortDescription: 'Website to register products, redeem software, and update profile information for Wacom.',
     keyPoints: [
-      'Tech lead building components with CMS and Google Analytics integrations',
-      'Handled data privacy requirements for GDPR and CCPA',
-      'Handled internationalization of site language support and video providers',
+      'Led building of components with CMS and Google Analytics integrations',
+      'Implemented data privacy requirements for GDPR and CCPA',
+      'Handled internationalization of site language support and video providers for Western and Eastern markets',
     ],
     images: [
       {
@@ -108,8 +108,8 @@ export const cards: ProjectCardContent[] = [
     shortDescription: 'Website to register and host in-person and online Wacom events.',
     keyPoints: [
       'Designed and built modular and customizable \'add to calendar\' component',
-      'Helped design and build modular form component for use in all sign ups',
-      'Built components with CMS integration',
+      'Designed and built modular form component for use in all sign ups',
+      'Built components with CMS integration and internationalization',
     ],
     images: [
       {
@@ -137,7 +137,7 @@ export const cards: ProjectCardContent[] = [
     keyPoints: [
       'Tech lead for the 3 weeks of develop time',
       'Integrated components with a CMS',
-      'Retrofit old Dashboard to work with new components and SDK downloads',
+      'Retrofit old dashboard to work with new components and SDK downloads',
       'Handled internationalization of site language support and video providers',
     ],
     images: [
@@ -172,10 +172,9 @@ export const cards: ProjectCardContent[] = [
     flairText: 'September 2018 - June 2019',
     shortDescription: 'Web App made to mimic the official Tesla application. App offers control of the car such as turning on and off the car, media and climate controls, and summoning.',
     keyPoints: [
-      'Team captain for 5 members',
-      'Led design and implementation over course of 9 months',
-      'Handled all front end work (HTML, SASS, JavaScript)',
-      'Created API calls to mimic official Tesla functionality (NodeJS)',
+      'Led team of 5 through design and implementation over course of 9 months',
+      'Handled all frontend work using React, Redux, and SASS',
+      'Created API calls to mimic official Tesla functionality in NodeJS',
     ],
     images: [
       {
@@ -209,9 +208,9 @@ export const cards: ProjectCardContent[] = [
     flairText: 'February 2019',
     shortDescription: 'Android app using Spotify API to get a random song, play a preview, and have the user guess from 4 choices which song it is.',
     keyPoints: [
-      'Responsible for overall design (Adobe XD)',
-      'Created all API calls to Spotify (Java)',
-      'Created Settings page to adjust genre and number of rounds (Java)',
+      'Designed application using Adobe XD',
+      'Created all API calls to Spotify in Java',
+      'Created settings page to adjust genre and number of rounds in Java',
     ],
     images: [
       {
@@ -242,8 +241,7 @@ export const cards: ProjectCardContent[] = [
     flairText: 'June 2018 - September 2018',
     shortDescription: 'Website to showcase the uses of Wacom tablets in a business to business scenario.',
     keyPoints: [
-      'Built many of the components',
-      'Integrated components with a CMS',
+      'Built components with CMS integrations',
       'Handled internationalization of site including language support and video providers',
     ],
     images: [
