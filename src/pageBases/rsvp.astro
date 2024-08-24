@@ -1,8 +1,8 @@
 ---
-import Marquee from '/src/components/Marquee.astro';
 import Layout from '/src/layouts/Layout.astro';
 import {rsvpCopy} from '/src/assets/copy/rsvp'
 import {supportedLang} from "/src/types/types";
+import RsvpForm from '/src/components/RsvpForm';
 
 export interface Props {
   lang: supportedLang
@@ -11,8 +11,11 @@ export interface Props {
 const { lang } = Astro.props;
 ---
 
-<Layout lang={lang} title="Brett Case - Software Engineer" description="The background and projects of Brett Case's software engineering career">
+<Layout lang={lang} title={rsvpCopy[lang].metaTitle} description={rsvpCopy[lang].metaDescription}>
   <main id="main-content" tabindex="-1">
-    <Marquee headline={rsvpCopy.fr.headline} subHeadline="Frontend Engineer" />
+    <div class="grid" data-layout="50-50">
+      <img />
+      <RsvpForm client:visible />
+    </div>
   </main>
 </Layout>

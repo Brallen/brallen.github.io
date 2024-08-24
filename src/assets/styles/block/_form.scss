@@ -1,7 +1,7 @@
 .form-field {
   position: relative;
-  
-  input, textarea {
+
+  input, textarea, fieldset {
     width: 100%;
     padding: var(--space-3xs) var(--space-xs);
     border-radius: var(--border-radius);
@@ -25,7 +25,40 @@
     transition: transform var(--transition-base), font-size var(--transition-base);
   }
 
-  input:is(:active, :hover, :focus, :not(:placeholder-shown)) + label {
+  input[type="radio"] {
+    appearance: none;
+    background-color: inherit;
+    margin: 0;
+    padding: 0;
+    width: var(--step-1);
+    height: var(--step-1);
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+
+    &::before {
+      content: "";
+      width: var(--step--1);
+      height: var(--step--1);
+      border-radius: 50%;
+      transform: scale(0);
+      transition: transform var(--transition-base);
+      box-shadow: inset var(--step-0) var(--step-0) var(--color-primary-500);
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+
+    & + label {
+      position: initial;
+      transform: initial;
+    }
+  }
+
+  input:is(:active, :hover, :focus, :not(:placeholder-shown)):not([type="radio"]) + label,
+  legend {
     top: 0;
     font-size: var(--step-0);
   }
@@ -33,5 +66,12 @@
   textarea:is(:active, :hover, :focus, :not(:placeholder-shown)) + label {
     transform: translateY(-50%);
     font-size: var(--step-0);
+  }
+
+  .radio-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: var(--space-2xs);
+    align-items: baseline;
   }
 }
