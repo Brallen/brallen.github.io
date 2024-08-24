@@ -1,0 +1,18 @@
+---
+import Marquee from '/src/components/Marquee.astro';
+import Layout from '/src/layouts/Layout.astro';
+import {rsvpCopy} from '/src/assets/copy/rsvp'
+import {supportedLang} from "/src/types/types";
+
+export interface Props {
+  lang: supportedLang
+}
+
+const { lang } = Astro.props;
+---
+
+<Layout lang={lang} title="Brett Case - Software Engineer" description="The background and projects of Brett Case's software engineering career">
+  <main id="main-content" tabindex="-1">
+    <Marquee headline={rsvpCopy.fr.headline} subHeadline="Frontend Engineer" />
+  </main>
+</Layout>

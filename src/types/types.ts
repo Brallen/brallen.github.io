@@ -16,3 +16,5 @@ export type LinkContent = Readonly<{
   text: string;
   url: string;
 }>;
+
+export type supportedLang = 'en' | 'fr';
