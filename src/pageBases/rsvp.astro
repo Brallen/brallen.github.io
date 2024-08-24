@@ -15,7 +15,9 @@ const { lang } = Astro.props;
   <main id="main-content" tabindex="-1">
     <div class="grid" data-layout="50-50">
       <img />
-      <RsvpForm client:visible />
+      <div class="padding-m">
+        <RsvpForm client:visible />
+      </div>
     </div>
   </main>
 </Layout>

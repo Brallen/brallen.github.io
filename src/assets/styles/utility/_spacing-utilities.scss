@@ -31,6 +31,10 @@
   margin-top: var(--flow-spacing, 1em);
 }
 
+.padding-m {
+  padding: var(--space-m);
+}
+
 .flow-spacing-s > * {
   --flow-spacing: var(--space-s);
 }
