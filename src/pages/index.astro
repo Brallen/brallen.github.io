@@ -1,13 +1,14 @@
 ---
-import { cards } from '../assets/data/cards';
-import ContactCard from '../components/ContactCard.astro';
-import CopyBlock from '../components/CopyBlock.astro';
-import Marquee from '../components/Marquee.astro';
-import ProjectCard from '../components/ProjectCard';
-import Layout from '../layouts/Layout.astro';
+import { cards } from '/src/assets/data/cards';
+import ContactCard from '/src/components/ContactCard.astro';
+import CopyBlock from '/src/components/CopyBlock.astro';
+import Marquee from '/src/components/Marquee.astro';
+import ProjectCard from '/src/components/ProjectCard';
+import Layout from '/src/layouts/Layout.astro';
+import Footer from '/src/components/navigation/footer.astro';
 ---
 
-<Layout title="Brett Case - Software Engineer" description="The background and projects of Brett Case's software engineering career">
+<Layout lang="en" title="Brett Case - Software Engineer" description="The background and projects of Brett Case's software engineering career">
   <main id="main-content" tabindex="-1">
     <Marquee headline="Brett Case" subHeadline="Frontend Engineer" />
 
@@ -32,4 +33,5 @@ import Layout from '../layouts/Layout.astro';
       <ContactCard />
     </article>
   </main>
+  <Footer />
 </Layout>

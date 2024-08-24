@@ -1,17 +1,17 @@
 ---
 import '../assets/styles/styles.scss';
-import Footer from '../components/navigation/footer.astro';
 
 export interface Props {
   title: string;
   description: string;
+  lang: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, lang } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,6 +23,5 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <slot />
-    <Footer />
   </body>
 </html>
