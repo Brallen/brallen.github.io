@@ -1,11 +1,28 @@
 .rsvp {
   --wrapper-max-width: 60ch;
+  --color-neutral-100: hsl(33, 73%, 97%);
+  --color-neutral-500: hsl(0deg, 0%, 62%);
+  --color-primary-500: hsl(345, 99%, 70%);
+  --color-primary-700: hsl(345, 99%, 60%);
+  --color-secondary-500:hsl(181, 59%, 31%);
+  --color-tertiary-500: hsl(33, 73%, 97%);
+  outline-color: var(--color-primary-500);
+
   min-height: 100vh;
-  background-image: url(https://plus.unsplash.com/premium_photo-1688114988405-5849e59e961b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-size: cover;
 
   h1 {
     font-size: var(--step-3);
+  }
+
+  input,
+  textarea,
+  fieldset {
+    background-color: transparent;
+    border-color: var(--color-secondary-500);
+  }
+
+  [type="radio"] + label {
+    color: var(--color-neutral-800);
   }
 
   .card {

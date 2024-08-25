@@ -13,7 +13,7 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [rsvpAnswer, setRsvpAnswer] = useState<string>("");
-  const [numGuests, setNumGuests] = useState<string>("");
+  const [groupNames, setGroupNames] = useState<string>("");
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -29,10 +29,10 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
     setRsvpAnswer(event.target.value);
   };
 
-  const handleNumGuestsChange = (
+  const handleGroupNamesChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    setNumGuests(event.target.value);
+    setGroupNames(event.target.value);
   };
 
   const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -45,7 +45,7 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
       name,
       email,
       rsvpAnswer,
-      numGuests,
+      groupNames,
     };
 
     const response = await fetch("https://formspree.io/f/mbjpejew", {
@@ -66,7 +66,7 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
 
   return (
     <div
-      className="card | apply-border-radius bg-neutral-100 color-primary-700"
+      className="card | apply-border-radius bg-neutral-100 color-secondary-500"
       data-type="form"
     >
       <form className="flow" onSubmit={submitForm}>
@@ -120,15 +120,15 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
         </div>
         {rsvpAnswer === "rsvp-yes" && (
           <div className="form-field">
-            <input
-              id="num-guests"
+            <textarea
+              id="group-names"
               type="text"
-              value={numGuests}
-              onChange={handleNumGuestsChange}
-              placeholder=" "
+              value={groupNames}
+              onChange={handleGroupNamesChange}
+              placeholder=""
               required
             />
-            <label htmlFor="num-guests">{copy.groupSize}</label>
+            <label htmlFor="group-names">{copy.groupNames}</label>
           </div>
         )}
         {status === "SUCCESS" ? (
@@ -142,7 +142,7 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
               name.length === 0 ||
               email.length === 0 ||
               rsvpAnswer.length === 0 ||
-              (rsvpAnswer === "rsvp-yes" && numGuests.length === 0)
+              (rsvpAnswer === "rsvp-yes" && groupNames.length === 0)
             }
           >
             {copy.submit}

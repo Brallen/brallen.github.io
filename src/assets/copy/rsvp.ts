@@ -13,7 +13,7 @@ type copyStructure = {
   rsvp: string;
   yes: string;
   no: string;
-  groupSize: string;
+  groupNames: string;
   submit: string;
   successText: string;
   errorText: string;
@@ -25,15 +25,15 @@ export const rsvpCopy: Record<supportedLang, copyStructure> = {
     metaDescription: "RSVP for the 30th and 60th birthday of the Gougeons",
     headline: "Birthday Bash",
     where: "Where",
-    address: "France",
+    address: "Parigné-sur-Braye France",
     when: "When",
-    date: "Today",
+    date: "July 5th, 2025",
     name: "Name",
     email: "Email",
     rsvp: "RSVP",
     yes: "Yes",
     no: "No",
-    groupSize: "Number of people in party",
+    groupNames: "Names of people in your party",
     submit: "Submit",
     successText: "Thanks for your submission",
     errorText: "Something went wrong. Please try again",
@@ -43,15 +43,15 @@ export const rsvpCopy: Record<supportedLang, copyStructure> = {
     metaDescription: "",
     headline: `Fête d'anniversaire`,
     where: "Où",
-    address: "France",
+    address: "Parigné-sur-Braye France",
     when: "Quand",
-    date: `Aujourd'hui`,
+    date: "5 Juillet 2025",
     name: "Nom",
     email: "Email",
     rsvp: "Réponse",
     yes: "Oui",
     no: "Non",
-    groupSize: "Nombre de personnes dans le groupe",
+    groupNames: "Noms des personnes de votre groupe",
     submit: "Soumettre",
     successText: "Merci pour votre réponse",
     errorText: "Quelque chose s'est mal passé. Veuillez réessayer",

@@ -15,12 +15,13 @@ const copy = rsvpCopy[lang];
 <Layout lang={lang} title={copy.metaTitle} description={copy.metaDescription}>
   <main id="main-content" tabindex="-1" class="rsvp">
     <div class="wrapper region">
-      <div>
-        <div class="card | apply-border-radius bg-primary-500 color-neutral-100">
+      <div class="flow">
+        <img class="apply-border-radius" src="/images/rsvp/birthdays.jpeg" alt="Helena and Monique smiling"/>
+        <div class="card | apply-border-radius bg-secondary-500 color-neutral-100">
           <div class="flow">
             <h1>{copy.headline}</h1>
-            <p>{copy.where}: {copy.address}</p>
-            <p>{copy.when}: {copy.date}</p>
+            <p><strong>{copy.where}:</strong> {copy.address}</p>
+            <p><strong>{copy.when}:</strong> {copy.date}</p>
           </div>
           <RsvpForm client:visible lang={lang} />
         </div>
