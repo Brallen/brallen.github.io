@@ -9,14 +9,21 @@ export interface Props {
 }
 
 const { lang } = Astro.props;
+const copy = rsvpCopy[lang];
 ---
 
-<Layout lang={lang} title={rsvpCopy[lang].metaTitle} description={rsvpCopy[lang].metaDescription}>
-  <main id="main-content" tabindex="-1">
-    <div class="grid" data-layout="50-50">
-      <img />
-      <div class="padding-m">
-        <RsvpForm client:visible />
+<Layout lang={lang} title={copy.metaTitle} description={copy.metaDescription}>
+  <main id="main-content" tabindex="-1" class="rsvp">
+    <div class="wrapper region">
+      <div>
+        <div class="card | apply-border-radius bg-primary-500 color-neutral-100">
+          <div class="flow">
+            <h1>{copy.headline}</h1>
+            <p>{copy.where}: {copy.address}</p>
+            <p>{copy.when}: {copy.date}</p>
+          </div>
+          <RsvpForm client:visible lang={lang} />
+        </div>
       </div>
     </div>
   </main>

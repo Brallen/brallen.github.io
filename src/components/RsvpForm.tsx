@@ -1,15 +1,14 @@
 import React, { useState } from "react";
+import { rsvpCopy } from "../assets/copy/rsvp";
+import type { supportedLang } from "../types/types";
 
-const TEXT = {
-  name: "Name",
-  emailAddress: "Email address",
-  message: "Message",
-  submitButtonText: "Submit",
-  successText: "Thanks for reaching out! I will get back to you soon.",
-  errorText: "Something has gone wrong! Please try again.",
+type RsvpFormProps = {
+  lang: supportedLang;
 };
 
-const RsvpForm: React.FC = () => {
+const RsvpForm = ({ lang }: RsvpFormProps) => {
+  const copy = rsvpCopy[lang];
+
   const [status, setStatus] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -46,6 +45,7 @@ const RsvpForm: React.FC = () => {
       name,
       email,
       rsvpAnswer,
+      numGuests,
     };
 
     const response = await fetch("https://formspree.io/f/mbjpejew", {
@@ -79,7 +79,7 @@ const RsvpForm: React.FC = () => {
             placeholder=" "
             required
           />
-          <label htmlFor="name">{TEXT.name}</label>
+          <label htmlFor="name">{copy.name}</label>
         </div>
         <div className="form-field">
           <input
@@ -90,11 +90,11 @@ const RsvpForm: React.FC = () => {
             placeholder=" "
             required
           />
-          <label htmlFor="email">{TEXT.emailAddress}</label>
+          <label htmlFor="email">{copy.email}</label>
         </div>
         <div className="form-field">
           <fieldset>
-            <legend>RSVP</legend>
+            <legend>{copy.rsvp}</legend>
             <div className="radio-wrapper">
               <input
                 type="radio"
@@ -104,7 +104,7 @@ const RsvpForm: React.FC = () => {
                 onChange={handleRsvpAnswerChange}
                 required
               />
-              <label htmlFor="rsvp-yes">Yes</label>
+              <label htmlFor="rsvp-yes">{copy.yes}</label>
 
               <input
                 type="radio"
@@ -114,7 +114,7 @@ const RsvpForm: React.FC = () => {
                 onChange={handleRsvpAnswerChange}
                 required
               />
-              <label htmlFor="rsvp-no">no</label>
+              <label htmlFor="rsvp-no">{copy.no}</label>
             </div>
           </fieldset>
         </div>
@@ -128,24 +128,27 @@ const RsvpForm: React.FC = () => {
               placeholder=" "
               required
             />
-            <label htmlFor="num-guests">Number of guests in party</label>
+            <label htmlFor="num-guests">{copy.groupSize}</label>
           </div>
         )}
         {status === "SUCCESS" ? (
-          <p>{TEXT.successText}</p>
+          <p>{copy.successText}</p>
         ) : (
           <button
             type="submit"
             aria-label="submit contact form"
             className="button"
             disabled={
-              name.length === 0 || email.length === 0 || rsvpAnswer.length === 0
+              name.length === 0 ||
+              email.length === 0 ||
+              rsvpAnswer.length === 0 ||
+              (rsvpAnswer === "rsvp-yes" && numGuests.length === 0)
             }
           >
-            {TEXT.submitButtonText}
+            {copy.submit}
           </button>
         )}
-        {status === "ERROR" && <p>{TEXT.errorText}</p>}
+        {status === "ERROR" && <p>{copy.errorText}</p>}
       </form>
     </div>
   );
