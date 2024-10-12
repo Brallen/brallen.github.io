@@ -30,7 +30,7 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
   };
 
   const handleGroupNamesChange = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: React.ChangeEvent<HTMLTextAreaElement>
   ) => {
     setGroupNames(event.target.value);
   };
@@ -38,8 +38,10 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
   const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // one last check before submitting form
-    if (name.length === 0 || email.length === 0 || rsvpAnswer.length === 0)
+    if (name.length === 0 || email.length === 0 || rsvpAnswer.length === 0) {
+      setStatus("Error");
       return;
+    }
 
     const data = {
       name,
@@ -48,14 +50,16 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
       groupNames,
     };
 
-    const response = await fetch("https://formspree.io/f/mbjpejew", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        accept: "application/json",
-      },
-      body: JSON.stringify({ data }),
-    });
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbxakBK4pnhzNypGDRZ2mzKoy7dXHcYVOkIPyqVrNq1rMSQJWh62dtjEoyRUAq3bHKM3/exec",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "text/plain",
+        },
+        body: JSON.stringify(data),
+      }
+    );
 
     if (response.status === 200) {
       setStatus("SUCCESS");
@@ -122,7 +126,6 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
           <div className="form-field">
             <textarea
               id="group-names"
-              type="text"
               value={groupNames}
               onChange={handleGroupNamesChange}
               placeholder=""
@@ -136,7 +139,7 @@ const RsvpForm = ({ lang }: RsvpFormProps) => {
         ) : (
           <button
             type="submit"
-            aria-label="submit contact form"
+            aria-label={copy.submit}
             className="button"
             disabled={
               name.length === 0 ||
