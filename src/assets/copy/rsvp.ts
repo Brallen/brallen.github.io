@@ -23,7 +23,7 @@ export const rsvpCopy: Record<supportedLang, copyStructure> = {
   en: {
     metaTitle: "30/60 Birthday Bash",
     metaDescription: "RSVP for the 30th and 60th birthday of the Gougeons",
-    headline: "Double the fun! Turning 30 and 60.",
+    headline: "Double the fun! Turning 30 and 60",
     where: "Where",
     address: "Parigné-sur-Braye France",
     when: "When",
@@ -39,9 +39,9 @@ export const rsvpCopy: Record<supportedLang, copyStructure> = {
     errorText: "Something went wrong. Please try again",
   },
   fr: {
-    metaTitle: "",
+    metaTitle: "30/60 Fête d'anniversaire",
     metaDescription: "",
-    headline: ``,
+    headline: `Fête d'anniversaire`,
     where: "Où",
     address: "Parigné-sur-Braye France",
     when: "Quand",
